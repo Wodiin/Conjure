@@ -5,20 +5,30 @@
         ],
         "traits": [
             {"name": "Sunlight Sensitivity", "description": "While in sunlight, the creature has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."},
-            {"name": "Skulker", "description": "The creature has advantage of stealth checks in dim light or darkness, and can hide when lightly obscured."}
-        ]
+            {"name": "Skulker", "description": "The creature has advantage on stealth checks in dim light or darkness, and can hide when lightly obscured."}
+        ],
+        "resistance": [],
+        "speed": []
     },
     "Arctic": {
-        "resistance":[
+        "sense": [],
+        "traits": [],
+        "resistance": [
             {"name": "Cold", "damage_reduction": "Half"}
-        ]
+        ],
+        "speed": []
     },
     "Desert": {
-        "resistance":[
+        "sense": [],
+        "traits": [],
+        "resistance": [
             {"name": "Fire", "damage_reduction": "Half"}
-        ]
+        ],
+        "speed": []
     },
     "Water": {
+        "sense": [],
+        "traits": [],
         "resistance": [
             {"name": "Cold", "damage_reduction": "Half"}
         ],
@@ -27,9 +37,11 @@
         ]
     },
     "Mountain": {
+        "sense": [],
         "traits": [
-            {"name": "Sure Footed", "description": "The creature has advantage on Strength and Dexterity saving throws made against effects that would knock it prone"}
+            {"name": "Sure Footed", "description": "The creature has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."}
         ],
+        "resistance": [],
         "speed": [
             {"name": "Climb", "distance": 30}
         ]
