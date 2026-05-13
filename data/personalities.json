@@ -1,0 +1,164 @@
+{
+    "Bitter": {
+        "entries": [
+            {"description": "\"Oh, she's done very well for herself. Very well indeed.\" The smile didn't reach his eyes. It didn't even try."},
+            {"description": "\"Hope's a fine thing. I had some once.\""},
+            {"description": "\"This city used to mean something.\" Probably says this about everywhere they've ever lived."},
+            {"description": "\"No no, don't mind me. Nobody ever does.\""},
+            {"description": "Perfectly polite. Perfectly pleasant. Has not forgiven a single person in this room."}
+        ]
+    },
+    "Charming": {
+        "entries": [
+            {"description": "\"Well hello there! Dont your scales just shimmer in the sunlight? Care for a drink? or a song?\" - said the bard to the ancient red dragon."},
+            {"description": "\"Your eyes remind me of the moon at dusk. Tragic that I never had the patience for poetry.\""},
+            {"description": "\"I never forget a face, especially one worth remembering.\" - said to the same stranger, three cities in a row."},
+            {"description": "\"Shall we settle this like gentlemen?\" - even with swords drawn, the enemy smiles."},
+            {"description": "\"I do hope you'll forgive me,\" she said, leaving anyway."}
+        ]
+    },
+    "Comedic": {
+        "entries": [
+            {"description": "\"I have a plan,\" they announce, with the confidence of someone whose last plan burned down a mill."},
+            {"description": "\"I've survived three wars, two famines, and a marriage. At this point death seems redundant.\""},
+            {"description": "\"Ah yes, I remember my dignity. Good times.\" - said after picking themselves up from the gutter while covered in various \"fluids\"."},
+            {"description": "Operates on a logic that almost makes sense. The almost is doing a lot of work."},
+            {"description": "\"It got a little out of hand,\" regarding an incident that three separate bards have already written songs about."}
+        ]
+    },
+    "Cunning": {
+        "entries": [
+            {"description": "Listens far more than they speak. When they do speak, you realise they've been three steps ahead the entire conversation."},
+            {"description": "Never lies. Simply chooses which truths to share, and when."},
+            {"description": "Has at least three versions of their own name depending on who's asking."},
+            {"description": "Plays games with very long endings. Most people don't realise they're playing."},
+            {"description": "Spotted the angle before you finished the sentence. Was already moving before you asked."}
+        ]
+    },
+    "Depressed": {
+        "entries": [
+            {"description": "Answers questions with the minimum possible words. Not rude. Just tired."},
+            {"description": "Stopped making plans. Plans imply a future worth organising."},
+            {"description": "Smiles at the right moments. It's very convincing. It doesn't mean anything."},
+            {"description": "Has the eyes of someone who has seen too much and slept too little. In that order."},
+            {"description": "Not unhappy exactly. Just finished. Like a book someone forgot to pick back up."}
+        ]
+    },
+    "Egotistical": {
+        "entries": [
+            {"description": "\"I don't want to say I'm the best. I just can't think of anyone better.\""},
+            {"description": "Asks how you are. Doesn't wait for the answer. Tells you how they are instead."},
+            {"description": "Cannot receive a compliment without immediately topping it with a better one about themselves."},
+            {"description": "Listens politely to your opinion. Files it immediately under irrelevant."},
+            {"description": "Dresses like they're expecting a portrait to be painted at any moment."}
+        ]
+    },
+    "Greedy": {
+        "entries": [
+            {"description": "\"I like you,\" they say. They mean: you are currently useful to me."},
+            {"description": "Owns a great deal of things. None of them were free. Some of them weren't for sale."},
+            {"description": "Genuinely believes that wanting something badly enough is a form of deserving it."},
+            {"description": "Never the first to reach for the bill. Never the last to reach for the share."},
+            {"description": "Tips poorly. Remembers every copper they were ever shortchanged. These are not contradictions to them."}
+        ]
+    },
+    "Introspective": {
+        "entries": [
+            {"description": "\"Do you ever think about why we do any of this?\" Yes. Constantly. It hasn't helped."},
+            {"description": "Keeps a journal. Has kept many journals. Has burned most of them."},
+            {"description": "Notices things. Rarely mentions them. Thinks about them for weeks."},
+            {"description": "Often found staring at something unremarkable for an uncomfortably long time."},
+            {"description": "\"I'm still figuring it out,\" regarding themselves, at an age where most people have stopped trying."}
+        ]
+    },
+    "Jovial": {
+        "entries": [
+            {"description": "Makes strangers feel like old friends within minutes. This is not a trick. They simply like people."},
+            {"description": "\"This is going to be great,\" they say, about everything, and somehow they're usually correct."},
+            {"description": "Laughs first and loudest at their own jokes. Somehow this makes them funnier, not less."},
+            {"description": "Will help you move, help you grieve, help you celebrate, and show up to all three with food."},
+            {"description": "\"Could be worse!\" It could. Somehow around them it rarely is."}
+        ]
+    },
+    "Learned": {
+        "entries": [
+            {"description": "\"Ah, interesting — did you know that—\" They have been saying this their entire life."},
+            {"description": "Brilliant in ways that don't always include remembering to eat, sleep, or notice the room is on fire."},
+            {"description": "\"Simply put—\" Nothing they say is ever simply put."},
+            {"description": "Has one particular subject they care about more than is entirely healthy. Will find a way to bring it up."},
+            {"description": "Spent thirty years learning everything there is to know. Spent the next ten unlearning most of it."}
+        ]
+    },
+    "Magical": {
+        "entries": [
+            {"description": "Something small and unexplained happens whenever they're surprised. They've stopped apologising for it."},
+            {"description": "Speaks about distant places and ancient events as though they were there recently. They may have been."},
+            {"description": "\"Oh that,\" they say, about something that should not have just happened."},
+            {"description": "Finds coins, hunger, and weather mildly amusing concerns that apply mostly to other people."},
+            {"description": "Looks at you like they can see something slightly behind you. You turn around. Nothing is there."}
+        ]
+    },
+    "Mysterious": {
+        "entries": [
+            {"description": "Has a different past depending on who's asking. All versions are equally plausible."},
+            {"description": "Appears where needed. Leaves before questions form. Has never once been late."},
+            {"description": "Reacts to certain names, certain places, certain years — just barely. Just enough to notice."},
+            {"description": "\"That's a good question,\" they say, and then simply don't answer it."},
+            {"description": "Smiles at things other people don't notice. Never explains what they found amusing."}
+        ]
+    },
+    "Paranoid": {
+        "entries": [
+            {"description": "Arrived early to check the exits. Knows exactly how many people are in the room. Has a plan."},
+            {"description": "Doesn't eat food they didn't see prepared. Considers this perfectly reasonable. It might be."},
+            {"description": "\"Who sent you?\" They're joking. Probably. The pause before the laugh is a little long."},
+            {"description": "Apologises for being nervous. Does not stop being nervous."},
+            {"description": "Would love to relax. Has simply never found a situation that warranted it."}
+        ]
+    },
+    "Political": {
+        "entries": [
+            {"description": "Agrees with you warmly and completely. Later you'll realise they didn't actually agree with anything."},
+            {"description": "Remembers who was in the room for every important conversation they've ever had. Just in case."},
+            {"description": "\"What I can tell you is—\" Everything after this is true. Everything before it was the real message."},
+            {"description": "Has never once said what they meant on the first try. Considers this a professional courtesy."},
+            {"description": "Has seen enough to know how it all works. Has not yet decided what to do with that knowledge."}
+        ]
+    },
+    "Stoic": {
+        "entries": [
+            {"description": "Processes catastrophe the way most people process mild inconvenience. Slowly, quietly, completely."},
+            {"description": "\"Mm.\" This means many things. You'll learn to read it eventually."},
+            {"description": "Doesn't complain. Not out of pride. It simply hasn't occurred to them that it would help."},
+            {"description": "Offers no comfort. Offers presence. Most people find this is enough."},
+            {"description": "\"It is what it is,\" they say, and somehow from them it doesn't sound like giving up."}
+        ]
+    },
+    "Stupid": {
+        "entries": [
+            {"description": "Incorrect with impressive consistency. Never deterred. Never right."},
+            {"description": "Misses every subtext, implication, and social cue. Enjoys conversations enormously as a result."},
+            {"description": "Means well, tries hard, and arrives at the wrong conclusion via a route nobody could have predicted."},
+            {"description": "Their logic almost holds together. The almost is load-bearing."},
+            {"description": "Has survived entirely on luck, instinct, and the goodwill of smarter people. Shows no signs of stopping."}
+        ]
+    },
+    "Violent": {
+        "entries": [
+            {"description": "Smiles a lot. The smile doesn't reach the eyes. The eyes are doing something else entirely."},
+            {"description": "\"It's not personal,\" they say, which is somehow worse than if it were."},
+            {"description": "Moves through crowds the way water moves around stone — always the path of least resistance, always aware of every obstacle."},
+            {"description": "Bored by peace. Not because they don't value it. Because they don't know what to do with themselves inside it."},
+            {"description": "Has hurt a lot of people. Keeps a rough count. Doesn't share it. Doesn't forget it."}
+        ]
+    },
+    "Zealot": {
+        "entries": [
+            {"description": "The faith isn't something they have. It's something they are. The distinction matters to them enormously."},
+            {"description": "Genuinely cannot conceive that you might hear the truth and still choose to walk away from it."},
+            {"description": "Prays constantly — not performatively, not dutifully. Like breathing. Like they'd die without it."},
+            {"description": "\"I have no fear of death,\" they say. You believe them. This is not reassuring."},
+            {"description": "Loved ones lost, comforts abandoned, doubts silenced. Calls it a fair trade. May still be deciding."}
+        ]
+    }
+}
