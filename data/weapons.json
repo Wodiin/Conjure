@@ -514,5 +514,101 @@
         "versatile": false,
         "versatile_damage": {"dice": 0, "amount": 0},
         "targets": 1
+    },
+    "Haymaker": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 4, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Bludgeoning",
+        "reach": 5,
+        "range": {"short": 0, "long": 0},
+        "finesse": false,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Ki Strike": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 6, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Bludgeoning",
+        "reach": 5,
+        "range": {"short": 0, "long": 0},
+        "finesse": true,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Psi Strike": {
+        "to_hit_stat": "INT",
+        "damage": {"dice": 6, "amount": 1},
+        "damage_stat": "INT",
+        "damage_type": "Psychic",
+        "reach": 0,
+        "range": {"short": 30, "long": 60},
+        "finesse": false,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Broken Bottle": {
+        "to_hit_stat": "DEX",
+        "damage": {"dice": 4, "amount": 1},
+        "damage_stat": "DEX",
+        "damage_type": "Piercing",
+        "reach": 5,
+        "range": {"short": 10, "long": 20},
+        "finesse": true,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Wok": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 6, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Bludgeoning",
+        "reach": 5,
+        "range": {"short": 0, "long": 0},
+        "finesse": false,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Pitchfork": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 6, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Piercing",
+        "reach": 5,
+        "range": {"short": 0, "long": 0},
+        "finesse": false,
+        "versatile": true,
+        "versatile_damage": {"dice": 8, "amount": 1},
+        "targets": 1
+    },
+    "Scythe": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 10, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Slashing",
+        "reach": 10,
+        "range": {"short": 0, "long": 0},
+        "finesse": false,
+        "versatile": false,
+        "versatile_damage": {"dice": 0, "amount": 0},
+        "targets": 1
+    },
+    "Shovel": {
+        "to_hit_stat": "STR",
+        "damage": {"dice": 6, "amount": 1},
+        "damage_stat": "STR",
+        "damage_type": "Bludgeoning",
+        "reach": 5,
+        "range": {"short": 0, "long": 0},
+        "finesse": false,
+        "versatile": true,
+        "versatile_damage": {"dice": 8, "amount": 1},
+        "targets": 1
     }
 }
