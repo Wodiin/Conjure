@@ -14,3 +14,6 @@ def load_data():
                 with open(os.path.join(folder, file), 'r') as f:
                     data[file.removesuffix(".json")] = json.load(f)
     return data
+
+# Load the data when the module is imported
+data = load_data()
