@@ -1,0 +1,329 @@
+{
+    "Abjuration": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Arcane Ward",
+                "description": "When the Abjurer casts an abjuration spell of 1st level or higher, they gain a ward with hit points equal to twice the spell's level plus their Intelligence modifier that absorbs damage in their place. The ward reforms whenever they cast another abjuration spell."
+            },
+            {
+                "name": "Projected Ward",
+                "description": "When a creature the Abjurer can see within 30 feet takes damage, they can use their reaction to have their Arcane Ward absorb that damage instead."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Blade Ward", "level": 0, "casting_amount": "at will"},
+            {"name": "Mage Armor", "level": 1, "casting_amount": "3/day"},
+            {"name": "Shield", "level": 1, "casting_amount": "3/day"},
+            {"name": "Counterspell", "level": 3, "casting_amount": "2/day"},
+            {"name": "Dispel Magic", "level": 3, "casting_amount": "2/day"},
+            {"name": "Globe of Invulnerability", "level": 6, "casting_amount": "1/day"}
+        ]
+    },
+    "Conjuration": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Benign Transposition",
+                "description": "As a bonus action, the Conjurer teleports up to 30 feet to an unoccupied space they can see, or swaps positions with a willing Small or Medium creature within range. This trait recharges after a long rest, or when the Conjurer casts a conjuration spell of 1st level or higher."
+            },
+            {
+                "name": "Focused Conjuration",
+                "description": "While the Conjurer is concentrating on a conjuration spell, their concentration cannot be broken by taking damage."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Mage Hand", "level": 0, "casting_amount": "at will"},
+            {"name": "Misty Step", "level": 2, "casting_amount": "3/day"},
+            {"name": "Conjure Animals", "level": 3, "casting_amount": "2/day"},
+            {"name": "Dimension Door", "level": 4, "casting_amount": "2/day"},
+            {"name": "Conjure Elemental", "level": 5, "casting_amount": "1/day"}
+        ]
+    },
+    "Divination": {
+        "weapons": ["Dagger"],
+        "traits": [
+            {
+                "name": "Portent",
+                "description": "When the Diviner finishes a long rest, they roll two d20s and record the results. Before the next long rest, they can replace any attack roll, saving throw, or ability check made by any creature with one of these rolls, choosing before the original roll is made."
+            },
+            {
+                "name": "Expert Divination",
+                "description": "When the Diviner casts a divination spell of 2nd level or higher, they regain one expended spell slot of a lower level, up to a maximum of 5th."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Guidance", "level": 0, "casting_amount": "at will"},
+            {"name": "Detect Thoughts", "level": 2, "casting_amount": "3/day"},
+            {"name": "Clairvoyance", "level": 3, "casting_amount": "2/day"},
+            {"name": "Scrying", "level": 5, "casting_amount": "1/day"},
+            {"name": "Foresight", "level": 9, "casting_amount": "1/day"}
+        ]
+    },
+    "Enchantment": {
+        "weapons": ["Dagger"],
+        "traits": [
+            {
+                "name": "Hypnotic Gaze",
+                "description": "As an action, the Enchanter targets a creature within 5 feet, which must succeed on a Wisdom saving throw or be charmed, incapacitated, and have its speed reduced to 0 until the end of the Enchanter's next turn. This trait cannot target the same creature on consecutive turns."
+            },
+            {
+                "name": "Instinctive Charm",
+                "description": "When a creature within 30 feet attacks the Enchanter, they can use their reaction to force a Wisdom saving throw, redirecting the attack to the nearest other visible creature on a failure. This trait can be used once per short rest."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Friends", "level": 0, "casting_amount": "at will"},
+            {"name": "Charm Person", "level": 1, "casting_amount": "3/day"},
+            {"name": "Hypnotic Pattern", "level": 3, "casting_amount": "2/day"},
+            {"name": "Dominate Person", "level": 5, "casting_amount": "2/day"},
+            {"name": "Power Word Stun", "level": 8, "casting_amount": "1/day"}
+        ]
+    },
+    "Evocation": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Sculpt Spells",
+                "description": "When the Evoker casts an evocation spell that forces saving throws, they can choose a number of creatures equal to 1 plus the spell's level to automatically succeed on the save and take no damage."
+            },
+            {
+                "name": "Overchannel",
+                "description": "When the Evoker casts an evocation spell of 1st–5th level that deals damage, they can deal maximum damage. Each use after the first before a long rest deals the Evoker 2d12 necrotic damage per spell level, which cannot be reduced in any way."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Fire Bolt", "level": 0, "casting_amount": "at will"},
+            {"name": "Magic Missile", "level": 1, "casting_amount": "3/day"},
+            {"name": "Fireball", "level": 3, "casting_amount": "3/day"},
+            {"name": "Cone of Cold", "level": 5, "casting_amount": "2/day"},
+            {"name": "Chain Lightning", "level": 6, "casting_amount": "1/day"},
+            {"name": "Meteor Swarm", "level": 9, "casting_amount": "1/day"}
+        ]
+    },
+    "Illusion": {
+        "weapons": ["Dagger"],
+        "traits": [
+            {
+                "name": "Malleable Illusions",
+                "description": "When the Illusionist casts an illusion spell with a duration of 1 minute or longer, they can use their action to change its nature at any time, provided the new illusion stays within the original spell's area and range."
+            },
+            {
+                "name": "Illusory Self",
+                "description": "When a creature attacks the Illusionist, they can use their reaction to interpose an illusory duplicate, causing the attack to miss automatically. This trait recharges after a short or long rest."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Minor Illusion", "level": 0, "casting_amount": "at will"},
+            {"name": "Mirror Image", "level": 2, "casting_amount": "3/day"},
+            {"name": "Major Image", "level": 3, "casting_amount": "2/day"},
+            {"name": "Greater Invisibility", "level": 4, "casting_amount": "2/day"},
+            {"name": "Project Image", "level": 7, "casting_amount": "1/day"}
+        ]
+    },
+    "Necromancy": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Grim Harvest",
+                "description": "Once per turn when the Necromancer kills a creature with a spell, they regain hit points equal to twice the spell's level, or three times its level if the spell is from the Necromancy school. This trait does not function against constructs or undead."
+            },
+            {
+                "name": "Undead Thralls",
+                "description": "Undead creatures created or controlled by the Necromancer gain bonus hit points equal to the Necromancer's proficiency bonus and add that bonus to their weapon damage rolls."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Toll the Dead", "level": 0, "casting_amount": "at will"},
+            {"name": "Animate Dead", "level": 3, "casting_amount": "2/day"},
+            {"name": "Blight", "level": 4, "casting_amount": "2/day"},
+            {"name": "Circle of Death", "level": 6, "casting_amount": "1/day"},
+            {"name": "Finger of Death", "level": 7, "casting_amount": "1/day"}
+        ]
+    },
+    "Transmutation": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Transmuter's Stone",
+                "description": "The Transmuter carries a stone that grants its bearer one chosen benefit: darkvision 60 ft., +10 ft. speed, proficiency in Constitution saves, or resistance to acid, cold, fire, lightning, or thunder damage. The benefit changes whenever the Transmuter casts a transmutation spell of 1st level or higher."
+            },
+            {
+                "name": "Shapechanger",
+                "description": "The Transmuter can cast Polymorph on themselves without expending a spell slot, transforming into a beast with a CR no higher than their proficiency bonus. This trait can be used once per long rest."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Mending", "level": 0, "casting_amount": "at will"},
+            {"name": "Enlarge/Reduce", "level": 2, "casting_amount": "3/day"},
+            {"name": "Fly", "level": 3, "casting_amount": "2/day"},
+            {"name": "Polymorph", "level": 4, "casting_amount": "2/day"},
+            {"name": "Disintegrate", "level": 6, "casting_amount": "1/day"}
+        ]
+    },
+    "Warlock": {
+        "weapons": ["Dagger"],
+        "traits": [
+            {
+                "name": "Dark One's Blessing",
+                "description": "When the Warlock reduces a hostile creature to 0 hit points, they gain temporary hit points equal to their Charisma modifier plus their proficiency bonus."
+            },
+            {
+                "name": "Eldritch Invocations",
+                "description": "The Warlock sees normally in mundane and magical darkness out to 120 feet. When they hit a creature with Eldritch Blast, they can push that creature up to 10 feet away in a straight line."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Eldritch Blast", "level": 0, "casting_amount": "at will"},
+            {"name": "Hex", "level": 1, "casting_amount": "3/day"},
+            {"name": "Hunger of Hadar", "level": 3, "casting_amount": "2/day"},
+            {"name": "Banishment", "level": 4, "casting_amount": "2/day"},
+            {"name": "Summon Fiend", "level": 6, "casting_amount": "1/day"}
+        ]
+    },
+    "Divine": {
+        "weapons": ["Warhammer"],
+        "traits": [
+            {
+                "name": "Channel Divinity",
+                "description": "As an action, the Divine caster turns undead within 30 feet — each undead that can see or hear them must succeed on a Wisdom saving throw or be turned for 1 minute or until it takes damage. This trait recharges after a short or long rest."
+            },
+            {
+                "name": "Divine Intervention",
+                "description": "Once per long rest, the Divine caster calls upon their deity for aid. Roll a d100 — on a result equal to or lower than their proficiency bonus × 5, the deity intervenes as the GM sees fit."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Sacred Flame", "level": 0, "casting_amount": "at will"},
+            {"name": "Bless", "level": 1, "casting_amount": "3/day"},
+            {"name": "Spirit Guardians", "level": 3, "casting_amount": "2/day"},
+            {"name": "Mass Cure Wounds", "level": 5, "casting_amount": "2/day"},
+            {"name": "Holy Aura", "level": 8, "casting_amount": "1/day"},
+            {"name": "True Resurrection", "level": 9, "casting_amount": "1/day"}
+        ]
+    },
+    "Nature": {
+        "weapons": ["Quarterstaff"],
+        "traits": [
+            {
+                "name": "Wild Shape",
+                "description": "As a bonus action, the Nature caster transforms into a beast with a CR no higher than their proficiency bonus divided by 2 (minimum CR 1/4), retaining their mental ability scores. They can use this feature twice, regaining uses after a short or long rest."
+            },
+            {
+                "name": "Timeless Body",
+                "description": "The Nature caster ages only 1 year for every 10 that pass and cannot be magically aged."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Druidcraft", "level": 0, "casting_amount": "at will"},
+            {"name": "Entangle", "level": 1, "casting_amount": "3/day"},
+            {"name": "Call Lightning", "level": 3, "casting_amount": "2/day"},
+            {"name": "Conjure Elemental", "level": 5, "casting_amount": "1/day"},
+            {"name": "Storm of Vengeance", "level": 9, "casting_amount": "1/day"}
+        ]
+    },
+    "Performance": {
+        "weapons": ["Rapier"],
+        "traits": [
+            {
+                "name": "Bardic Inspiration",
+                "description": "As a bonus action, the Bard grants one creature within 60 feet that can hear them a d8 Bardic Inspiration die. The creature can add this die to one ability check, attack roll, or saving throw made within the next 10 minutes."
+            },
+            {
+                "name": "Song of Rest",
+                "description": "When allies hear the Bard perform during a short rest, each ally that spends Hit Dice regains an additional 1d6 hit points at the end of the rest."
+            }
+        ],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Vicious Mockery", "level": 0, "casting_amount": "at will"},
+            {"name": "Charm Person", "level": 1, "casting_amount": "3/day"},
+            {"name": "Hypnotic Pattern", "level": 3, "casting_amount": "2/day"},
+            {"name": "Otto's Irresistible Dance", "level": 8, "casting_amount": "1/day"},
+            {"name": "Power Word Kill", "level": 9, "casting_amount": "1/day"}
+        ]
+    },
+    "Arcane Gish": {
+        "weapons": [],
+        "traits": [],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Booming Blade", "level": 0, "casting_amount": "at will"},
+            {"name": "Shield", "level": 1, "casting_amount": "3/day"},
+            {"name": "Haste", "level": 3, "casting_amount": "1/day"}
+        ]
+    },
+    "Shadow Pact": {
+        "weapons": [],
+        "traits": [],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Hex", "level": 1, "casting_amount": "3/day"},
+            {"name": "Darkness", "level": 2, "casting_amount": "2/day"},
+            {"name": "Shadow of Moil", "level": 4, "casting_amount": "1/day"}
+        ]
+    },
+    "Holy Warrior": {
+        "weapons": [],
+        "traits": [],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Divine Favor", "level": 1, "casting_amount": "3/day"},
+            {"name": "Aura of Vitality", "level": 3, "casting_amount": "2/day"},
+            {"name": "Holy Weapon", "level": 5, "casting_amount": "1/day"}
+        ]
+    },
+    "Ranger": {
+        "weapons": [],
+        "traits": [],
+        "proficiencies": [],
+        "resistances": [],
+        "senses": [],
+        "spells": [
+            {"name": "Hunter's Mark", "level": 1, "casting_amount": "3/day"},
+            {"name": "Pass without Trace", "level": 2, "casting_amount": "2/day"},
+            {"name": "Swift Quiver", "level": 5, "casting_amount": "1/day"}
+        ]
+    }
+}
