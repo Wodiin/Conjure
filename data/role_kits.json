@@ -1,0 +1,502 @@
+{
+  "Sailor": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Perception"],
+    "proficiencies_t": ["Navigator's Tools", "Vehicles (Water)"]
+  },
+  "Pirate": {
+    "traits": [
+      {
+        "name": "Salt and Scars",
+        "description": "The Pirate has advantage on Insight checks made to detect deception during negotiations or trade."
+      }
+    ],
+    "proficiencies": ["Athletics", "Deception"],
+    "proficiencies_t": ["Navigator's Tools", "Vehicles (Water)"]
+  },
+  "Navigator": {
+    "traits": [],
+    "proficiencies": ["History", "Perception"],
+    "proficiencies_t": ["Cartographer's Tools", "Navigator's Tools"]
+  },
+  "Ferryman": {
+    "traits": [
+      {
+        "name": "Liminal Keeper",
+        "description": "The Ferryman has advantage on Charisma (Persuasion) checks made to gather information. Creatures have disadvantage on Deception checks made against the Ferryman while in their vessel."
+      }
+    ],
+    "proficiencies": ["Insight", "Persuasion"],
+    "proficiencies_t": ["Vehicles (Water)"]
+  },
+  "Dockworker": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Perception"],
+    "proficiencies_t": ["Vehicles (Water)"]
+  },
+  "Airship Crew": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Perception"],
+    "proficiencies_t": ["Navigator's Tools", "Vehicles (Air)"]
+  },
+  "Tracker": {
+    "traits": [],
+    "proficiencies": ["Nature", "Survival"],
+    "proficiencies_t": ["Cartographer's Tools"]
+  },
+  "Shepherd": {
+    "traits": [],
+    "proficiencies": ["Animal Handling", "Nature"],
+    "proficiencies_t": []
+  },
+  "Fisher": {
+    "traits": [],
+    "proficiencies": ["Nature", "Perception"],
+    "proficiencies_t": ["Vehicles (Water)"]
+  },
+  "Forester": {
+    "traits": [],
+    "proficiencies": ["Nature", "Survival"],
+    "proficiencies_t": ["Woodcarver's Tools"]
+  },
+  "Farmer": {
+    "traits": [],
+    "proficiencies": ["Animal Handling", "Nature"],
+    "proficiencies_t": ["Carpenter's Tools"]
+  },
+  "Beekeeper": {
+    "traits": [],
+    "proficiencies": ["Animal Handling", "Nature"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Courier": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Perception"],
+    "proficiencies_t": ["Vehicles (Land)"]
+  },
+  "Physician": {
+    "traits": [],
+    "proficiencies": ["Investigation", "Medicine"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Herbalist": {
+    "traits": [],
+    "proficiencies": ["Medicine", "Nature"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Surgeon": {
+    "traits": [],
+    "proficiencies": ["Medicine", "Perception"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Midwife": {
+    "traits": [],
+    "proficiencies": ["Insight", "Medicine"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Plague Doctor": {
+    "traits": [
+      {
+        "name": "Warden of the Dead",
+        "description": "The Plague Doctor has advantage on saving throws against disease and the frightened condition when caused by undead or death effects. They are immune to the effects of exposure to corpses and disease environments."
+      }
+    ],
+    "proficiencies": ["Medicine", "Perception"],
+    "proficiencies_t": ["Alchemist's Supplies", "Herbalism Kit"]
+  },
+  "Apothecary": {
+    "traits": [],
+    "proficiencies": ["Medicine", "Nature"],
+    "proficiencies_t": ["Alchemist's Supplies", "Herbalism Kit"]
+  },
+  "Barber-Surgeon": {
+    "traits": [],
+    "proficiencies": ["Medicine", "Persuasion"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Criminal": {
+    "traits": [],
+    "proficiencies": ["Deception", "Stealth"],
+    "proficiencies_t": ["Thieves' Tools"]
+  },
+  "Fence": {
+    "traits": [],
+    "proficiencies": ["Deception", "Investigation"],
+    "proficiencies_t": ["Forgery Kit"]
+  },
+  "Forger": {
+    "traits": [
+      {
+        "name": "Eye for Imperfection",
+        "description": "The Forger has advantage on Investigation checks made to identify forgeries, counterfeits, or disguised items. Creatures have disadvantage on Deception checks made using forged documents or false credentials against the Forger."
+      }
+    ],
+    "proficiencies": ["Deception", "Investigation"],
+    "proficiencies_t": ["Calligrapher's Supplies", "Forgery Kit"]
+  },
+  "Spy": {
+    "traits": [
+      {
+        "name": "Unremarkable by Design",
+        "description": "The Spy can attempt to hide even when only lightly obscured. They have advantage on Deception checks made to pass as an ordinary person and on Perception checks made to notice surveillance."
+      }
+    ],
+    "proficiencies": ["Deception", "Insight"],
+    "proficiencies_t": ["Disguise Kit", "Forgery Kit"]
+  },
+  "Smuggler": {
+    "traits": [
+      {
+        "name": "The Second Map",
+        "description": "The Smuggler has advantage on Investigation checks made to find hidden compartments, secret doors, or concealed passages. They can identify likely hiding spots in any building or vessel without a check."
+      }
+    ],
+    "proficiencies": ["Deception", "Stealth"],
+    "proficiencies_t": ["Thieves' Tools", "Vehicles (Water)"]
+  },
+  "Poisoner": {
+    "traits": [],
+    "proficiencies": ["Nature", "Stealth"],
+    "proficiencies_t": ["Herbalism Kit", "Poisoner's Kit"]
+  },
+  "Merchant": {
+    "traits": [],
+    "proficiencies": ["Insight", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Innkeeper": {
+    "traits": [],
+    "proficiencies": ["Insight", "Persuasion"],
+    "proficiencies_t": ["Brewer's Supplies"]
+  },
+  "Tax Collector": {
+    "traits": [],
+    "proficiencies": ["Intimidation", "Investigation"],
+    "proficiencies_t": []
+  },
+  "Auctioneer": {
+    "traits": [
+      {
+        "name": "Reading the Room",
+        "description": "The Auctioneer has advantage on Insight checks made to determine a creature's true interest or intent during negotiations. They have advantage on Persuasion checks when addressing groups of three or more creatures simultaneously."
+      }
+    ],
+    "proficiencies": ["Insight", "Performance"],
+    "proficiencies_t": []
+  },
+  "Moneylender": {
+    "traits": [],
+    "proficiencies": ["Insight", "Investigation"],
+    "proficiencies_t": []
+  },
+  "Carpenter": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Investigation"],
+    "proficiencies_t": ["Carpenter's Tools"]
+  },
+  "Mason": {
+    "traits": [],
+    "proficiencies": ["Athletics", "History"],
+    "proficiencies_t": ["Mason's Tools"]
+  },
+  "Tailor": {
+    "traits": [],
+    "proficiencies": ["History", "Perception"],
+    "proficiencies_t": ["Weaver's Tools"]
+  },
+  "Cobbler": {
+    "traits": [],
+    "proficiencies": ["Insight", "Perception"],
+    "proficiencies_t": ["Cobbler's Tools", "Leatherworker's Tools"]
+  },
+  "Tinker": {
+    "traits": [],
+    "proficiencies": ["Investigation", "Sleight of Hand"],
+    "proficiencies_t": ["Tinker's Tools"]
+  },
+  "Jeweler": {
+    "traits": [],
+    "proficiencies": ["Investigation", "Perception"],
+    "proficiencies_t": ["Jeweler's Tools"]
+  },
+  "Glassblower": {
+    "traits": [],
+    "proficiencies": ["Investigation", "Perception"],
+    "proficiencies_t": ["Glassblower's Tools"]
+  },
+  "Bookbinder": {
+    "traits": [],
+    "proficiencies": ["History", "Investigation"],
+    "proficiencies_t": ["Calligrapher's Supplies", "Leatherworker's Tools"]
+  },
+  "Locksmith": {
+    "traits": [
+      {
+        "name": "Conversational Mechanisms",
+        "description": "The Locksmith has advantage on Investigation checks involving locks, mechanisms, and traps. They can identify the maker, quality, and whether a lock has been tampered with by touch alone, without a check."
+      }
+    ],
+    "proficiencies": ["Investigation", "Sleight of Hand"],
+    "proficiencies_t": ["Thieves' Tools", "Tinker's Tools"]
+  },
+  "Clockmaker": {
+    "traits": [
+      {
+        "name": "Deviation Sense",
+        "description": "The Clockmaker has advantage on Perception checks made to notice when something has been altered, tampered with, or disturbed. They cannot be surprised by mechanical traps."
+      }
+    ],
+    "proficiencies": ["Investigation", "Perception"],
+    "proficiencies_t": ["Tinker's Tools"]
+  },
+  "Engineer": {
+    "traits": [],
+    "proficiencies": ["Arcana", "Investigation"],
+    "proficiencies_t": ["Mason's Tools", "Tinker's Tools"]
+  },
+  "Factory Worker": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Perception"],
+    "proficiencies_t": ["Tinker's Tools"]
+  },
+  "Tattoo Artist": {
+    "traits": [
+      {
+        "name": "Worn Confessions",
+        "description": "The Tattoo Artist has advantage on Insight checks. Creatures have disadvantage on Deception checks against the Tattoo Artist during or immediately after a tattooing session."
+      }
+    ],
+    "proficiencies": ["Insight", "Perception"],
+    "proficiencies_t": ["Painter's Supplies"]
+  },
+  "Baker": {
+    "traits": [],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": ["Cook's Utensils"]
+  },
+  "Brewer": {
+    "traits": [],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": ["Brewer's Supplies"]
+  },
+  "Vintner": {
+    "traits": [],
+    "proficiencies": ["Nature", "Persuasion"],
+    "proficiencies_t": ["Brewer's Supplies"]
+  },
+  "Miller": {
+    "traits": [],
+    "proficiencies": ["Athletics", "Nature"],
+    "proficiencies_t": ["Carpenter's Tools"]
+  },
+  "Scholar": {
+    "traits": [],
+    "proficiencies": ["Arcana", "History"],
+    "proficiencies_t": ["Calligrapher's Supplies"]
+  },
+  "Alchemist": {
+    "traits": [
+      {
+        "name": "Volatile Intuition",
+        "description": "The Alchemist has advantage on Investigation checks to identify substances, poisons, and alchemical compounds. They can identify any common substance by smell alone without a check."
+      }
+    ],
+    "proficiencies": ["Arcana", "Investigation"],
+    "proficiencies_t": ["Alchemist's Supplies", "Herbalism Kit"]
+  },
+  "Cartographer": {
+    "traits": [],
+    "proficiencies": ["History", "Nature"],
+    "proficiencies_t": ["Cartographer's Tools", "Navigator's Tools"]
+  },
+  "Astronomer": {
+    "traits": [],
+    "proficiencies": ["Arcana", "History"],
+    "proficiencies_t": ["Cartographer's Tools"]
+  },
+  "Astrologer": {
+    "traits": [
+      {
+        "name": "Pattern Without Proof",
+        "description": "The Astrologer has advantage on Insight checks. They can cast Augury once per long rest without requiring material components."
+      }
+    ],
+    "proficiencies": ["Arcana", "Insight"],
+    "proficiencies_t": ["Cartographer's Tools"]
+  },
+  "Scribe": {
+    "traits": [],
+    "proficiencies": ["History", "Investigation"],
+    "proficiencies_t": ["Calligrapher's Supplies", "Forgery Kit"]
+  },
+  "Journalist": {
+    "traits": [],
+    "proficiencies": ["Investigation", "Persuasion"],
+    "proficiencies_t": ["Calligrapher's Supplies"]
+  },
+  "Acolyte": {
+    "traits": [],
+    "proficiencies": ["Insight", "Religion"],
+    "proficiencies_t": []
+  },
+  "Inquisitor": {
+    "traits": [
+      {
+        "name": "The Smell of Guilt",
+        "description": "The Inquisitor has advantage on Insight checks made to detect lies. Creatures have disadvantage on Deception checks made against the Inquisitor."
+      }
+    ],
+    "proficiencies": ["Insight", "Intimidation"],
+    "proficiencies_t": ["Forgery Kit"]
+  },
+  "Magistrate": {
+    "traits": [],
+    "proficiencies": ["History", "Insight"],
+    "proficiencies_t": []
+  },
+  "Lawyer": {
+    "traits": [],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Monarch": {
+    "traits": [
+      {
+        "name": "Weight of Command",
+        "description": "The Monarch has advantage on Charisma (Intimidation) and Charisma (Persuasion) checks made against creatures of lower social standing. Creatures must succeed on a DC 13 Wisdom saving throw to take a hostile action against the Monarch in a non-combat social context."
+      }
+    ],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Noble": {
+    "traits": [],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Diplomat": {
+    "traits": [
+      {
+        "name": "Temperature Reading",
+        "description": "The Diplomat has advantage on Insight checks. They cannot be surprised during social interactions and have advantage on Persuasion checks made to de-escalate hostile situations."
+      }
+    ],
+    "proficiencies": ["Insight", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Advisor": {
+    "traits": [
+      {
+        "name": "Debts Remembered",
+        "description": "The Advisor has advantage on History checks related to political figures, noble houses, and court intrigue. When in a city or region they have previously worked in, they always have a contact with access to local power structures."
+      }
+    ],
+    "proficiencies": ["History", "Insight"],
+    "proficiencies_t": []
+  },
+  "Politician": {
+    "traits": [],
+    "proficiencies": ["Deception", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Herald": {
+    "traits": [],
+    "proficiencies": ["History", "Performance"],
+    "proficiencies_t": ["Calligrapher's Supplies"]
+  },
+  "Court Jester": {
+    "traits": [
+      {
+        "name": "Licensed Fool",
+        "description": "The Court Jester has advantage on Insight checks. They have advantage on saving throws against the frightened condition and cannot be intimidated by creatures they have previously performed for."
+      }
+    ],
+    "proficiencies": ["Insight", "Performance"],
+    "proficiencies_t": ["Disguise Kit"]
+  },
+  "Musician": {
+    "traits": [],
+    "proficiencies": ["Performance", "Persuasion"],
+    "proficiencies_t": ["Musical Instrument"]
+  },
+  "Actor": {
+    "traits": [],
+    "proficiencies": ["Deception", "Performance"],
+    "proficiencies_t": ["Disguise Kit"]
+  },
+  "Painter": {
+    "traits": [],
+    "proficiencies": ["History", "Perception"],
+    "proficiencies_t": ["Painter's Supplies"]
+  },
+  "Storyteller": {
+    "traits": [],
+    "proficiencies": ["History", "Performance"],
+    "proficiencies_t": []
+  },
+  "Poet": {
+    "traits": [],
+    "proficiencies": ["History", "Performance"],
+    "proficiencies_t": ["Calligrapher's Supplies"]
+  },
+  "Servant": {
+    "traits": [
+      {
+        "name": "Perfectly Invisible",
+        "description": "The Servant has advantage on Stealth checks made while performing domestic tasks. They have advantage on Perception checks made to overhear conversations in buildings they work or have worked in."
+      }
+    ],
+    "proficiencies": ["Insight", "Perception"],
+    "proficiencies_t": []
+  },
+  "Governess": {
+    "traits": [],
+    "proficiencies": ["History", "Persuasion"],
+    "proficiencies_t": ["Calligrapher's Supplies"]
+  },
+  "Gladiator": {
+    "traits": [
+      {
+        "name": "Performed Suffering",
+        "description": "The Gladiator has advantage on Charisma (Performance) checks. They have advantage on saving throws against the frightened condition when in front of an audience of three or more creatures."
+      }
+    ],
+    "proficiencies": ["Athletics", "Performance"],
+    "proficiencies_t": ["Dice Set"]
+  },
+  "Healer": {
+    "traits": [],
+    "proficiencies": ["Insight", "Medicine"],
+    "proficiencies_t": ["Herbalism Kit"]
+  },
+  "Undertaker": {
+    "traits": [
+      {
+        "name": "Letter of Endings",
+        "description": "The Undertaker can determine the cause and approximate time of death of a corpse by examining it for 1 minute. They have advantage on Medicine checks involving the dead or dying."
+      }
+    ],
+    "proficiencies": ["Investigation", "Medicine"],
+    "proficiencies_t": []
+  },
+  "Beggar": {
+    "traits": [
+      {
+        "name": "Below Notice",
+        "description": "The Beggar has advantage on Stealth checks in urban environments. Guards and authority figures must succeed on a DC 12 Insight check to consider the Beggar a person of interest during investigations."
+      }
+    ],
+    "proficiencies": ["Insight", "Persuasion"],
+    "proficiencies_t": []
+  },
+  "Rat Catcher": {
+    "traits": [
+      {
+        "name": "Two Cities",
+        "description": "The Rat Catcher has advantage on Investigation checks to find hidden passages, sewer access points, and forgotten infrastructure in urban environments. They always know the general layout of a settlement's underbelly without a check."
+      }
+    ],
+    "proficiencies": ["Investigation", "Stealth"],
+    "proficiencies_t": []
+  }
+}

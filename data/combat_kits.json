@@ -6,6 +6,7 @@
             {"name": "Surprise Attack", "description": "If the Ambusher surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -16,6 +17,7 @@
             {"name": "Tavern Brawler", "description": "The barkeeper has proficiency with improvised weapons and Haymaker strikes. Their Haymaker strike damage is 1d4 + their Strength modifier."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -26,9 +28,9 @@
             {"name": "Relentless", "description": "If the Berserker takes damage that reduces it to 0 hit points but doesn't kill it outright, it drops to 1 hit point instead. It can only use this trait once per long rest."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
-
     },
     "Blacksmith": {
         "weapons": ["Warhammer"],
@@ -36,7 +38,8 @@
             {"name": "Master Craftsman", "description": "The blacksmith has proficiency with artisan's tools (Smith's Tools) and can use them to create or repair weapons and armor."},
             {"name": "Iron Lung", "description": "The blacksmith can hold their breath for an extended period, allowing them to work in hazardous environments without needing to surface for air."}
         ],
-        "proficiencies": ["Smith's Tools"],
+        "proficiencies": [],
+        "proficiencies_t": ["Smith's Tools"],
         "resistances": [],
         "senses": []
     },
@@ -47,6 +50,7 @@
             {"name": "Crimson Hex", "description": "The Blood Hunter can place a hex on a creature within 30 feet of them. The Blood Hunter has advantage on attack rolls against the hexed creature and disadvantage on attack rolls against all other creatures. This feature cannot be used again until the hexed creature drops to 0 hit points."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -57,6 +61,7 @@
             {"name": "Shield Wall", "description": "The Bodyguard can use their action to grant themselves and all allies within 5 feet of them a +2 bonus to AC until the start of their next turn. This trait can only be used once per combat encounter."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -67,6 +72,7 @@
             {"name": "Heavy Hitter", "description": "When the Brawler hits with a Haymaker, they can choose to deal an additional 1d4 damage. This trait can only be used once per turn."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -76,7 +82,8 @@
             {"name": "Culinary Expertise", "description": "The Chef has proficiency with cook's utensils and can use them to create meals that provide various benefits, such as temporary hit points or advantage on certain skill checks."},
             {"name": "Wok Toss", "description": "The Chef can as a action, throw their wok at a target within 20 feet. The target must make a DC 12 Dexterity saving throw, taking 1d6 bludgeoning damage and be knocked prone on a failed save."}
         ],
-        "proficiencies": ["Cook's Utensils"],
+        "proficiencies": [],
+        "proficiencies_t": ["Cook's Utensils"],
         "resistances": [],
         "senses": []
     },
@@ -86,7 +93,8 @@
             {"name": "Sneaky", "description": "The Criminal has proficiency in the Stealth skill and can attempt to hide even when only lightly obscured."},
             {"name": "Thief's Tools", "description": "The Criminal has proficiency with thieves' tools and can use them to pick locks and disarm traps."}
         ],
-        "proficiencies": ["Stealth", "Thieves' Tools"],
+        "proficiencies": ["Stealth"],
+        "proficiencies_t": ["Thieves' Tools"],
         "resistances": [],
         "senses": []
     },
@@ -97,6 +105,7 @@
             {"name": "Inspiring Presence", "description": "The Commander can use their action to inspire their allies. Each ally within 30 feet of the Commander that can see or hear them gains temporary hit points equal to the Commander's level + their Charisma modifier. This trait can only be used once per long rest."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -107,6 +116,7 @@
             {"name": "Call of the Void", "description": "The Doomsayer can use their action to unleash a wave of necrotic energy in a 15-foot cone. Each creature in the area must make a DC 13 Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. This trait can only be used once per combat encounter."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -117,6 +127,7 @@
             {"name": "Riposte", "description": "When a creature misses the Duelist with a melee attack, the Duelist can use their reaction to make a melee weapon attack against the creature."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -127,6 +138,7 @@
             {"name": "War Magic", "description": "When the Eldritch Knight uses their action to cast a cantrip, they can make one weapon attack as a bonus action."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -137,6 +149,7 @@
             {"name": "Purely Organic", "description": "The Farmer has resistance to poison damage and advantage on saving throws against being poisoned."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [{"name": "Poison", "damage_reduction": "half"}],
         "senses": []
     },
@@ -146,7 +159,8 @@
             {"name": "Undead Expertise", "description": "The Grave Digger has advantage on attack rolls against all undead creatures."},
             {"name": "Darkvision", "description": "The Grave Digger can see in darkness as if it were dim light and darkness as if it were dim light, up to 60 feet."}
         ],
-        "proficiencies": ["Thieves' Tools"],
+        "proficiencies": [],
+        "proficiencies_t": ["Thieves' Tools"],
         "resistances": [],
         "senses": [
             {"name": "Darkvision", "range": 60}
@@ -159,6 +173,7 @@
             {"name": "Shadow Step", "description": "The Hexblade can use their bonus action to teleport up to 30 feet to an unoccupied space they can see that is in dim light or darkness."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -169,6 +184,7 @@
             {"name": "Surprise!", "description": "The Inquisitor has advantage on attack rolls against any creature that hasn't taken a turn in the combat yet. Quite unexpected."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -179,6 +195,7 @@
             {"name": "Trample", "description": "When the Juggernaut moves at least 20 feet straight toward a creature and then hits it with a Greataxe attack on the same turn, that target must succeed on a DC 15 Strength saving throw or be knocked prone."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -189,6 +206,7 @@
             {"name": "Defender of the Realm", "description": "The Knight can use their action to grant themselves and all allies within 5 feet of them a +2 bonus to AC until the start of their next turn. This trait can only be used once per combat encounter."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -199,6 +217,7 @@
             {"name": "One with the world.", "description": "The Ki Fighter can use their action to enter a state of heightened awareness, granting them advantage on Wisdom (Perception) checks and saving throws against being frightened for 1 minute. This trait can only be used once per long rest."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -209,6 +228,7 @@
             {"name": "Woodcutter's Strength", "description": "The Lumberjack has advantage on Strength checks and saving throws."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -219,6 +239,7 @@
             {"name": "Lay on Hands", "description": "The Paladin can use their action to touch a creature and restore a number of hit points equal to their Paladin level x 5. This trait can only be used once per long rest."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -229,6 +250,7 @@
             {"name": "Psychic Assault", "description": "The Psion can use their action to unleash a wave of psychic energy in a 15-foot cone. Each creature in the area must make a DC 13 Intelligence saving throw, taking 2d6 psychic damage on a failed save, or half as much damage on a successful one. This trait can only be used once per combat encounter."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -239,6 +261,7 @@
             {"name": "Long Range", "description": "The Sharpshooter's ranged weapon attacks ignore disadvantage from long range."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -249,6 +272,7 @@
             {"name": "Double Shield", "description": "The Shield Bearer while wielding a shield in each hand, can use their action to gain a +4 bonus to AC until the start of their next turn. This trait can only be used once per combat encounter."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -259,6 +283,7 @@
             {"name": "Hit and Run", "description": "When the Skirmisher makes a ranged weapon attack, they can choose to move up to half their speed without provoking opportunity attacks."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -269,6 +294,7 @@
             {"name": "Headshot", "description": "When the Sniper the uses their attack action to make a ranged weapon attack, they can choose to roll with disadvantage and if they manage to critically hit, the target instantly dies."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -279,6 +305,7 @@
             {"name": "Arcane Shield", "description": "The Spellblade can use their reaction to create a magical shield that grants them a +2 bonus to AC against one attack that would hit them. This trait can only be used once per turn."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     },
@@ -289,9 +316,9 @@
             {"name": "Gale Force", "description": "When the Wind Dancer hits a creature with a melee weapon attack, they can choose to unleash a gust of wind that pushes the target 10 feet away from them in a straight line. This trait can only be used once per turn."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
-
     },
     "Zealot": {
         "weapons": ["Morningstar"],
@@ -300,6 +327,7 @@
             {"name": "Divine Fury", "description": "When the Zealot hits a creature with a weapon attack, they can choose to deal an extra 1d6 radiant damage. This trait can only be used once per turn."}
         ],
         "proficiencies": [],
+        "proficiencies_t": [],
         "resistances": [],
         "senses": []
     }
