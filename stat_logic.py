@@ -27,6 +27,10 @@ def generate_stats(cr: str, base: str, primary: str | None, secondary: str | Non
     return stats
 
 
+def generate_stat_modifiers(stats: dict[str, int]) -> dict[str, int]:
+    """Takes a dict of stat values and returns a dict of corresponding modifiers."""
+    return {stat: (value - 10) // 2 for stat, value in stats.items()}
+
 def reorder_stats(base: str, primary: str | None, secondary: str | None) -> list[str]:
     """Takes primary and secondary stat tags and a base category, returns a list of
     all six stat tags in priority order. If provided, primary is placed first and
