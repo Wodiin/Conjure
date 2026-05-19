@@ -21,22 +21,21 @@ def get_stat_array(cr: str) -> list[int]:
         if int_stat > cr_index:
             break
 
-    # Edge case: CR 30 — no band above, return ceiling array as a copy
+    # Edge case: CR 30 - no band above, return ceiling array as a copy
     if len(next_cr_list) == len(CR_STATS):
         final_array = list(CR_STATS[next_cr_list[-1]])
         return final_array
 
-    # Edge case: CR 0 — only one band collected, return it as a copy
-    elif len(next_cr_list) == 1:
+    # Edge case: CR 0 - only one band collected, return it as a copy
+    if len(next_cr_list) == 1:
         final_array = list(CR_STATS[next_cr_list[0]])
         return final_array
 
     # Normal case: interpolate between current band and next band
-    else:
-        next_band_cr: int | float = cr_to_num(next_cr_list[-1])
-        current_band_cr: int | float = cr_to_num(next_cr_list[-2])
-        next_band_array: list[int] = CR_STATS[next_cr_list[-1]]
-        base_array: list[int] = CR_STATS[next_cr_list[-2]]
+    next_band_cr: int | float = cr_to_num(next_cr_list[-1])
+    current_band_cr: int | float = cr_to_num(next_cr_list[-2])
+    next_band_array: list[int] = CR_STATS[next_cr_list[-1]]
+    base_array: list[int] = CR_STATS[next_cr_list[-2]]
 
     # Calculate how far into the band the chosen CR sits
     band_size: int | float = next_band_cr - current_band_cr
@@ -58,5 +57,4 @@ def cr_to_num(cr_str: str) -> int | float:
     if "/" in cr_str:
         num, denom = cr_str.split("/")
         return int(num) / int(denom)
-    else:
-        return int(cr_str)
+    return int(cr_str)
