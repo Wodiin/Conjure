@@ -2,7 +2,7 @@
     "0": {
         "xp": 10,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 3,
         "attack_bonus": 3,
         "damage_per_round": 0,
@@ -11,7 +11,7 @@
     "1/8": {
         "xp": 25,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 21,
         "attack_bonus": 3,
         "damage_per_round": 2,
@@ -20,7 +20,7 @@
     "1/4": {
         "xp": 50,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 42,
         "attack_bonus": 3,
         "damage_per_round": 4,
@@ -29,7 +29,7 @@
     "1/2": {
         "xp": 100,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 60,
         "attack_bonus": 3,
         "damage_per_round": 7,
@@ -38,7 +38,7 @@
     "1": {
         "xp": 200,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 78,
         "attack_bonus": 3,
         "damage_per_round": 11,
@@ -47,7 +47,7 @@
     "2": {
         "xp": 450,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 93,
         "attack_bonus": 3,
         "damage_per_round": 17,
@@ -56,7 +56,7 @@
     "3": {
         "xp": 700,
         "proficiency_bonus": 2,
-        "armor_class": 13,
+        "armour_class": 13,
         "hit_points": 108,
         "attack_bonus": 4,
         "damage_per_round": 23,
@@ -65,7 +65,7 @@
     "4": {
         "xp": 1100,
         "proficiency_bonus": 2,
-        "armor_class": 14,
+        "armour_class": 14,
         "hit_points": 123,
         "attack_bonus": 5,
         "damage_per_round": 29,
@@ -74,7 +74,7 @@
     "5": {
         "xp": 1800,
         "proficiency_bonus": 3,
-        "armor_class": 15,
+        "armour_class": 15,
         "hit_points": 138,
         "attack_bonus": 6,
         "damage_per_round": 35,
@@ -83,7 +83,7 @@
     "6": {
         "xp": 2300,
         "proficiency_bonus": 3,
-        "armor_class": 15,
+        "armour_class": 15,
         "hit_points": 153,
         "attack_bonus": 6,
         "damage_per_round": 41,
@@ -92,7 +92,7 @@
     "7": {
         "xp": 2900,
         "proficiency_bonus": 3,
-        "armor_class": 15,
+        "armour_class": 15,
         "hit_points": 168,
         "attack_bonus": 6,
         "damage_per_round": 47,
@@ -101,7 +101,7 @@
     "8": {
         "xp": 3900,
         "proficiency_bonus": 3,
-        "armor_class": 16,
+        "armour_class": 16,
         "hit_points": 183,
         "attack_bonus": 7,
         "damage_per_round": 53,
@@ -110,7 +110,7 @@
     "9": {
         "xp": 5000,
         "proficiency_bonus": 4,
-        "armor_class": 16,
+        "armour_class": 16,
         "hit_points": 198,
         "attack_bonus": 7,
         "damage_per_round": 59,
@@ -119,7 +119,7 @@
     "10": {
         "xp": 5900,
         "proficiency_bonus": 4,
-        "armor_class": 17,
+        "armour_class": 17,
         "hit_points": 213,
         "attack_bonus": 7,
         "damage_per_round": 65,
@@ -128,7 +128,7 @@
     "11": {
         "xp": 7200,
         "proficiency_bonus": 4,
-        "armor_class": 17,
+        "armour_class": 17,
         "hit_points": 228,
         "attack_bonus": 8,
         "damage_per_round": 71,
@@ -137,7 +137,7 @@
     "12": {
         "xp": 8400,
         "proficiency_bonus": 4,
-        "armor_class": 17,
+        "armour_class": 17,
         "hit_points": 243,
         "attack_bonus": 8,
         "damage_per_round": 77,
@@ -146,7 +146,7 @@
     "13": {
         "xp": 10000,
         "proficiency_bonus": 5,
-        "armor_class": 18,
+        "armour_class": 18,
         "hit_points": 258,
         "attack_bonus": 8,
         "damage_per_round": 83,
@@ -155,7 +155,7 @@
     "14": {
         "xp": 11500,
         "proficiency_bonus": 5,
-        "armor_class": 18,
+        "armour_class": 18,
         "hit_points": 273,
         "attack_bonus": 8,
         "damage_per_round": 89,
@@ -164,7 +164,7 @@
     "15": {
         "xp": 13000,
         "proficiency_bonus": 5,
-        "armor_class": 18,
+        "armour_class": 18,
         "hit_points": 288,
         "attack_bonus": 8,
         "damage_per_round": 95,
@@ -173,7 +173,7 @@
     "16": {
         "xp": 15000,
         "proficiency_bonus": 5,
-        "armor_class": 18,
+        "armour_class": 18,
         "hit_points": 303,
         "attack_bonus": 9,
         "damage_per_round": 101,
@@ -182,7 +182,7 @@
     "17": {
         "xp": 18000,
         "proficiency_bonus": 6,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 318,
         "attack_bonus": 10,
         "damage_per_round": 107,
@@ -191,7 +191,7 @@
     "18": {
         "xp": 20000,
         "proficiency_bonus": 6,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 333,
         "attack_bonus": 10,
         "damage_per_round": 113,
@@ -200,7 +200,7 @@
     "19": {
         "xp": 22000,
         "proficiency_bonus": 6,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 348,
         "attack_bonus": 10,
         "damage_per_round": 119,
@@ -209,7 +209,7 @@
     "20": {
         "xp": 25000,
         "proficiency_bonus": 6,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 378,
         "attack_bonus": 10,
         "damage_per_round": 131,
@@ -218,7 +218,7 @@
     "21": {
         "xp": 33000,
         "proficiency_bonus": 7,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 423,
         "attack_bonus": 11,
         "damage_per_round": 149,
@@ -227,7 +227,7 @@
     "22": {
         "xp": 41000,
         "proficiency_bonus": 7,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 468,
         "attack_bonus": 11,
         "damage_per_round": 167,
@@ -236,7 +236,7 @@
     "23": {
         "xp": 50000,
         "proficiency_bonus": 7,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 513,
         "attack_bonus": 11,
         "damage_per_round": 185,
@@ -245,7 +245,7 @@
     "24": {
         "xp": 62000,
         "proficiency_bonus": 7,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 558,
         "attack_bonus": 11,
         "damage_per_round": 203,
@@ -254,7 +254,7 @@
     "25": {
         "xp": 75000,
         "proficiency_bonus": 8,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 603,
         "attack_bonus": 12,
         "damage_per_round": 221,
@@ -263,7 +263,7 @@
     "26": {
         "xp": 90000,
         "proficiency_bonus": 8,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 648,
         "attack_bonus": 12,
         "damage_per_round": 239,
@@ -272,7 +272,7 @@
     "27": {
         "xp": 105000,
         "proficiency_bonus": 8,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 693,
         "attack_bonus": 13,
         "damage_per_round": 257,
@@ -281,7 +281,7 @@
     "28": {
         "xp": 120000,
         "proficiency_bonus": 8,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 738,
         "attack_bonus": 13,
         "damage_per_round": 275,
@@ -290,7 +290,7 @@
     "29": {
         "xp": 135000,
         "proficiency_bonus": 9,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 782,
         "attack_bonus": 13,
         "damage_per_round": 293,
@@ -299,7 +299,7 @@
     "30": {
         "xp": 155000,
         "proficiency_bonus": 9,
-        "armor_class": 19,
+        "armour_class": 19,
         "hit_points": 827,
         "attack_bonus": 14,
         "damage_per_round": 311,

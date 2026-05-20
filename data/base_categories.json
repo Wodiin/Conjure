@@ -3,40 +3,40 @@
         "stat_priority": ["STR", "CON", "DEX", "WIS", "CHA", "INT"],
         "hit_die": 10,
         "armour": {
-            "ac_default": 14,
-            "ac_physical": 16
+            "ac_mod_default": 2,
+            "ac_mod_enhanced": 4
         }
     },
     "Half Caster": {
         "stat_priority": ["CHA", "STR", "CON", "DEX", "WIS", "INT"],
         "hit_die": 8,
         "armour": {
-            "ac_default": 12,
-            "ac_physical": 14
+            "ac_mod_default": 1,
+            "ac_mod_enhanced": 2
         }
     },
     "Full Caster": {
         "stat_priority": ["INT", "CHA", "CON", "DEX", "WIS", "STR"],
         "hit_die": 6,
         "armour": {
-            "ac_default": 10,
-            "ac_physical": 12
+            "ac_mod_default": -2,
+            "ac_mod_enhanced": 0
         }
     },
     "Ranged": {
         "stat_priority": ["DEX", "CON", "WIS", "CHA", "STR", "INT"],
         "hit_die": 8,
         "armour": {
-            "ac_default": 12,
-            "ac_physical": 14
+            "ac_mod_default": 1,
+            "ac_mod_enhanced": 2
         }
     },
     "Non Combatant": {
         "stat_priority": ["WIS", "CHA", "INT", "CON", "DEX", "STR"],
         "hit_die": 6,
         "armour": {
-            "ac_default": 8,
-            "ac_physical": 10
+            "ac_mod_default": -4,
+            "ac_mod_enhanced": -2
         }
     }
 }

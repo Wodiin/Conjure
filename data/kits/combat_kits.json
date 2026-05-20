@@ -8,7 +8,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Barkeeper": {
         "weapons": ["Broken Bottle", "Haymaker"],
@@ -19,7 +20,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Berserker": {
         "weapons": ["Greataxe"],
@@ -30,7 +32,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Blacksmith": {
         "weapons": ["Warhammer"],
@@ -41,7 +44,8 @@
         "proficiencies": [],
         "proficiencies_t": ["Smith's Tools"],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Blood Hunter": {
         "weapons": ["Longsword", "Longbow"],
@@ -52,7 +56,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Bodyguard": {
         "weapons": ["Longsword", "Shield Bash"],
@@ -63,7 +68,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Brawler": {
         "weapons": ["Haymaker"],
@@ -74,7 +80,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Chef": {
         "weapons": ["Wok"],
@@ -85,7 +92,8 @@
         "proficiencies": [],
         "proficiencies_t": ["Cook's Utensils"],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Criminal": {
         "weapons": ["Shortsword", "Light Crossbow"],
@@ -96,7 +104,8 @@
         "proficiencies": ["Stealth"],
         "proficiencies_t": ["Thieves' Tools"],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Commander": {
         "weapons": ["Longsword", "Longbow"],
@@ -107,7 +116,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Doomsayer": {
         "weapons": ["Scythe"],
@@ -118,7 +128,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Duelist": {
         "weapons": ["Rapier"],
@@ -129,7 +140,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Eldritch Knight": {
         "weapons": ["Longsword", "Shield Bash"],
@@ -140,7 +152,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Farmer": {
         "weapons": ["Pitchfork"],
@@ -151,7 +164,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [{"name": "Poison", "damage_reduction": "half"}],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Grave Digger": {
         "weapons": ["Shovel"],
@@ -164,7 +178,8 @@
         "resistances": [],
         "senses": [
             {"name": "Darkvision", "range": 60}
-        ]
+        ],
+        "enhanced_ac": false
     },
     "Hexblade": {
         "weapons": ["Longsword", "Shield Bash"],
@@ -175,7 +190,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Inquisitor": {
         "weapons": ["Dagger", "Light Crossbow"],
@@ -186,7 +202,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Juggernaut": {
         "weapons": ["Greataxe"],
@@ -197,7 +214,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Knight": {
         "weapons": ["Longsword", "Shield Bash"],
@@ -208,7 +226,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Ki Fighter": {
         "weapons": ["Ki Strike"],
@@ -219,7 +238,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Lumberjack": {
         "weapons": ["Handaxe"],
@@ -230,7 +250,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Paladin": {
         "weapons": ["Longsword", "Shield Bash"],
@@ -241,7 +262,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Psion": {
         "weapons": ["Dagger", "Psi Strike"],
@@ -252,7 +274,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Sharpshooter": {
         "weapons": ["Longbow"],
@@ -263,7 +286,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Shield Bearer": {
         "weapons": ["Shield Bash"],
@@ -274,7 +298,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Skirmisher": {
         "weapons": ["Shortsword","Shortbow"],
@@ -285,7 +310,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Sniper": {
         "weapons": ["Longbow"],
@@ -296,7 +322,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Spellblade": {
         "weapons": ["Longsword"],
@@ -307,7 +334,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     },
     "Wind Dancer": {
         "weapons": ["Scimitar"],
@@ -318,7 +346,8 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": true
     },
     "Zealot": {
         "weapons": ["Morningstar"],
@@ -329,6 +358,7 @@
         "proficiencies": [],
         "proficiencies_t": [],
         "resistances": [],
-        "senses": []
+        "senses": [],
+        "enhanced_ac": false
     }
 }
