@@ -16,7 +16,7 @@
         }
     },
     "Full Caster": {
-        "stat_priority": ["INT", "CHA", "CON", "DEX", "WIS", "STR"],
+        "stat_priority": ["INT", "CHA", "WIS", "DEX", "CON", "STR"],
         "hit_die": 6,
         "armour": {
             "ac_mod_default": -2,
@@ -32,8 +32,8 @@
         }
     },
     "Non Combatant": {
-        "stat_priority": ["WIS", "CHA", "INT", "CON", "DEX", "STR"],
-        "hit_die": 6,
+        "stat_priority": ["WIS", "CHA", "INT", "DEX", "STR", "CON"],
+        "hit_die": 4,
         "armour": {
             "ac_mod_default": -4,
             "ac_mod_enhanced": -2

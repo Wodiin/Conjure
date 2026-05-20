@@ -6,7 +6,8 @@
         "hit_points": 3,
         "attack_bonus": 3,
         "damage_per_round": 0,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 1
     },
     "1/8": {
         "xp": 25,
@@ -15,7 +16,8 @@
         "hit_points": 21,
         "attack_bonus": 3,
         "damage_per_round": 2,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 5
     },
     "1/4": {
         "xp": 50,
@@ -24,7 +26,8 @@
         "hit_points": 42,
         "attack_bonus": 3,
         "damage_per_round": 4,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 8
     },
     "1/2": {
         "xp": 100,
@@ -33,7 +36,8 @@
         "hit_points": 60,
         "attack_bonus": 3,
         "damage_per_round": 7,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 11
     },
     "1": {
         "xp": 200,
@@ -42,7 +46,8 @@
         "hit_points": 78,
         "attack_bonus": 3,
         "damage_per_round": 11,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 13
     },
     "2": {
         "xp": 450,
@@ -51,7 +56,8 @@
         "hit_points": 93,
         "attack_bonus": 3,
         "damage_per_round": 17,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 15
     },
     "3": {
         "xp": 700,
@@ -60,7 +66,8 @@
         "hit_points": 108,
         "attack_bonus": 4,
         "damage_per_round": 23,
-        "save_dc": 13
+        "save_dc": 13,
+        "hit_dice_count": 17
     },
     "4": {
         "xp": 1100,
@@ -69,7 +76,8 @@
         "hit_points": 123,
         "attack_bonus": 5,
         "damage_per_round": 29,
-        "save_dc": 14
+        "save_dc": 14,
+        "hit_dice_count": 18
     },
     "5": {
         "xp": 1800,
@@ -78,7 +86,8 @@
         "hit_points": 138,
         "attack_bonus": 6,
         "damage_per_round": 35,
-        "save_dc": 15
+        "save_dc": 15,
+        "hit_dice_count": 19
     },
     "6": {
         "xp": 2300,
@@ -87,7 +96,8 @@
         "hit_points": 153,
         "attack_bonus": 6,
         "damage_per_round": 41,
-        "save_dc": 15
+        "save_dc": 15,
+        "hit_dice_count": 20
     },
     "7": {
         "xp": 2900,
@@ -96,7 +106,8 @@
         "hit_points": 168,
         "attack_bonus": 6,
         "damage_per_round": 47,
-        "save_dc": 15
+        "save_dc": 15,
+        "hit_dice_count": 21
     },
     "8": {
         "xp": 3900,
@@ -105,7 +116,8 @@
         "hit_points": 183,
         "attack_bonus": 7,
         "damage_per_round": 53,
-        "save_dc": 16
+        "save_dc": 16,
+        "hit_dice_count": 23
     },
     "9": {
         "xp": 5000,
@@ -114,7 +126,8 @@
         "hit_points": 198,
         "attack_bonus": 7,
         "damage_per_round": 59,
-        "save_dc": 16
+        "save_dc": 16,
+        "hit_dice_count": 23
     },
     "10": {
         "xp": 5900,
@@ -123,7 +136,8 @@
         "hit_points": 213,
         "attack_bonus": 7,
         "damage_per_round": 65,
-        "save_dc": 16
+        "save_dc": 16,
+        "hit_dice_count": 25
     },
     "11": {
         "xp": 7200,
@@ -132,7 +146,8 @@
         "hit_points": 228,
         "attack_bonus": 8,
         "damage_per_round": 71,
-        "save_dc": 17
+        "save_dc": 17,
+        "hit_dice_count": 26
     },
     "12": {
         "xp": 8400,
@@ -141,7 +156,8 @@
         "hit_points": 243,
         "attack_bonus": 8,
         "damage_per_round": 77,
-        "save_dc": 18
+        "save_dc": 18,
+        "hit_dice_count": 29
     },
     "13": {
         "xp": 10000,
@@ -150,7 +166,8 @@
         "hit_points": 258,
         "attack_bonus": 8,
         "damage_per_round": 83,
-        "save_dc": 18
+        "save_dc": 18,
+        "hit_dice_count": 30
     },
     "14": {
         "xp": 11500,
@@ -159,7 +176,8 @@
         "hit_points": 273,
         "attack_bonus": 8,
         "damage_per_round": 89,
-        "save_dc": 18
+        "save_dc": 18,
+        "hit_dice_count": 31
     },
     "15": {
         "xp": 13000,
@@ -168,7 +186,8 @@
         "hit_points": 288,
         "attack_bonus": 8,
         "damage_per_round": 95,
-        "save_dc": 18
+        "save_dc": 18,
+        "hit_dice_count": 31
     },
     "16": {
         "xp": 15000,
@@ -177,7 +196,8 @@
         "hit_points": 303,
         "attack_bonus": 9,
         "damage_per_round": 101,
-        "save_dc": 18
+        "save_dc": 18,
+        "hit_dice_count": 32
     },
     "17": {
         "xp": 18000,
@@ -186,7 +206,8 @@
         "hit_points": 318,
         "attack_bonus": 10,
         "damage_per_round": 107,
-        "save_dc": 19
+        "save_dc": 19,
+        "hit_dice_count": 32
     },
     "18": {
         "xp": 20000,
@@ -195,7 +216,8 @@
         "hit_points": 333,
         "attack_bonus": 10,
         "damage_per_round": 113,
-        "save_dc": 19
+        "save_dc": 19,
+        "hit_dice_count": 33
     },
     "19": {
         "xp": 22000,
@@ -204,7 +226,8 @@
         "hit_points": 348,
         "attack_bonus": 10,
         "damage_per_round": 119,
-        "save_dc": 19
+        "save_dc": 19,
+        "hit_dice_count": 34
     },
     "20": {
         "xp": 25000,
@@ -213,7 +236,8 @@
         "hit_points": 378,
         "attack_bonus": 10,
         "damage_per_round": 131,
-        "save_dc": 19
+        "save_dc": 19,
+        "hit_dice_count": 35
     },
     "21": {
         "xp": 33000,
@@ -222,7 +246,8 @@
         "hit_points": 423,
         "attack_bonus": 11,
         "damage_per_round": 149,
-        "save_dc": 20
+        "save_dc": 20,
+        "hit_dice_count": 37
     },
     "22": {
         "xp": 41000,
@@ -231,7 +256,8 @@
         "hit_points": 468,
         "attack_bonus": 11,
         "damage_per_round": 167,
-        "save_dc": 20
+        "save_dc": 20,
+        "hit_dice_count": 39
     },
     "23": {
         "xp": 50000,
@@ -240,7 +266,8 @@
         "hit_points": 513,
         "attack_bonus": 11,
         "damage_per_round": 185,
-        "save_dc": 20
+        "save_dc": 20,
+        "hit_dice_count": 40
     },
     "24": {
         "xp": 62000,
@@ -249,7 +276,8 @@
         "hit_points": 558,
         "attack_bonus": 11,
         "damage_per_round": 203,
-        "save_dc": 21
+        "save_dc": 21,
+        "hit_dice_count": 42
     },
     "25": {
         "xp": 75000,
@@ -258,7 +286,8 @@
         "hit_points": 603,
         "attack_bonus": 12,
         "damage_per_round": 221,
-        "save_dc": 21
+        "save_dc": 21,
+        "hit_dice_count": 45
     },
     "26": {
         "xp": 90000,
@@ -267,7 +296,8 @@
         "hit_points": 648,
         "attack_bonus": 12,
         "damage_per_round": 239,
-        "save_dc": 21
+        "save_dc": 21,
+        "hit_dice_count": 48
     },
     "27": {
         "xp": 105000,
@@ -276,7 +306,8 @@
         "hit_points": 693,
         "attack_bonus": 13,
         "damage_per_round": 257,
-        "save_dc": 22
+        "save_dc": 22,
+        "hit_dice_count": 51
     },
     "28": {
         "xp": 120000,
@@ -285,7 +316,8 @@
         "hit_points": 738,
         "attack_bonus": 13,
         "damage_per_round": 275,
-        "save_dc": 22
+        "save_dc": 22,
+        "hit_dice_count": 54
     },
     "29": {
         "xp": 135000,
@@ -294,7 +326,8 @@
         "hit_points": 782,
         "attack_bonus": 13,
         "damage_per_round": 293,
-        "save_dc": 22
+        "save_dc": 22,
+        "hit_dice_count": 58
     },
     "30": {
         "xp": 155000,
@@ -303,6 +336,7 @@
         "hit_points": 827,
         "attack_bonus": 14,
         "damage_per_round": 311,
-        "save_dc": 23
+        "save_dc": 23,
+        "hit_dice_count": 58
     }
 }
