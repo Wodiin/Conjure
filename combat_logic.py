@@ -4,6 +4,9 @@ from data_loader import data
 BASE_CATEGORIES = data['base_categories']
 CR_TABLE = data['cr_table']
 COMBAT_KITS = data['combat_kits']
+WEAPONS = data['weapons']
+RACES = data['races']
+MAGIC_KITS = data['magic_kits']
 
 
 def calculate_ac(cr: str, base: str, primary: str | None, combat_kits: list[str] | None) -> int:
@@ -51,3 +54,62 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
         dice_string = f"{num_dice}d{die_size} + {con_contribution}"
 
     return hp, dice_string
+
+
+def generate_action_data(cr: str, modifiers: dict[str, int], combat_kits: list[str] | None) -> dict:
+    """Generates a dict of action data based on CR, stat modifiers, and combat kits.
+    Determines available actions from combat kits, then calculates relevant values for each action using the appropriate stat modifiers and data."""
+   
+
+
+
+
+
+"""
+    {
+        "Multiattack": {
+            "weapons": {
+                "longsword": 2,
+                "has_shield": True
+            }
+        },
+        "Weapons": {
+            "longsword": {
+                "weapon_type": "melee",
+                "num_of_die": 1,
+                "die_size": 8,
+                "damage_type": "slashing",
+                "to_hit": 5,
+                "damage_bonus": 3,
+                "damage_avg": 7,
+                "reach": 5,
+                "range_min": None,
+                "range_max": None,
+                "targets": 1
+            },
+            "shield_bash": {
+                "weapon_type": "melee",
+                "num_of_die": 1,
+                "die_size": 4,
+                "damage_type": "bludgeoning",
+                "to_hit": 3,
+                "damage_bonus": 1,
+                "damage_avg": 3,
+                "reach": 5,
+                "range_min": None,
+                "range_max": None,
+                "targets": 1
+            }
+        },
+        "Bonus Actions": {
+            "Second Wind": {
+                "description": "The NPC can use a bonus action to regain hit points equal to 1d10 + their fighter level. Once they use this feature, they must finish a short or long rest before they can use it again."
+            }
+        },
+        "Reactions": {
+            "Parry": {
+                "description": "The NPC adds 2 to their AC against one melee attack that would hit them. To do so, the NPC must see the attacker and be wielding a melee weapon."
+            }
+        }
+    }
+"""

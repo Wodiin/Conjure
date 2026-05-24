@@ -1,438 +1,877 @@
 {
     "Aasimar_Necrotic": {
-        "stat_bonus": {"CHA":2, "WIS":1},
+        "stat_bonus": {
+            "CHA": 2,
+            "WIS": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Flying", "distance": 30},
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Flying",
+                "distance": 30
+            },
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Necrotic", "damage_reduction": "Half"}
+            {
+                "name": "Necrotic",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [],
         "traits": [
-            {"name": "Necrotic Shroud", "description": "As an action, the creature can unleash a burst of necrotic energy. Each creature of the creature's choice that is within 10 feet of it and can see it must succeed on a DC 10 Charisma saving throw or take necrotic damage equal to 1d6 + the creature's level, and the creature can choose to frighten the target until the end of its next turn. This trait can be used once per short or long rest."},
-            {"name": "Dark One's Blessing", "description": "When the creature reduces a hostile creature to 0 hit points, it gains temporary hit points equal to its level + its Charisma modifier."}
+            {
+                "name": "Necrotic Shroud",
+                "description": "As an action, the creature can unleash a burst of necrotic energy. Each creature of the creature's choice that is within 10 feet of it and can see it must succeed on a DC 10 Charisma saving throw or take necrotic damage equal to 1d6 + the creature's level, and the creature can choose to frighten the target until the end of its next turn. This trait can be used once per short or long rest."
+            },
+            {
+                "name": "Dark One's Blessing",
+                "description": "When the creature reduces a hostile creature to 0 hit points, it gains temporary hit points equal to its level + its Charisma modifier."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Aasimar_Radiant": {
-        "stat_bonus": {"CHA":2, "WIS":1},
+        "stat_bonus": {
+            "CHA": 2,
+            "WIS": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Flying", "distance": 30},
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Flying",
+                "distance": 30
+            },
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Radiant", "damage_reduction": "Half"}
+            {
+                "name": "Radiant",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [
-            {"name": "Light", "level": 0, "casting_amount":"at will"}
+            {
+                "name": "Light",
+                "level": 0,
+                "casting_amount": "at will"
+            }
         ],
         "traits": [
-            {"name": "Healing Hands", "description": "As an action, the creature can touch a creature to heal it for a number of hit points equal to its level."},
-            {"name": "Light Bearer", "description": "The creature knows the Light cantrip and can cast it at will."}
+            {
+                "name": "Healing Hands",
+                "description": "As an action, the creature can touch a creature to heal it for a number of hit points equal to its level."
+            },
+            {
+                "name": "Light Bearer",
+                "description": "The creature knows the Light cantrip and can cast it at will."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Elf": {
-        "stat_bonus": {"DEX":2},
+        "stat_bonus": {
+            "DEX": 2
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Fey Ancestry", "description": "The creature has advantage on saving throws against being charmed, and magic can't put it to sleep."}
+            {
+                "name": "Fey Ancestry",
+                "description": "The creature has advantage on saving throws against being charmed, and magic can't put it to sleep."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Dwarf": {
-        "stat_bonus": {"CON":2},
+        "stat_bonus": {
+            "CON": 2
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 25}
+            {
+                "name": "Walking",
+                "distance": 25
+            }
         ],
         "resistance": [
-            {"name": "Poison", "damage_reduction": "Half"}
+            {
+                "name": "Poison",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [],
         "traits": [
-            {"name": "Dwarven Resilience", "description": "The creature has advantage on saving throws against poison, and it has resistance against poison damage."}
+            {
+                "name": "Dwarven Resilience",
+                "description": "The creature has advantage on saving throws against poison, and it has resistance against poison damage."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Halfling": {
-        "stat_bonus": {"DEX":2},
+        "stat_bonus": {
+            "DEX": 2
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 25}
+            {
+                "name": "Walking",
+                "distance": 25
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Brave", "description": "The creature has advantage on saving throws against being frightened."}
+            {
+                "name": "Brave",
+                "description": "The creature has advantage on saving throws against being frightened."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Human": {
-        "stat_bonus": {"STR":1, "DEX":1, "CON":1, "INT":1, "WIS":1, "CHA":1},
+        "stat_bonus": {
+            "STR": 1,
+            "DEX": 1,
+            "CON": 1,
+            "INT": 1,
+            "WIS": 1,
+            "CHA": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [],
+        "bonus_actions": [],
         "reactions": []
     },
     "Half Orc": {
-        "stat_bonus": {"STR":2, "CON":1},
+        "stat_bonus": {
+            "STR": 2,
+            "CON": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Relentless Endurance", "description": "When the creature is reduced to 0 hit points but not killed outright, it can drop to 1 hit point instead. This trait can be used once per long rest."}
+            {
+                "name": "Relentless Endurance",
+                "description": "When the creature is reduced to 0 hit points but not killed outright, it can drop to 1 hit point instead. This trait can be used once per long rest."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Tiefling": {
-        "stat_bonus": {"INT":1, "CHA":2},
+        "stat_bonus": {
+            "INT": 1,
+            "CHA": 2
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Fire", "damage_reduction": "Half"}
+            {
+                "name": "Fire",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [
-            {"name": "Thaumaturgy", "level": 0, "casting_amount":"at will"},
-            {"name": "Hellish Rebuke", "level": 1, "casting_amount":"1/day"},
-            {"name": "Darkness", "level": 2, "casting_amount":"1/day"}
+            {
+                "name": "Thaumaturgy",
+                "level": 0,
+                "casting_amount": "at will"
+            },
+            {
+                "name": "Hellish Rebuke",
+                "level": 1,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Darkness",
+                "level": 2,
+                "casting_amount": "1/day"
+            }
         ],
         "traits": [
-            {"name": "Infernal Legacy", "description": "The creature knows the Thaumaturgy cantrip. When it reaches 3rd level, it can cast the Hellish Rebuke spell once as a 2nd-level spell. When it reaches 5th level, it can also cast the Darkness spell once. The creature regains the ability to cast these spells when it finishes a long rest."}
+            {
+                "name": "Infernal Legacy",
+                "description": "The creature knows the Thaumaturgy cantrip. When it reaches 3rd level, it can cast the Hellish Rebuke spell once as a 2nd-level spell. When it reaches 5th level, it can also cast the Darkness spell once. The creature regains the ability to cast these spells when it finishes a long rest."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Dragonborn": {
-        "stat_bonus": {"STR":2, "CHA":1},
+        "stat_bonus": {
+            "STR": 2,
+            "CHA": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Draconic Ancestry", "description": "The creature has a draconic ancestry that grants it a breath weapon and resistance to a damage type associated with its dragon ancestor."}
+            {
+                "name": "Draconic Ancestry",
+                "description": "The creature has a draconic ancestry that grants it a breath weapon and resistance to a damage type associated with its dragon ancestor."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Gnome": {
-        "stat_bonus": {"INT":2},
+        "stat_bonus": {
+            "INT": 2
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Gnome Cunning", "description": "The creature has advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."}
+            {
+                "name": "Gnome Cunning",
+                "description": "The creature has advantage on all Intelligence, Wisdom, and Charisma saving throws against magic."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Githyanki": {
-        "stat_bonus": {"STR":2, "INT":1},
+        "stat_bonus": {
+            "STR": 2,
+            "INT": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [
-            {"name": "Mage Hand", "level": 0, "casting_amount":"at will"},
-            {"name": "Jump", "level": 2, "casting_amount":"1/day"},
-            {"name": "Misty Step", "level": 2, "casting_amount":"1/day"}
+            {
+                "name": "Mage Hand",
+                "level": 0,
+                "casting_amount": "at will"
+            },
+            {
+                "name": "Jump",
+                "level": 2,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Misty Step",
+                "level": 2,
+                "casting_amount": "1/day"
+            }
         ],
         "traits": [
-            {"name": "Psionics", "description": "The creature knows the Mage Hand cantrip. When it reaches 3rd level, it can cast the Jump spell once as a 2nd-level spell. When it reaches 5th level, it can also cast the Misty Step spell once. The creature regains the ability to cast these spells when it finishes a long rest."}
+            {
+                "name": "Psionics",
+                "description": "The creature knows the Mage Hand cantrip. When it reaches 3rd level, it can cast the Jump spell once as a 2nd-level spell. When it reaches 5th level, it can also cast the Misty Step spell once. The creature regains the ability to cast these spells when it finishes a long rest."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Githzerai": {
-        "stat_bonus": {"WIS":2, "INT":1},
+        "stat_bonus": {
+            "WIS": 2,
+            "INT": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Mental Discipline", "description": "The creature has advantage on saving throws against being charmed and frightened."}
+            {
+                "name": "Mental Discipline",
+                "description": "The creature has advantage on saving throws against being charmed and frightened."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Goliath": {
-        "stat_bonus": {"STR":2, "CON":1},
+        "stat_bonus": {
+            "STR": 2,
+            "CON": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [],
+        "bonus_actions": [],
         "reactions": [
-            {"name": "Stone's Endurance", "recharge": "Recharges after a short or long rest", "description": "When the creature takes damage, it can use its reaction to roll a d12 and add its Constitution modifier to the number rolled. The creature reduces the damage by the total. This trait can be used once per short or long rest."}
+            {
+                "name": "Stone's Endurance",
+                "recharge": "Recharges after a short or long rest",
+                "description": "When the creature takes damage, it can use its reaction to roll a d12 and add its Constitution modifier to the number rolled. The creature reduces the damage by the total. This trait can be used once per short or long rest."
+            }
         ]
     },
     "Firbolg": {
-        "stat_bonus": {"WIS":2, "STR":1},
+        "stat_bonus": {
+            "WIS": 2,
+            "STR": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [
-            {"name": "Detect Magic", "level": 1, "casting_amount":"1/day"},
-            {"name": "Disguise Self", "level": 1, "casting_amount":"1/day"}
+            {
+                "name": "Detect Magic",
+                "level": 1,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Disguise Self",
+                "level": 1,
+                "casting_amount": "1/day"
+            }
         ],
-        "traits": [
-            {"name": "Hidden Step", "description": "As a bonus action, the creature can turn invisible until the start of its next turn or until it attacks, makes a damage roll, or forces someone to make a saving throw. This trait can be used once per short or long rest."}
+        "traits": [],
+        "bonus_actions": [
+            {
+                "name": "Hidden Step",
+                "description": "As a bonus action, the creature can turn invisible until the start of its next turn or until it attacks, makes a damage roll, or forces someone to make a saving throw. This trait can be used once per short or long rest."
+            }
         ],
         "reactions": []
     },
     "Tabaxi": {
-        "stat_bonus": {"DEX":2, "CHA":1},
+        "stat_bonus": {
+            "DEX": 2,
+            "CHA": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30},
-            {"name": "Climbing", "distance": 20}
+            {
+                "name": "Walking",
+                "distance": 30
+            },
+            {
+                "name": "Climbing",
+                "distance": 20
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [],
+        "bonus_actions": [],
         "reactions": []
     },
     "Kenku": {
-        "stat_bonus": {"DEX":2, "WIS":1},
+        "stat_bonus": {
+            "DEX": 2,
+            "WIS": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Mimicry", "description": "The creature can mimic sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful Insight check against the creature's Charisma (Deception) check."},
-            {"name": "Ambusher", "description": "The creature has advantage on attack rolls against any creature it has surprised."}
+            {
+                "name": "Mimicry",
+                "description": "The creature can mimic sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful Insight check against the creature's Charisma (Deception) check."
+            },
+            {
+                "name": "Ambusher",
+                "description": "The creature has advantage on attack rolls against any creature it has surprised."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Lizardfolk": {
-        "stat_bonus": {"CON":2, "WIS":1},
+        "stat_bonus": {
+            "CON": 2,
+            "WIS": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30},
-            {"name": "Swimming", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            },
+            {
+                "name": "Swimming",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Natural Armor", "description": "The creature has a base AC of 13 + its Dexterity modifier."},
-            {"name": "Bite", "description": "The creature can use its action to make a bite attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier piercing damage."}
+            {
+                "name": "Natural Armor",
+                "description": "The creature has a base AC of 13 + its Dexterity modifier."
+            },
+            {
+                "name": "Bite",
+                "description": "The creature can use its action to make a bite attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier piercing damage."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Triton": {
-        "stat_bonus": {"CON":1, "STR":1, "CHA":1},
-        "sense": [
-        ],
+        "stat_bonus": {
+            "CON": 1,
+            "STR": 1,
+            "CHA": 1
+        },
+        "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30},
-            {"name": "Swimming", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            },
+            {
+                "name": "Swimming",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Cold", "damage_reduction": "Half"}
+            {
+                "name": "Cold",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [
-                {"name": "Fog Cloud", "level": 1, "casting_amount":"1/day"},
-                {"name": "Gust of Wind", "level": 2, "casting_amount":"1/day"},
-                {"name": "Wall of Water", "level": 3, "casting_amount":"1/day"}
+            {
+                "name": "Fog Cloud",
+                "level": 1,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Gust of Wind",
+                "level": 2,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Wall of Water",
+                "level": 3,
+                "casting_amount": "1/day"
+            }
         ],
         "traits": [
-            {"name": "Amphibious", "description": "The creature can breathe air and water."}
+            {
+                "name": "Amphibious",
+                "description": "The creature can breathe air and water."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Yuan-ti": {
-        "stat_bonus": {"INT":1, "CHA":2},
+        "stat_bonus": {
+            "INT": 1,
+            "CHA": 2
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Poison", "damage_reduction": "Full"}
+            {
+                "name": "Poison",
+                "damage_reduction": "Full"
+            }
         ],
         "spells": [],
         "traits": [
-            {"name": "Magic Resistance", "description": "The creature has advantage on saving throws against spells and other magical effects."}
+            {
+                "name": "Magic Resistance",
+                "description": "The creature has advantage on saving throws against spells and other magical effects."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Leonin": {
-        "stat_bonus": {"CON":2, "STR":1},
+        "stat_bonus": {
+            "CON": 2,
+            "STR": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Daunting Roar", "description": "As an action, the creature can let out a mighty roar. Each creature of the creature's choice that is within 10 feet of it and can hear it must succeed on a DC 10 Wisdom saving throw or be frightened until the end of the creature's next turn. This trait can be used once per short or long rest."},
-            {"name": "Claws", "description": "The creature can use its action to make a claw attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier slashing damage."}
+            {
+                "name": "Daunting Roar",
+                "description": "As an action, the creature can let out a mighty roar. Each creature of the creature's choice that is within 10 feet of it and can hear it must succeed on a DC 10 Wisdom saving throw or be frightened until the end of the creature's next turn. This trait can be used once per short or long rest."
+            },
+            {
+                "name": "Claws",
+                "description": "The creature can use its action to make a claw attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier slashing damage."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Satyr": {
-        "stat_bonus": {"CHA":2, "DEX":1},
+        "stat_bonus": {
+            "CHA": 2,
+            "DEX": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Ram", "description": "The creature can use its action to make a ram attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier bludgeoning damage."},
-            {"name": "Magic Resistance", "description": "The creature has advantage on saving throws against spells and other magical effects."}
+            {
+                "name": "Ram",
+                "description": "The creature can use its action to make a ram attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier bludgeoning damage."
+            },
+            {
+                "name": "Magic Resistance",
+                "description": "The creature has advantage on saving throws against spells and other magical effects."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Giff": {
-        "stat_bonus": {"STR":2, "CON":1},
+        "stat_bonus": {
+            "STR": 2,
+            "CON": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Giff's Lucky Shot", "description": "When the creature makes an attack roll with a firearm, it can reroll the die and must use the new roll. This trait can be used once per short or long rest."}
+            {
+                "name": "Giff's Lucky Shot",
+                "description": "When the creature makes an attack roll with a firearm, it can reroll the die and must use the new roll. This trait can be used once per short or long rest."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Warforged": {
-        "stat_bonus": {"CON":2, "STR":1},
+        "stat_bonus": {
+            "CON": 2,
+            "STR": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [
-            {"name": "Poison", "damage_reduction": "Half"}
+            {
+                "name": "Poison",
+                "damage_reduction": "Half"
+            }
         ],
         "spells": [],
         "traits": [
-            {"name": "Constructed Resilience", "description": "The creature has advantage on saving throws against being poisoned, and it is immune to disease. It doesn't need to eat, drink, or breathe."},
-            {"name": "Integrated Protection", "description": "The creature can integrate armor into its body, granting it a base AC of 13 + its Dexterity modifier. The creature can don and doff armor as an action."}
+            {
+                "name": "Constructed Resilience",
+                "description": "The creature has advantage on saving throws against being poisoned, and it is immune to disease. It doesn't need to eat, drink, or breathe."
+            },
+            {
+                "name": "Integrated Protection",
+                "description": "The creature can integrate armor into its body, granting it a base AC of 13 + its Dexterity modifier. The creature can don and doff armor as an action."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Changeling": {
-        "stat_bonus": {"CHA":2, "DEX":1},
+        "stat_bonus": {
+            "CHA": 2,
+            "DEX": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Shapechanger", "description": "The creature can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."}
+            {
+                "name": "Shapechanger",
+                "description": "The creature can use its action to polymorph into a Small or Medium humanoid it has seen, or back into its true form. Its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Shifter": {
-        "stat_bonus": {"WIS":2, "CON":1},
+        "stat_bonus": {
+            "WIS": 2,
+            "CON": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 60}
+            {
+                "name": "Darkvision",
+                "range": 60
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [],
+        "bonus_actions": [],
         "reactions": [
-                {"name": "Shifting Reaction", "recharge": "Recharges after a short or long rest", "description": "The creature can use its reaction to gain a bonus to its AC equal to its proficiency bonus until the end of the current turn. This trait can be used once per short or long rest."}
+            {
+                "name": "Shifting Reaction",
+                "recharge": "Recharges after a short or long rest",
+                "description": "The creature can use its reaction to gain a bonus to its AC equal to its proficiency bonus until the end of the current turn. This trait can be used once per short or long rest."
+            }
         ]
     },
     "Owlin": {
-        "stat_bonus": {"WIS":2, "DEX":1},
+        "stat_bonus": {
+            "WIS": 2,
+            "DEX": 1
+        },
         "sense": [
-            {"name": "Darkvision", "range": 120}
+            {
+                "name": "Darkvision",
+                "range": 120
+            }
         ],
         "speed": [
-            {"name": "Walking", "distance": 30},
-            {"name": "Flying", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            },
+            {
+                "name": "Flying",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Silent Feathers", "description": "The creature has advantage on Dexterity (Stealth) checks that rely on moving silently."}
+            {
+                "name": "Silent Feathers",
+                "description": "The creature has advantage on Dexterity (Stealth) checks that rely on moving silently."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Fairy": {
-        "stat_bonus": {"CHA":2, "DEX":1},
+        "stat_bonus": {
+            "CHA": 2,
+            "DEX": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30},
-            {"name": "Flying", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            },
+            {
+                "name": "Flying",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [
-            {"name": "Druidcraft", "level": 0, "casting_amount":"at will"},
-            {"name": "Faerie Fire", "level": 1, "casting_amount":"1/day"},
-            {"name": "Enlarge/Reduce", "level": 2, "casting_amount":"1/day"}
+            {
+                "name": "Druidcraft",
+                "level": 0,
+                "casting_amount": "at will"
+            },
+            {
+                "name": "Faerie Fire",
+                "level": 1,
+                "casting_amount": "1/day"
+            },
+            {
+                "name": "Enlarge/Reduce",
+                "level": 2,
+                "casting_amount": "1/day"
+            }
         ],
         "traits": [
-            {"name": "Fey Ancestry", "description": "The creature has advantage on saving throws against being charmed, and magic can't put it to sleep."}
+            {
+                "name": "Fey Ancestry",
+                "description": "The creature has advantage on saving throws against being charmed, and magic can't put it to sleep."
+            }
         ],
+        "bonus_actions": [],
         "reactions": []
     },
     "Harengon": {
-        "stat_bonus": {"DEX":2, "WIS":1},
+        "stat_bonus": {
+            "DEX": 2,
+            "WIS": 1
+        },
         "sense": [],
         "speed": [
-            {"name": "Walking", "distance": 30}
+            {
+                "name": "Walking",
+                "distance": 30
+            }
         ],
         "resistance": [],
         "spells": [],
         "traits": [
-            {"name": "Lucky Footwork", "description": "The creature has advantage on Dexterity saving throws against effects that it can see, such as traps and spells. This trait can be used once per short or long rest."}
+            {
+                "name": "Lucky Footwork",
+                "description": "The creature has advantage on Dexterity saving throws against effects that it can see, such as traps and spells. This trait can be used once per short or long rest."
+            }
         ],
+        "bonus_actions": [],
         "reactions": [
-            {"name": "Hare-Trigger Reflexes", "recharge": "Recharges after a short or long rest", "description": "The creature can use its reaction to add its proficiency bonus to its AC against one attack that would hit it. This trait can be used once per short or long rest."}
+            {
+                "name": "Hare-Trigger Reflexes",
+                "recharge": "Recharges after a short or long rest",
+                "description": "The creature can use its reaction to add its proficiency bonus to its AC against one attack that would hit it. This trait can be used once per short or long rest."
+            }
         ]
     }
 }
