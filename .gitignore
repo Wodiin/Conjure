@@ -5,5 +5,3 @@ __pycache__/
 *.spec
 *.pyc
 .env
-test/
-test.sh

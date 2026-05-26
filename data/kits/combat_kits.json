@@ -494,7 +494,7 @@
         "senses": [],
         "enhanced_ac": false
     },
-    "Paladin": {
+    "Oath Keeper": {
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -502,11 +502,11 @@
         "traits": [
             {
                 "name": "True to their Oath",
-                "description": "The Paladin can use their action to invoke their sacred oath, granting them and all allies within 10 feet a +2 bonus to attack rolls and saving throws until the start of their next turn. This trait can only be used once per long rest."
+                "description": "The Oath Keeper can use their action to invoke their sacred oath, granting them and all allies within 10 feet a +2 bonus to attack rolls and saving throws until the start of their next turn. This trait can only be used once per long rest."
             },
             {
                 "name": "Lay on Hands",
-                "description": "The Paladin can use their action to touch a creature and restore a number of hit points equal to their Paladin level x 5. This trait can only be used once per long rest."
+                "description": "The Oath Keeper can use their action to touch a creature and restore a number of hit points equal to their Oath Keeper level x 5. This trait can only be used once per long rest."
             }
         ],
         "bonus_actions": [],

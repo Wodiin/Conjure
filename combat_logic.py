@@ -56,17 +56,105 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
     return hp, dice_string
 
 
-def generate_action_data(cr: str, modifiers: dict[str, int], combat_kits: list[str] | None) -> dict:
-    """Generates a dict of action data based on CR, stat modifiers, and combat kits.
+def generate_action_data(cr: str, modifiers: dict[str, int], actions: dict | None) -> dict:
+    """Generates a dict of action data based on CR, stat modifiers, and a list of available actions.
     Determines available actions from combat kits, then calculates relevant values for each action using the appropriate stat modifiers and data."""
    
 
 
 
+def _casting_rank(amount: str) -> int:
+    """Converts casting frequency to a comparable integer. Higher is better."""
+    if amount == "at will":
+        return 99
+    return int(amount.split("/")[0])
+ 
+ 
+def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None, race: str | None) -> dict | None:
+    """Gathers traits, weapons, spells, bonus actions, and reactions from
+    the selected race, combat kits, and magic kits. Returns a structured
+    dict organised for downstream action generation, or None if no
+    sources are provided."""
+    if race is None and magic_kits is None and combat_kits is None:
+        return None
+ 
+    action_data = {}
+ 
+    def _collect_descriptions(race_key: str, combat_key: str, magic_key: str) -> dict[str, str]:
+        """Builds a name → description dict from every selected source,
+        sorted alphabetically by name."""
+        result = {}
+        if race is not None:
+            for item in RACES[race].get(race_key, []):
+                result[item["name"]] = item["description"]
+        if combat_kits is not None:
+            for kit in combat_kits:
+                for item in COMBAT_KITS[kit].get(combat_key, []):
+                    result[item["name"]] = item["description"]
+        if magic_kits is not None:
+            for kit in magic_kits:
+                for item in MAGIC_KITS[kit].get(magic_key, []):
+                    result[item["name"]] = item["description"]
+        return dict(sorted(result.items()))
+ 
+    # Traits
+    traits = _collect_descriptions("traits", "traits", "traits")
+    if traits:
+        action_data["Traits"] = traits
+ 
+    # Weapons — melee first, shield bash second, ranged last
+    weapons: list[str] = []
+    if combat_kits is not None:
+        for kit in combat_kits:
+            weapons.extend(COMBAT_KITS[kit]["weapons"])
+    if magic_kits is not None:
+        for kit in magic_kits:
+            weapons.extend(MAGIC_KITS[kit]["weapons"])
+    weapons = list(set(weapons))
+    melee = sorted([w for w in weapons if WEAPONS[w]["reach"] >= 5 and w != "Shield Bash"])
+    shield = [w for w in weapons if w == "Shield Bash"]
+    ranged = sorted([w for w in weapons if WEAPONS[w]["reach"] < 5 and WEAPONS[w]["range"]["short"] > 0])
+    weapons = melee + shield + ranged
+    if weapons:
+        action_data["Weapons"] = weapons
+ 
+    # Spells — deduplicated, keeping the higher casting frequency
+    spells: dict[str, dict] = {}
+    if race is not None:
+        for spell in RACES[race].get("spells", []):
+            spells[spell["name"]] = {"level": spell["level"], "casting_amount": spell["casting_amount"]}
+    if magic_kits is not None:
+        for kit in magic_kits:
+            for spell in MAGIC_KITS[kit].get("spells", []):
+                name = spell["name"]
+                entry = {"level": spell["level"], "casting_amount": spell["casting_amount"]}
+                if name not in spells or _casting_rank(spell["casting_amount"]) > _casting_rank(spells[name]["casting_amount"]):
+                    spells[name] = entry
+    spells = dict(sorted(spells.items(), key=lambda x: (x[1]["level"], x[0])))
+    if spells:
+        action_data["Spells"] = spells
+ 
+    # Bonus Actions
+    bonus_actions = _collect_descriptions("bonus_actions", "bonus_actions", "bonus_actions")
+    if bonus_actions:
+        action_data["Bonus Actions"] = bonus_actions
+ 
+    # Reactions
+    reactions = _collect_descriptions("reactions", "reactions", "reactions")
+    if reactions:
+        action_data["Reactions"] = reactions
+ 
+    return action_data
+
 
 
 """
     {
+        "Traits": {
+            "Brave": {
+                "description": "The NPC has advantage on saving throws against being frightened."
+            }
+        },
         "Multiattack": {
             "weapons": {
                 "longsword": 2,
