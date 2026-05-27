@@ -385,7 +385,7 @@
     },
     "Blowgun": {
         "to_hit_stat": "DEX",
-        "damage": {"dice": 0, "amount": 1},
+        "damage": {"dice": 1, "amount": 1},
         "damage_stat": "DEX",
         "damage_type": "Piercing",
         "reach": 0,
@@ -457,7 +457,7 @@
     },
     "Unarmed Strike": {
         "to_hit_stat": "STR",
-        "damage": {"dice": 0, "amount": 1},
+        "damage": {"dice": 1, "amount": 1},
         "damage_stat": "STR",
         "damage_type": "Bludgeoning",
         "reach": 5,

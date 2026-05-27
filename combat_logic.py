@@ -34,7 +34,7 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
     num_dice = CR_TABLE[cr]['hit_dice_count']
     die_size = BASE_CATEGORIES[base]['hit_die']
 
-    # CR 0 with negative CON is an edge case — floor HP at 1
+    # CR 0 with negative CON is an edge case - floor HP at 1
     if cr == "0" and con_mod < 0:
         dice_string = f"1d{die_size} - {abs(con_mod)}"
         return 1, dice_string
@@ -56,11 +56,122 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
     return hp, dice_string
 
 
-def generate_action_data(cr: str, modifiers: dict[str, int], actions: dict | None) -> dict:
-    """Generates a dict of action data based on CR, stat modifiers, and a list of available actions.
-    Determines available actions from combat kits, then calculates relevant values for each action using the appropriate stat modifiers and data."""
-   
+def generate_action_data(
+    cr: str,
+    modifiers: dict[str, int],
+    actions: dict | None,
+    use_primary_for_casting: bool = False,
+    primary: str | None = None
+) -> dict | None:
+    """Generates a dict of action data based on CR, stat modifiers, and
+    available actions. Calculates weapon stats, multiattack structure,
+    spellcasting block, and passes through traits, bonus actions, and
+    reactions with their CR-based budget.
 
+    Returns None if no actions are provided."""
+
+    if actions is None:
+        return None
+
+    action_data: dict = {}
+    weapons_data: dict = {}
+    weapon_list: list[str] = actions.get("Weapons", [])
+    has_shield: bool = "Shield Bash" in weapon_list
+    prof_bonus: int = CR_TABLE[cr]["proficiency_bonus"]
+
+    # Weapons - calculate to-hit, damage bonus, average damage, and
+    # weapon type classification for each weapon in the action set
+    for weapon in weapon_list:
+        weapon_info: dict = WEAPONS[weapon]
+
+        # Classify weapon type based on reach and range values
+        if weapon_info["range"]["short"] > 0 and weapon_info["reach"] >= 5:
+            weapon_type = "thrown"
+        elif weapon_info["reach"] >= 5:
+            weapon_type = "melee"
+        else:
+            weapon_type = "ranged"
+
+        # Versatile weapons use two-handed damage only when no shield is present
+        versatile: bool = weapon_info["versatile"] and not has_shield
+
+        # Finesse weapons use the higher of STR or DEX for attack and damage
+        if weapon_info["finesse"]:
+            attack_mod: int = max(modifiers["STR"], modifiers["DEX"])
+        else:
+            attack_mod = modifiers[weapon_info["to_hit_stat"]]
+
+        to_hit: int = attack_mod + prof_bonus
+        damage_bonus: int = attack_mod
+
+        # Use versatile damage dice when applicable, otherwise standard
+        num_of_die: int = weapon_info["versatile_damage"]["amount"] if versatile else weapon_info["damage"]["amount"]
+        die_size: int = weapon_info["versatile_damage"]["dice"] if versatile else weapon_info["damage"]["dice"]
+        damage_avg: int = int(num_of_die * (die_size + 1) / 2 + damage_bonus)
+
+        weapons_data[weapon] = {
+            "weapon_type": weapon_type,
+            "num_of_die": num_of_die,
+            "die_size": die_size,
+            "damage_type": weapon_info["damage_type"],
+            "to_hit": to_hit,
+            "damage_bonus": damage_bonus,
+            "damage_avg": damage_avg,
+            "reach": weapon_info["reach"],
+            "range_min": weapon_info["range"]["short"] if weapon_type != "melee" else None,
+            "range_max": weapon_info["range"]["long"] if weapon_type != "melee" else None,
+            "targets": weapon_info["targets"],
+        }
+
+    if weapons_data:
+        action_data["Weapons"] = weapons_data
+
+    # Multiattack - only generated when CR grants more than one attack
+    # and the NPC has at least one weapon available.
+    # Future: switch type to "prescriptive" for monstrous base types
+    if CR_TABLE[cr]["multiattack_count"] > 1 and weapon_list:
+        action_data["Multiattack"] = {
+            "type": "any_combination",
+            "count": CR_TABLE[cr]["multiattack_count"],
+            "weapons": weapon_list,
+            "has_shield": has_shield,
+        }
+
+    # Spells - determine the spellcasting ability, save DC, and attack
+    # bonus. When use_primary_for_casting is True, the primary stat is
+    # used regardless of its value. Otherwise, the highest mental stat
+    # (INT, WIS, CHA) is selected automatically.
+    if "Spells" in actions:
+        if use_primary_for_casting and primary:
+            spellcasting_stat: str = primary
+        else:
+            spellcasting_stat = max(["INT", "WIS", "CHA"], key=modifiers.get)
+
+        casting_mod: int = modifiers[spellcasting_stat]
+        action_data["Spells"] = {
+            "Spells": actions["Spells"],
+            "Spell Save DC": 8 + casting_mod + prof_bonus,
+            "Spell Attack Bonus": casting_mod + prof_bonus,
+            "Spell Budget": CR_TABLE[cr]["spell_budget"],
+            "Spellcasting Stat": spellcasting_stat,
+        }
+
+    # Traits, Bonus Actions, and Reactions are passed through as-is.
+    # The trait budget is a shared cap across all three sections, set
+    # by CR and enforced by the renderer or user selection.
+    if "Traits" in actions or "Bonus Actions" in actions or "Reactions" in actions:
+        action_data["Trait Budget"] = CR_TABLE[cr]["trait_budget"]
+    if "Traits" in actions:
+        action_data["Traits"] = actions["Traits"]
+    if "Bonus Actions" in actions:
+        action_data["Bonus Actions"] = actions["Bonus Actions"]
+    if "Reactions" in actions:
+        action_data["Reactions"] = actions["Reactions"]
+
+    return action_data
+
+    
+        
 
 
 def _casting_rank(amount: str) -> int:
@@ -102,7 +213,7 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
     if traits:
         action_data["Traits"] = traits
  
-    # Weapons — melee first, shield bash second, ranged last
+    # Weapons - melee first, shield bash second, ranged last
     weapons: list[str] = []
     if combat_kits is not None:
         for kit in combat_kits:
@@ -118,7 +229,7 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
     if weapons:
         action_data["Weapons"] = weapons
  
-    # Spells — deduplicated, keeping the higher casting frequency
+    # Spells - deduplicated, keeping the higher casting frequency
     spells: dict[str, dict] = {}
     if race is not None:
         for spell in RACES[race].get("spells", []):
@@ -157,7 +268,9 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
         },
         "Multiattack": {
             "weapons": {
-                "longsword": 2,
+                "type": "any_combination",
+                "count": 2,
+                "weapons": ["longsword", "shield_bash"],
                 "has_shield": True
             }
         },

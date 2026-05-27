@@ -7,7 +7,10 @@
         "attack_bonus": 3,
         "damage_per_round": 0,
         "save_dc": 13,
-        "hit_dice_count": 1
+        "hit_dice_count": 1,
+        "multiattack_count": 1,
+        "trait_budget": 1,
+        "spell_budget": 5
     },
     "1/8": {
         "xp": 25,
@@ -17,7 +20,10 @@
         "attack_bonus": 3,
         "damage_per_round": 2,
         "save_dc": 13,
-        "hit_dice_count": 5
+        "hit_dice_count": 5,
+        "multiattack_count": 1,
+        "trait_budget": 1,
+        "spell_budget": 5
     },
     "1/4": {
         "xp": 50,
@@ -27,7 +33,10 @@
         "attack_bonus": 3,
         "damage_per_round": 4,
         "save_dc": 13,
-        "hit_dice_count": 8
+        "hit_dice_count": 8,
+        "multiattack_count": 1,
+        "trait_budget": 1,
+        "spell_budget": 5
     },
     "1/2": {
         "xp": 100,
@@ -37,7 +46,10 @@
         "attack_bonus": 3,
         "damage_per_round": 7,
         "save_dc": 13,
-        "hit_dice_count": 11
+        "hit_dice_count": 11,
+        "multiattack_count": 1,
+        "trait_budget": 1,
+        "spell_budget": 5
     },
     "1": {
         "xp": 200,
@@ -47,7 +59,10 @@
         "attack_bonus": 3,
         "damage_per_round": 11,
         "save_dc": 13,
-        "hit_dice_count": 13
+        "hit_dice_count": 13,
+        "multiattack_count": 1,
+        "trait_budget": 1,
+        "spell_budget": 5
     },
     "2": {
         "xp": 450,
@@ -57,7 +72,10 @@
         "attack_bonus": 3,
         "damage_per_round": 17,
         "save_dc": 13,
-        "hit_dice_count": 15
+        "hit_dice_count": 15,
+        "multiattack_count": 1,
+        "trait_budget": 3,
+        "spell_budget": 5
     },
     "3": {
         "xp": 700,
@@ -67,7 +85,10 @@
         "attack_bonus": 4,
         "damage_per_round": 23,
         "save_dc": 13,
-        "hit_dice_count": 17
+        "hit_dice_count": 17,
+        "multiattack_count": 2,
+        "trait_budget": 3,
+        "spell_budget": 5
     },
     "4": {
         "xp": 1100,
@@ -77,7 +98,10 @@
         "attack_bonus": 5,
         "damage_per_round": 29,
         "save_dc": 14,
-        "hit_dice_count": 18
+        "hit_dice_count": 18,
+        "multiattack_count": 2,
+        "trait_budget": 3,
+        "spell_budget": 5
     },
     "5": {
         "xp": 1800,
@@ -87,7 +111,10 @@
         "attack_bonus": 6,
         "damage_per_round": 35,
         "save_dc": 15,
-        "hit_dice_count": 19
+        "hit_dice_count": 19,
+        "multiattack_count": 2,
+        "trait_budget": 5,
+        "spell_budget": 6
     },
     "6": {
         "xp": 2300,
@@ -97,7 +124,10 @@
         "attack_bonus": 6,
         "damage_per_round": 41,
         "save_dc": 15,
-        "hit_dice_count": 20
+        "hit_dice_count": 20,
+        "multiattack_count": 2,
+        "trait_budget": 5,
+        "spell_budget": 6
     },
     "7": {
         "xp": 2900,
@@ -107,7 +137,10 @@
         "attack_bonus": 6,
         "damage_per_round": 47,
         "save_dc": 15,
-        "hit_dice_count": 21
+        "hit_dice_count": 21,
+        "multiattack_count": 3,
+        "trait_budget": 5,
+        "spell_budget": 6
     },
     "8": {
         "xp": 3900,
@@ -117,7 +150,10 @@
         "attack_bonus": 7,
         "damage_per_round": 53,
         "save_dc": 16,
-        "hit_dice_count": 23
+        "hit_dice_count": 23,
+        "multiattack_count": 3,
+        "trait_budget": 5,
+        "spell_budget": 8
     },
     "9": {
         "xp": 5000,
@@ -127,7 +163,10 @@
         "attack_bonus": 7,
         "damage_per_round": 59,
         "save_dc": 16,
-        "hit_dice_count": 23
+        "hit_dice_count": 23,
+        "multiattack_count": 3,
+        "trait_budget": 8,
+        "spell_budget": 9
     },
     "10": {
         "xp": 5900,
@@ -137,7 +176,10 @@
         "attack_bonus": 7,
         "damage_per_round": 65,
         "save_dc": 16,
-        "hit_dice_count": 25
+        "hit_dice_count": 25,
+        "multiattack_count": 3,
+        "trait_budget": 8,
+        "spell_budget": 9
     },
     "11": {
         "xp": 7200,
@@ -147,7 +189,10 @@
         "attack_bonus": 8,
         "damage_per_round": 71,
         "save_dc": 17,
-        "hit_dice_count": 26
+        "hit_dice_count": 26,
+        "multiattack_count": 3,
+        "trait_budget": 8,
+        "spell_budget": 9
     },
     "12": {
         "xp": 8400,
@@ -157,7 +202,10 @@
         "attack_bonus": 8,
         "damage_per_round": 77,
         "save_dc": 18,
-        "hit_dice_count": 29
+        "hit_dice_count": 29,
+        "multiattack_count": 3,
+        "trait_budget": 8,
+        "spell_budget": 9
     },
     "13": {
         "xp": 10000,
@@ -167,7 +215,10 @@
         "attack_bonus": 8,
         "damage_per_round": 83,
         "save_dc": 18,
-        "hit_dice_count": 30
+        "hit_dice_count": 30,
+        "multiattack_count": 3,
+        "trait_budget": 999,
+        "spell_budget": 10
     },
     "14": {
         "xp": 11500,
@@ -177,7 +228,10 @@
         "attack_bonus": 8,
         "damage_per_round": 89,
         "save_dc": 18,
-        "hit_dice_count": 31
+        "hit_dice_count": 31,
+        "multiattack_count": 3,
+        "trait_budget": 999,
+        "spell_budget": 10
     },
     "15": {
         "xp": 13000,
@@ -187,7 +241,10 @@
         "attack_bonus": 8,
         "damage_per_round": 95,
         "save_dc": 18,
-        "hit_dice_count": 31
+        "hit_dice_count": 31,
+        "multiattack_count": 3,
+        "trait_budget": 999,
+        "spell_budget": 10
     },
     "16": {
         "xp": 15000,
@@ -197,7 +254,10 @@
         "attack_bonus": 9,
         "damage_per_round": 101,
         "save_dc": 18,
-        "hit_dice_count": 32
+        "hit_dice_count": 32,
+        "multiattack_count": 3,
+        "trait_budget": 999,
+        "spell_budget": 11
     },
     "17": {
         "xp": 18000,
@@ -207,7 +267,10 @@
         "attack_bonus": 10,
         "damage_per_round": 107,
         "save_dc": 19,
-        "hit_dice_count": 32
+        "hit_dice_count": 32,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 12
     },
     "18": {
         "xp": 20000,
@@ -217,7 +280,10 @@
         "attack_bonus": 10,
         "damage_per_round": 113,
         "save_dc": 19,
-        "hit_dice_count": 33
+        "hit_dice_count": 33,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 12
     },
     "19": {
         "xp": 22000,
@@ -227,7 +293,10 @@
         "attack_bonus": 10,
         "damage_per_round": 119,
         "save_dc": 19,
-        "hit_dice_count": 34
+        "hit_dice_count": 34,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 12
     },
     "20": {
         "xp": 25000,
@@ -237,7 +306,10 @@
         "attack_bonus": 10,
         "damage_per_round": 131,
         "save_dc": 19,
-        "hit_dice_count": 35
+        "hit_dice_count": 35,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 12
     },
     "21": {
         "xp": 33000,
@@ -247,7 +319,10 @@
         "attack_bonus": 11,
         "damage_per_round": 149,
         "save_dc": 20,
-        "hit_dice_count": 37
+        "hit_dice_count": 37,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 13
     },
     "22": {
         "xp": 41000,
@@ -257,7 +332,10 @@
         "attack_bonus": 11,
         "damage_per_round": 167,
         "save_dc": 20,
-        "hit_dice_count": 39
+        "hit_dice_count": 39,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 13
     },
     "23": {
         "xp": 50000,
@@ -267,7 +345,10 @@
         "attack_bonus": 11,
         "damage_per_round": 185,
         "save_dc": 20,
-        "hit_dice_count": 40
+        "hit_dice_count": 40,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 13
     },
     "24": {
         "xp": 62000,
@@ -277,7 +358,10 @@
         "attack_bonus": 11,
         "damage_per_round": 203,
         "save_dc": 21,
-        "hit_dice_count": 42
+        "hit_dice_count": 42,
+        "multiattack_count": 4,
+        "trait_budget": 999,
+        "spell_budget": 13
     },
     "25": {
         "xp": 75000,
@@ -287,7 +371,10 @@
         "attack_bonus": 12,
         "damage_per_round": 221,
         "save_dc": 21,
-        "hit_dice_count": 45
+        "hit_dice_count": 45,
+        "multiattack_count": 5,
+        "trait_budget": 999,
+        "spell_budget": 15
     },
     "26": {
         "xp": 90000,
@@ -297,7 +384,10 @@
         "attack_bonus": 12,
         "damage_per_round": 239,
         "save_dc": 21,
-        "hit_dice_count": 48
+        "hit_dice_count": 48,
+        "multiattack_count": 5,
+        "trait_budget": 999,
+        "spell_budget": 15
     },
     "27": {
         "xp": 105000,
@@ -307,7 +397,10 @@
         "attack_bonus": 13,
         "damage_per_round": 257,
         "save_dc": 22,
-        "hit_dice_count": 51
+        "hit_dice_count": 51,
+        "multiattack_count": 5,
+        "trait_budget": 999,
+        "spell_budget": 15
     },
     "28": {
         "xp": 120000,
@@ -317,7 +410,10 @@
         "attack_bonus": 13,
         "damage_per_round": 275,
         "save_dc": 22,
-        "hit_dice_count": 54
+        "hit_dice_count": 54,
+        "multiattack_count": 5,
+        "trait_budget": 999,
+        "spell_budget": 15
     },
     "29": {
         "xp": 135000,
@@ -327,7 +423,10 @@
         "attack_bonus": 13,
         "damage_per_round": 293,
         "save_dc": 22,
-        "hit_dice_count": 58
+        "hit_dice_count": 58,
+        "multiattack_count": 5,
+        "trait_budget": 999,
+        "spell_budget": 16
     },
     "30": {
         "xp": 155000,
@@ -337,6 +436,9 @@
         "attack_bonus": 14,
         "damage_per_round": 311,
         "save_dc": 23,
-        "hit_dice_count": 58
+        "hit_dice_count": 58,
+        "multiattack_count": 6,
+        "trait_budget": 999,
+        "spell_budget": 999
     }
 }
