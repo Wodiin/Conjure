@@ -1,344 +1,3032 @@
 {
-    "Male": [
-        {
-            "Human": {
-                "First": [
-                    "Aldric", "Brennan", "Caius", "Corvin", "Daven",
-                    "Edric", "Erwin", "Gareth", "Godwin", "Halvard",
-                    "Leoric", "Marius", "Oswin", "Tavish", "Aldous"
-                ],
-                "Last": [
-                    "Ashford", "Blackwood", "Dunmore", "Fenwick", "Greymantle",
-                    "Ironwood", "Ravenscar", "Stonehaven", "Coldwater", "Duskholm",
-                    "Embermoor", "Fairbanks", "Goldvale", "Hartwell", "Ironsides"
-                ]
-            }
+    "Masculine": {
+        "Human": {
+            "First": [
+                "Aldric",
+                "Brennan",
+                "Caius",
+                "Corvin",
+                "Daven",
+                "Edric",
+                "Erwin",
+                "Gareth",
+                "Godwin",
+                "Halvard",
+                "Leoric",
+                "Marius",
+                "Oswin",
+                "Tavish",
+                "Aldous"
+            ],
+            "Last": [
+                "Ashford",
+                "Blackwood",
+                "Dunmore",
+                "Fenwick",
+                "Greymantle",
+                "Ironwood",
+                "Ravenscar",
+                "Stonehaven",
+                "Coldwater",
+                "Duskholm",
+                "Embermoor",
+                "Fairbanks",
+                "Goldvale",
+                "Hartwell",
+                "Ironsides"
+            ]
         },
-        {
-            "Elf": {
-                "First": [
-                    "Aelindor", "Caladrel", "Erevan", "Faeron", "Ivellios",
-                    "Liriel", "Mirethos", "Naevon", "Silvanus", "Tharivol",
-                    "Adran", "Beiro", "Carric", "Dayereth", "Enialis"
-                ],
-                "Last": [
-                    "Amakir", "Dawnmere", "Elensar", "Faewynn", "Galendor",
-                    "Isilmere", "Lirenwood", "Moonwhisper", "Silverleaf", "Starbrow",
-                    "Windweave", "Brightleaf", "Duskmantle", "Starhollow", "Thornweald"
-                ]
-            }
+        "Elf": {
+            "First": [
+                "Aelindor",
+                "Caladrel",
+                "Erevan",
+                "Faeron",
+                "Ivellios",
+                "Liriel",
+                "Mirethos",
+                "Naevon",
+                "Silvanus",
+                "Tharivol",
+                "Adran",
+                "Beiro",
+                "Carric",
+                "Dayereth",
+                "Enialis"
+            ],
+            "Last": [
+                "Amakir",
+                "Dawnmere",
+                "Elensar",
+                "Faewynn",
+                "Galendor",
+                "Isilmere",
+                "Lirenwood",
+                "Moonwhisper",
+                "Silverleaf",
+                "Starbrow",
+                "Windweave",
+                "Brightleaf",
+                "Duskmantle",
+                "Starhollow",
+                "Thornweald"
+            ]
         },
-        {
-            "Dwarf": {
-                "First": [
-                    "Barek", "Dorgrim", "Eberk", "Fargrin", "Gordak",
-                    "Harbek", "Kildrak", "Morven", "Orsik", "Rangrim",
-                    "Rurik", "Taklin", "Thordak", "Umbar", "Vondal"
-                ],
-                "Last": [
-                    "Anvilmar", "Boulderkin", "Copperforge", "Deepdelve", "Firemantle",
-                    "Goldvein", "Hammerfall", "Ironbrew", "Mountainheart", "Rockseam",
-                    "Stonefist", "Thunderpeak", "Brassbuckle", "Coalmantle", "Steelwright"
-                ]
-            }
+        "Dwarf": {
+            "First": [
+                "Barek",
+                "Dorgrim",
+                "Eberk",
+                "Fargrin",
+                "Gordak",
+                "Harbek",
+                "Kildrak",
+                "Morven",
+                "Orsik",
+                "Rangrim",
+                "Rurik",
+                "Taklin",
+                "Thordak",
+                "Umbar",
+                "Vondal"
+            ],
+            "Last": [
+                "Anvilmar",
+                "Boulderkin",
+                "Copperforge",
+                "Deepdelve",
+                "Firemantle",
+                "Goldvein",
+                "Hammerfall",
+                "Ironbrew",
+                "Mountainheart",
+                "Rockseam",
+                "Stonefist",
+                "Thunderpeak",
+                "Brassbuckle",
+                "Coalmantle",
+                "Steelwright"
+            ]
         },
-        {
-            "Half-Orc": {
-                "First": [
-                    "Bolg", "Dench", "Feng", "Gell", "Grash",
-                    "Holg", "Keth", "Krusk", "Morg", "Roth",
-                    "Shump", "Thokk", "Urgh", "Varg", "Zorn"
-                ],
-                "Last": [
-                    "Bearclaw", "Blacktusk", "Bloodfist", "Bonecrusher", "Darkblade",
-                    "Fiercewind", "Grimtooth", "Ironjaw", "Skullcleave", "Stoneback",
-                    "Tuskhide", "Wolfmane", "Ashbrand", "Razorback", "Warborn"
-                ]
-            }
+        "Half Orc": {
+            "First": [
+                "Bolg",
+                "Dench",
+                "Feng",
+                "Gell",
+                "Grash",
+                "Holg",
+                "Keth",
+                "Krusk",
+                "Morg",
+                "Roth",
+                "Shump",
+                "Thokk",
+                "Urgh",
+                "Varg",
+                "Zorn"
+            ],
+            "Last": [
+                "Bearclaw",
+                "Blacktusk",
+                "Bloodfist",
+                "Bonecrusher",
+                "Darkblade",
+                "Fiercewind",
+                "Grimtooth",
+                "Ironjaw",
+                "Skullcleave",
+                "Stoneback",
+                "Tuskhide",
+                "Wolfmane",
+                "Ashbrand",
+                "Razorback",
+                "Warborn"
+            ]
         },
-        {
-            "Gnome": {
-                "First": [
-                    "Alston", "Bimble", "Dimble", "Eldon", "Fizwick",
-                    "Fonkin", "Gimble", "Jebeddo", "Nubbin", "Orvin",
-                    "Sindri", "Tindal", "Warryn", "Wick", "Zook"
-                ],
-                "Last": [
-                    "Beren", "Cogsworth", "Folkor", "Garrick", "Gearspring",
-                    "Nackle", "Ningel", "Scheppen", "Tinkerton", "Turen",
-                    "Wobblewick", "Wrenchbit", "Copperkettle", "Fizzlebang", "Sprocketdale"
-                ]
-            }
+        "Gnome": {
+            "First": [
+                "Alston",
+                "Bimble",
+                "Dimble",
+                "Eldon",
+                "Fizwick",
+                "Fonkin",
+                "Gimble",
+                "Jebeddo",
+                "Nubbin",
+                "Orvin",
+                "Sindri",
+                "Tindal",
+                "Warryn",
+                "Wick",
+                "Zook"
+            ],
+            "Last": [
+                "Beren",
+                "Cogsworth",
+                "Folkor",
+                "Garrick",
+                "Gearspring",
+                "Nackle",
+                "Ningel",
+                "Scheppen",
+                "Tinkerton",
+                "Turen",
+                "Wobblewick",
+                "Wrenchbit",
+                "Copperkettle",
+                "Fizzlebang",
+                "Sprocketdale"
+            ]
         },
-        {
-            "Halfling": {
-                "First": [
-                    "Alton", "Ander", "Cade", "Corrin", "Errich",
-                    "Finnan", "Garret", "Lyle", "Merric", "Milo",
-                    "Osborn", "Perrin", "Rollo", "Tobold", "Wellby"
-                ],
-                "Last": [
-                    "Brambletoe", "Burrows", "Goodbarrel", "Greenhill", "Hillmantle",
-                    "Leagallow", "Meadowbrook", "Tealeaf", "Thorngage", "Tosscobble",
-                    "Underbough", "Tumbleweed", "Fernhollow", "Lightfoot", "Mossberg"
-                ]
-            }
+        "Halfling": {
+            "First": [
+                "Alton",
+                "Ander",
+                "Cade",
+                "Corrin",
+                "Errich",
+                "Finnan",
+                "Garret",
+                "Lyle",
+                "Merric",
+                "Milo",
+                "Osborn",
+                "Perrin",
+                "Rollo",
+                "Tobold",
+                "Wellby"
+            ],
+            "Last": [
+                "Brambletoe",
+                "Burrows",
+                "Goodbarrel",
+                "Greenhill",
+                "Hillmantle",
+                "Leagallow",
+                "Meadowbrook",
+                "Tealeaf",
+                "Thorngage",
+                "Tosscobble",
+                "Underbough",
+                "Tumbleweed",
+                "Fernhollow",
+                "Lightfoot",
+                "Mossberg"
+            ]
         },
-        {
-            "Tiefling": {
-                "First": [
-                    "Akmenos", "Amnon", "Barakas", "Damakos", "Ekemon",
-                    "Iados", "Kairon", "Leucis", "Melech", "Mordai",
-                    "Morthos", "Pelaios", "Skamos", "Vexan", "Zalthar"
-                ],
-                "Last": [
-                    "Ashmoor", "Blackflame", "Cinderfall", "Darkmantle", "Emberveil",
-                    "Hellscar", "Ironveil", "Nightfall", "Shadowend", "Singedge",
-                    "Soulchain", "Voidmark", "Ashenbrand", "Duskmantle", "Scorchveil"
-                ]
-            }
+        "Tiefling": {
+            "First": [
+                "Akmenos",
+                "Amnon",
+                "Barakas",
+                "Damakos",
+                "Ekemon",
+                "Iados",
+                "Kairon",
+                "Leucis",
+                "Melech",
+                "Mordai",
+                "Morthos",
+                "Pelaios",
+                "Skamos",
+                "Vexan",
+                "Zalthar"
+            ],
+            "Last": [
+                "Ashmoor",
+                "Blackflame",
+                "Cinderfall",
+                "Darkmantle",
+                "Emberveil",
+                "Hellscar",
+                "Ironveil",
+                "Nightfall",
+                "Shadowend",
+                "Singedge",
+                "Soulchain",
+                "Voidmark",
+                "Ashenbrand",
+                "Duskmantle",
+                "Scorchveil"
+            ]
         },
-        {
-            "Dragonborn": {
-                "First": [
-                    "Arjhan", "Balasar", "Bharash", "Donaar", "Drakan",
-                    "Ghesh", "Heskan", "Kriv", "Medrash", "Nadarr",
-                    "Rhogar", "Tarhun", "Torinn", "Varrax", "Zedaar"
-                ],
-                "Last": [
-                    "Dawnscale", "Emberclaw", "Frostfang", "Goldwing", "Ironscale",
-                    "Jadecrest", "Obsidianmaw", "Rubycrest", "Silverfang", "Stormwing",
-                    "Thunderscale", "Voidfang", "Ashenwing", "Cinderclaw", "Slatescale"
-                ]
-            }
+        "Dragonborn": {
+            "First": [
+                "Arjhan",
+                "Balasar",
+                "Bharash",
+                "Donaar",
+                "Drakan",
+                "Ghesh",
+                "Heskan",
+                "Kriv",
+                "Medrash",
+                "Nadarr",
+                "Rhogar",
+                "Tarhun",
+                "Torinn",
+                "Varrax",
+                "Zedaar"
+            ],
+            "Last": [
+                "Dawnscale",
+                "Emberclaw",
+                "Frostfang",
+                "Goldwing",
+                "Ironscale",
+                "Jadecrest",
+                "Obsidianmaw",
+                "Rubycrest",
+                "Silverfang",
+                "Stormwing",
+                "Thunderscale",
+                "Voidfang",
+                "Ashenwing",
+                "Cinderclaw",
+                "Slatescale"
+            ]
+        },
+        "Aasimar_Necrotic": {
+            "First": [
+                "Auriel",
+                "Cassiel",
+                "Hadrian",
+                "Isander",
+                "Kael",
+                "Lumael",
+                "Malthus",
+                "Orathis",
+                "Raelus",
+                "Sariel",
+                "Theron",
+                "Valdris",
+                "Xanthir",
+                "Zarek",
+                "Corvael"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
+        },
+        "Githyanki": {
+            "First": [
+                "Bralak",
+                "Draven",
+                "Githrak",
+                "Harzul",
+                "Karath",
+                "Krazith",
+                "Mardok",
+                "Nirgal",
+                "Razoth",
+                "Sarkul",
+                "Thravik",
+                "Vorkan",
+                "Xarketh",
+                "Yalgrim",
+                "Zarthok"
+            ],
+            "Last": [
+                "Voidblade",
+                "Warsong",
+                "Deathspear",
+                "Astralborn",
+                "Starreaver",
+                "Planescar",
+                "Silversting",
+                "Voidwrath",
+                "Mindsever",
+                "Steelgrasp",
+                "Doomforge",
+                "Warmantle",
+                "Starsunder",
+                "Voidstep",
+                "Ironwill"
+            ]
+        },
+        "Githzerai": {
+            "First": [
+                "Balir",
+                "Caleth",
+                "Dhamir",
+                "Estal",
+                "Falgrim",
+                "Gathir",
+                "Izahal",
+                "Kethir",
+                "Lathir",
+                "Mazhir",
+                "Nethir",
+                "Ozamir",
+                "Rashael",
+                "Talhir",
+                "Uzain"
+            ],
+            "Last": [
+                "Stillmind",
+                "Voidwalker",
+                "Calmspire",
+                "Ironwill",
+                "Peacemantle",
+                "Soulforged",
+                "Mindkeeper",
+                "Greywind",
+                "Dawnseeker",
+                "Stonemantle",
+                "Breathless",
+                "Clearwater",
+                "Silentpeak",
+                "Truthseer",
+                "Zerthborn"
+            ]
+        },
+        "Goliath": {
+            "First": [
+                "Aukan",
+                "Gauthak",
+                "Ilikan",
+                "Keothi",
+                "Maulek",
+                "Nathrek",
+                "Ogolak",
+                "Paavek",
+                "Thaliak",
+                "Uthal",
+                "Vekul",
+                "Zarkon",
+                "Berak",
+                "Dothak",
+                "Granak"
+            ],
+            "Last": [
+                "Peakclimber",
+                "Stonecarver",
+                "Thunderstep",
+                "Cloudwalker",
+                "Rockbreaker",
+                "Frostbeard",
+                "Mountainborn",
+                "Skywatcher",
+                "Boulderkin",
+                "Cragborn",
+                "Highpeak",
+                "Ridgewalker",
+                "Snowmane",
+                "Windkeeper",
+                "Ironpeak"
+            ]
+        },
+        "Firbolg": {
+            "First": [
+                "Adair",
+                "Boden",
+                "Cael",
+                "Daegan",
+                "Eogan",
+                "Faelan",
+                "Graeme",
+                "Iain",
+                "Keiran",
+                "Lorcan",
+                "Niall",
+                "Oisin",
+                "Padric",
+                "Ronan",
+                "Seamus"
+            ],
+            "Last": [
+                "Deeproot",
+                "Fernwalker",
+                "Glenmoss",
+                "Hillwhisper",
+                "Ivythorn",
+                "Leafsong",
+                "Mossheart",
+                "Oakenshield",
+                "Pinegrove",
+                "Rootweaver",
+                "Stonebark",
+                "Thornvale",
+                "Willowmere",
+                "Bramblewood",
+                "Misthollow"
+            ]
+        },
+        "Tabaxi": {
+            "First": [
+                "Dusk Runner",
+                "Ember Claw",
+                "Frost Whisker",
+                "Ghost Prowl",
+                "Iron Fang",
+                "Jade Eye",
+                "Night Strider",
+                "Quick Pounce",
+                "River Shadow",
+                "Storm Chaser",
+                "Thorn Paw",
+                "Vine Stalker",
+                "Wind Racer",
+                "Ash Hunter",
+                "Cloud Walker"
+            ],
+            "Last": [
+                "Bright Cliffs",
+                "Distant Rain",
+                "Emerald Shore",
+                "Hollow Tree",
+                "Ivory Mesa",
+                "Keen Wind",
+                "Moonlit Peak",
+                "Rushing River",
+                "Silver Dune",
+                "Twilight Marsh",
+                "Wandering Cloud",
+                "Crimson Bluff",
+                "Dappled Shade",
+                "Fallen Star",
+                "Golden Ridge"
+            ]
+        },
+        "Kenku": {
+            "First": [
+                "Clatter",
+                "Creak",
+                "Drone",
+                "Flick",
+                "Gust",
+                "Hiss",
+                "Jangle",
+                "Knock",
+                "Ping",
+                "Rattle",
+                "Screech",
+                "Snap",
+                "Thud",
+                "Whistle",
+                "Buzz"
+            ],
+            "Last": [
+                "Clicktap",
+                "Creakboard",
+                "Droptile",
+                "Echohall",
+                "Floorcreak",
+                "Gutterdrop",
+                "Hingesqueal",
+                "Ironclang",
+                "Keystroke",
+                "Lockpick",
+                "Mousetrap",
+                "Nightcall",
+                "Oldbell",
+                "Pipedrip",
+                "Rooftap"
+            ]
+        },
+        "Lizardfolk": {
+            "First": [
+                "Arashk",
+                "Brazzik",
+                "Chrusk",
+                "Drezzik",
+                "Essik",
+                "Grissik",
+                "Hassik",
+                "Irusk",
+                "Kethsik",
+                "Lorusk",
+                "Nazzik",
+                "Ossik",
+                "Rassik",
+                "Sethsik",
+                "Thrusk"
+            ],
+            "Last": [
+                "Blackscale",
+                "Coldblood",
+                "Darkfen",
+                "Marshborn",
+                "Mudclaw",
+                "Reedhide",
+                "Riverfang",
+                "Scalethorn",
+                "Shallowmaw",
+                "Stonescale",
+                "Sunscale",
+                "Swampclaw",
+                "Tideborn",
+                "Venomscale",
+                "Bogwalker"
+            ]
+        },
+        "Triton": {
+            "First": [
+                "Adratus",
+                "Caspion",
+                "Delphion",
+                "Erathis",
+                "Galaton",
+                "Helcion",
+                "Korinth",
+                "Lysion",
+                "Nereus",
+                "Pelamon",
+                "Rathion",
+                "Soron",
+                "Tethion",
+                "Undaris",
+                "Valthor"
+            ],
+            "Last": [
+                "Coralcrest",
+                "Deepcurrent",
+                "Foambreaker",
+                "Galeborn",
+                "Highsea",
+                "Kelpcrown",
+                "Pearlward",
+                "Reefwalker",
+                "Saltborne",
+                "Shellcrest",
+                "Stormtide",
+                "Surgeborn",
+                "Tidecaller",
+                "Wavemantle",
+                "Abyssward"
+            ]
+        },
+        "Yuan-ti": {
+            "First": [
+                "Asshir",
+                "Cssathor",
+                "Hassith",
+                "Isstal",
+                "Kassir",
+                "Nassith",
+                "Ossiral",
+                "Rassil",
+                "Shissok",
+                "Thassik",
+                "Ussath",
+                "Vassik",
+                "Xisstal",
+                "Yssith",
+                "Zassir"
+            ],
+            "Last": [
+                "Coilshadow",
+                "Duskscale",
+                "Fangseer",
+                "Hissbane",
+                "Nightcoil",
+                "Scaleveil",
+                "Serpentblood",
+                "Shadowcoil",
+                "Silentfang",
+                "Spineweave",
+                "Veilscale",
+                "Venomtongue",
+                "Viperthorn",
+                "Wraithscale",
+                "Wyrmveil"
+            ]
+        },
+        "Leonin": {
+            "First": [
+                "Ajabu",
+                "Bakari",
+                "Chuma",
+                "Dakan",
+                "Ekene",
+                "Faraji",
+                "Gathu",
+                "Hasani",
+                "Jabari",
+                "Khari",
+                "Makalo",
+                "Nkosi",
+                "Osei",
+                "Safiri",
+                "Zuberi"
+            ],
+            "Last": [
+                "Goldmane",
+                "Ironpride",
+                "Prideborn",
+                "Roarcrest",
+                "Sunmane",
+                "Thunderpride",
+                "Wildmane",
+                "Dustwalker",
+                "Firemane",
+                "Huntclaw",
+                "Kingmane",
+                "Lightpaw",
+                "Nightpride",
+                "Stormroar",
+                "Swiftclaw"
+            ]
+        },
+        "Satyr": {
+            "First": [
+                "Aegis",
+                "Brios",
+                "Cydon",
+                "Dinos",
+                "Eudos",
+                "Galenos",
+                "Hylas",
+                "Iolos",
+                "Kyros",
+                "Linos",
+                "Maron",
+                "Nikos",
+                "Orios",
+                "Pylos",
+                "Theron"
+            ],
+            "Last": [
+                "Brookleap",
+                "Dawnpiper",
+                "Fernhoof",
+                "Gladesong",
+                "Greenvine",
+                "Hillrunner",
+                "Ivydance",
+                "Meadowlark",
+                "Mossfoot",
+                "Oakhorn",
+                "Revelgrove",
+                "Springhoof",
+                "Thornberry",
+                "Wildgrape",
+                "Winebloom"
+            ]
+        },
+        "Giff": {
+            "First": [
+                "Barnaby",
+                "Chester",
+                "Dudley",
+                "Fenton",
+                "Godfrey",
+                "Hartwell",
+                "Jasper",
+                "Kingston",
+                "Mortimer",
+                "Nigel",
+                "Oswald",
+                "Percival",
+                "Reginald",
+                "Thaddeus",
+                "Winston"
+            ],
+            "Last": [
+                "Brassington",
+                "Cannonbury",
+                "Dreadnought",
+                "Fieldmarshal",
+                "Gunwright",
+                "Ironclad",
+                "Knightbridge",
+                "Muzzleton",
+                "Ordnance",
+                "Powderhorn",
+                "Rampart",
+                "Shellcasing",
+                "Thunderbore",
+                "Vanguard",
+                "Wellingford"
+            ]
+        },
+        "Warforged": {
+            "First": [
+                "Anchor",
+                "Bastion",
+                "Bulwark",
+                "Forge",
+                "Granite",
+                "Hammer",
+                "Iron",
+                "Lance",
+                "Piston",
+                "Rampart",
+                "Rivet",
+                "Sentinel",
+                "Shield",
+                "Timber",
+                "Warden"
+            ],
+            "Last": [
+                "Steelframe",
+                "Copperplate",
+                "Brasswork",
+                "Ironheart",
+                "Bronzemantle",
+                "Gearheart",
+                "Springcoil",
+                "Platemend",
+                "Forgespawn",
+                "Hammerbuilt",
+                "Sparkforge",
+                "Weldborn",
+                "Moldcast",
+                "Tinkerbuilt",
+                "Coilspring"
+            ]
+        },
+        "Changeling": {
+            "First": [
+                "Auric",
+                "Bask",
+                "Cael",
+                "Drift",
+                "Elm",
+                "Fael",
+                "Glim",
+                "Haze",
+                "Isle",
+                "Jynn",
+                "Kael",
+                "Lure",
+                "Mask",
+                "Null",
+                "Oren"
+            ],
+            "Last": [
+                "Blankborn",
+                "Ciphermark",
+                "Driftmask",
+                "Faceless",
+                "Greyborn",
+                "Hollowveil",
+                "Mistveil",
+                "Nonescript",
+                "Palemark",
+                "Quickchange",
+                "Shiftborn",
+                "Thinveil",
+                "Unmarked",
+                "Veilborn",
+                "Wandermask"
+            ]
+        },
+        "Shifter": {
+            "First": [
+                "Barrow",
+                "Crag",
+                "Dirk",
+                "Fang",
+                "Gnarl",
+                "Howl",
+                "Keel",
+                "Lash",
+                "Maul",
+                "Pike",
+                "Rasp",
+                "Snarl",
+                "Tusk",
+                "Whet",
+                "Yawl"
+            ],
+            "Last": [
+                "Ashfur",
+                "Blackpelt",
+                "Clawmark",
+                "Darkfang",
+                "Emberhide",
+                "Fleetpaw",
+                "Greymane",
+                "Hollowfang",
+                "Ironhide",
+                "Keenfang",
+                "Longclaw",
+                "Moonscar",
+                "Nightpelt",
+                "Razorback",
+                "Swiftfang"
+            ]
+        },
+        "Owlin": {
+            "First": [
+                "Aldwin",
+                "Boral",
+                "Corvyn",
+                "Darin",
+                "Eventide",
+                "Finch",
+                "Galen",
+                "Hootan",
+                "Icarin",
+                "Jasper",
+                "Kestrel",
+                "Lorewin",
+                "Meridian",
+                "Nocturne",
+                "Owlric"
+            ],
+            "Last": [
+                "Brightfeather",
+                "Cloudperch",
+                "Downplume",
+                "Evensky",
+                "Feathermantle",
+                "Glidewind",
+                "Highperch",
+                "Ivorytalon",
+                "Keeneye",
+                "Moonplume",
+                "Nightglide",
+                "Pinehome",
+                "Softwing",
+                "Starperch",
+                "Twilightdown"
+            ]
+        },
+        "Fairy": {
+            "First": [
+                "Bramble",
+                "Cobweb",
+                "Dewdrop",
+                "Flicker",
+                "Glimmer",
+                "Hawthorn",
+                "Juniper",
+                "Kindle",
+                "Larkspur",
+                "Mote",
+                "Nettle",
+                "Petal",
+                "Quill",
+                "Rowan",
+                "Sprout"
+            ],
+            "Last": [
+                "Bellchime",
+                "Crystaldew",
+                "Dewshine",
+                "Evenbreeze",
+                "Frostpetal",
+                "Glowmoss",
+                "Honeybloom",
+                "Icebell",
+                "Jewelvine",
+                "Moonpetal",
+                "Nightbloom",
+                "Petalwind",
+                "Shimmerleaf",
+                "Sparkdust",
+                "Twinklevale"
+            ]
+        },
+        "Harengon": {
+            "First": [
+                "Barley",
+                "Bramwell",
+                "Chester",
+                "Dashwood",
+                "Fenwick",
+                "Grover",
+                "Hopsdale",
+                "Jasper",
+                "Kennick",
+                "Larch",
+                "Merrick",
+                "Nutley",
+                "Oakley",
+                "Pipwick",
+                "Thistle"
+            ],
+            "Last": [
+                "Brambletail",
+                "Burrowfield",
+                "Cloverhill",
+                "Dashfoot",
+                "Fernhollow",
+                "Greensward",
+                "Hopsfield",
+                "Longear",
+                "Meadowrun",
+                "Nibblewood",
+                "Quickfoot",
+                "Thornhill",
+                "Tumbletail",
+                "Warrengate",
+                "Wheatfield"
+            ]
+        },
+        "Aasimar_Radiant": {
+            "First": [
+                "Auriel",
+                "Cassiel",
+                "Hadrian",
+                "Isander",
+                "Kael",
+                "Lumael",
+                "Malthus",
+                "Orathis",
+                "Raelus",
+                "Sariel",
+                "Theron",
+                "Valdris",
+                "Xanthir",
+                "Zarek",
+                "Corvael"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
         }
-    ],
-    "Female": [
-        {
-            "Human": {
-                "First": [
-                    "Aelith", "Brenna", "Caitrin", "Dara", "Elspeth",
-                    "Gwyneth", "Isolde", "Lira", "Maren", "Rowena",
-                    "Sable", "Aldira", "Brynn", "Celia", "Oswyn"
-                ],
-                "Last": [
-                    "Ashford", "Blackwood", "Dunmore", "Fenwick", "Greymantle",
-                    "Ironwood", "Ravenscar", "Stonehaven", "Coldwater", "Duskholm",
-                    "Embermoor", "Fairbanks", "Goldvale", "Hartwell", "Ironsides"
-                ]
-            }
+    },
+    "Feminine": {
+        "Human": {
+            "First": [
+                "Aelith",
+                "Brenna",
+                "Caitrin",
+                "Dara",
+                "Elspeth",
+                "Gwyneth",
+                "Isolde",
+                "Lira",
+                "Maren",
+                "Rowena",
+                "Sable",
+                "Aldira",
+                "Brynn",
+                "Celia",
+                "Oswyn"
+            ],
+            "Last": [
+                "Ashford",
+                "Blackwood",
+                "Dunmore",
+                "Fenwick",
+                "Greymantle",
+                "Ironwood",
+                "Ravenscar",
+                "Stonehaven",
+                "Coldwater",
+                "Duskholm",
+                "Embermoor",
+                "Fairbanks",
+                "Goldvale",
+                "Hartwell",
+                "Ironsides"
+            ]
         },
-        {
-            "Elf": {
-                "First": [
-                    "Aelindra", "Caelynn", "Drusilia", "Enna", "Faelinn",
-                    "Felosial", "Isilme", "Lirien", "Miriel", "Naevara",
-                    "Silwen", "Adrie", "Birel", "Gwynneth", "Tialenne"
-                ],
-                "Last": [
-                    "Amakir", "Dawnmere", "Elensar", "Faewynn", "Galendor",
-                    "Isilmere", "Lirenwood", "Moonwhisper", "Silverleaf", "Starbrow",
-                    "Windweave", "Brightleaf", "Duskmantle", "Starhollow", "Thornweald"
-                ]
-            }
+        "Elf": {
+            "First": [
+                "Aelindra",
+                "Caelynn",
+                "Drusilia",
+                "Enna",
+                "Faelinn",
+                "Felosial",
+                "Isilme",
+                "Lirien",
+                "Miriel",
+                "Naevara",
+                "Silwen",
+                "Adrie",
+                "Birel",
+                "Gwynneth",
+                "Tialenne"
+            ],
+            "Last": [
+                "Amakir",
+                "Dawnmere",
+                "Elensar",
+                "Faewynn",
+                "Galendor",
+                "Isilmere",
+                "Lirenwood",
+                "Moonwhisper",
+                "Silverleaf",
+                "Starbrow",
+                "Windweave",
+                "Brightleaf",
+                "Duskmantle",
+                "Starhollow",
+                "Thornweald"
+            ]
         },
-        {
-            "Dwarf": {
-                "First": [
-                    "Arva", "Dagra", "Diesa", "Eldra", "Falka",
-                    "Gunda", "Helga", "Ilda", "Kathra", "Marta",
-                    "Osra", "Riswynn", "Saba", "Torbera", "Vistra"
-                ],
-                "Last": [
-                    "Anvilmar", "Boulderkin", "Copperforge", "Deepdelve", "Firemantle",
-                    "Goldvein", "Hammerfall", "Ironbrew", "Mountainheart", "Rockseam",
-                    "Stonefist", "Thunderpeak", "Brassbuckle", "Coalmantle", "Steelwright"
-                ]
-            }
+        "Dwarf": {
+            "First": [
+                "Arva",
+                "Dagra",
+                "Diesa",
+                "Eldra",
+                "Falka",
+                "Gunda",
+                "Helga",
+                "Ilda",
+                "Kathra",
+                "Marta",
+                "Osra",
+                "Riswynn",
+                "Saba",
+                "Torbera",
+                "Vistra"
+            ],
+            "Last": [
+                "Anvilmar",
+                "Boulderkin",
+                "Copperforge",
+                "Deepdelve",
+                "Firemantle",
+                "Goldvein",
+                "Hammerfall",
+                "Ironbrew",
+                "Mountainheart",
+                "Rockseam",
+                "Stonefist",
+                "Thunderpeak",
+                "Brassbuckle",
+                "Coalmantle",
+                "Steelwright"
+            ]
         },
-        {
-            "Half-Orc": {
-                "First": [
-                    "Bagra", "Emka", "Gorva", "Helka", "Itha",
-                    "Kansa", "Morda", "Neeva", "Ovra", "Shavra",
-                    "Sulka", "Vola", "Yeva", "Zarka", "Brusha"
-                ],
-                "Last": [
-                    "Bearclaw", "Blacktusk", "Bloodfist", "Bonecrusher", "Darkblade",
-                    "Fiercewind", "Grimtooth", "Ironjaw", "Skullcleave", "Stoneback",
-                    "Tuskhide", "Wolfmane", "Ashbrand", "Razorback", "Warborn"
-                ]
-            }
+        "Half Orc": {
+            "First": [
+                "Bagra",
+                "Emka",
+                "Gorva",
+                "Helka",
+                "Itha",
+                "Kansa",
+                "Morda",
+                "Neeva",
+                "Ovra",
+                "Shavra",
+                "Sulka",
+                "Vola",
+                "Yeva",
+                "Zarka",
+                "Brusha"
+            ],
+            "Last": [
+                "Bearclaw",
+                "Blacktusk",
+                "Bloodfist",
+                "Bonecrusher",
+                "Darkblade",
+                "Fiercewind",
+                "Grimtooth",
+                "Ironjaw",
+                "Skullcleave",
+                "Stoneback",
+                "Tuskhide",
+                "Wolfmane",
+                "Ashbrand",
+                "Razorback",
+                "Warborn"
+            ]
         },
-        {
-            "Gnome": {
-                "First": [
-                    "Bimble", "Breena", "Caramip", "Dimple", "Ellywyn",
-                    "Fibblestix", "Gimlet", "Lilli", "Mimpsy", "Nissa",
-                    "Popple", "Roondar", "Sybil", "Tippi", "Wren"
-                ],
-                "Last": [
-                    "Beren", "Cogsworth", "Folkor", "Garrick", "Gearspring",
-                    "Nackle", "Ningel", "Scheppen", "Tinkerton", "Turen",
-                    "Wobblewick", "Wrenchbit", "Copperkettle", "Fizzlebang", "Sprocketdale"
-                ]
-            }
+        "Gnome": {
+            "First": [
+                "Bimble",
+                "Breena",
+                "Caramip",
+                "Dimple",
+                "Ellywyn",
+                "Fibblestix",
+                "Gimlet",
+                "Lilli",
+                "Mimpsy",
+                "Nissa",
+                "Popple",
+                "Roondar",
+                "Sybil",
+                "Tippi",
+                "Wren"
+            ],
+            "Last": [
+                "Beren",
+                "Cogsworth",
+                "Folkor",
+                "Garrick",
+                "Gearspring",
+                "Nackle",
+                "Ningel",
+                "Scheppen",
+                "Tinkerton",
+                "Turen",
+                "Wobblewick",
+                "Wrenchbit",
+                "Copperkettle",
+                "Fizzlebang",
+                "Sprocketdale"
+            ]
         },
-        {
-            "Halfling": {
-                "First": [
-                    "Andry", "Bree", "Callie", "Cora", "Delly",
-                    "Euphemia", "Jillian", "Kithri", "Lidda", "Maegan",
-                    "Melly", "Nedda", "Portia", "Seraphina", "Wendeline"
-                ],
-                "Last": [
-                    "Brambletoe", "Burrows", "Goodbarrel", "Greenhill", "Hillmantle",
-                    "Leagallow", "Meadowbrook", "Tealeaf", "Thorngage", "Tosscobble",
-                    "Underbough", "Tumbleweed", "Fernhollow", "Lightfoot", "Mossberg"
-                ]
-            }
+        "Halfling": {
+            "First": [
+                "Andry",
+                "Bree",
+                "Callie",
+                "Cora",
+                "Delly",
+                "Euphemia",
+                "Jillian",
+                "Kithri",
+                "Lidda",
+                "Maegan",
+                "Melly",
+                "Nedda",
+                "Portia",
+                "Seraphina",
+                "Wendeline"
+            ],
+            "Last": [
+                "Brambletoe",
+                "Burrows",
+                "Goodbarrel",
+                "Greenhill",
+                "Hillmantle",
+                "Leagallow",
+                "Meadowbrook",
+                "Tealeaf",
+                "Thorngage",
+                "Tosscobble",
+                "Underbough",
+                "Tumbleweed",
+                "Fernhollow",
+                "Lightfoot",
+                "Mossberg"
+            ]
         },
-        {
-            "Tiefling": {
-                "First": [
-                    "Akta", "Anakis", "Bryseis", "Criella", "Damaia",
-                    "Kallista", "Lerissa", "Makaria", "Nemeia", "Orianna",
-                    "Phelaia", "Rieta", "Seriva", "Vexara", "Zira"
-                ],
-                "Last": [
-                    "Ashmoor", "Blackflame", "Cinderfall", "Darkmantle", "Emberveil",
-                    "Hellscar", "Ironveil", "Nightfall", "Shadowend", "Singedge",
-                    "Soulchain", "Voidmark", "Ashenbrand", "Duskmantle", "Scorchveil"
-                ]
-            }
+        "Tiefling": {
+            "First": [
+                "Akta",
+                "Anakis",
+                "Bryseis",
+                "Criella",
+                "Damaia",
+                "Kallista",
+                "Lerissa",
+                "Makaria",
+                "Nemeia",
+                "Orianna",
+                "Phelaia",
+                "Rieta",
+                "Seriva",
+                "Vexara",
+                "Zira"
+            ],
+            "Last": [
+                "Ashmoor",
+                "Blackflame",
+                "Cinderfall",
+                "Darkmantle",
+                "Emberveil",
+                "Hellscar",
+                "Ironveil",
+                "Nightfall",
+                "Shadowend",
+                "Singedge",
+                "Soulchain",
+                "Voidmark",
+                "Ashenbrand",
+                "Duskmantle",
+                "Scorchveil"
+            ]
         },
-        {
-            "Dragonborn": {
-                "First": [
-                    "Akra", "Biri", "Daar", "Farideh", "Harann",
-                    "Kava", "Korinn", "Mishann", "Nala", "Perra",
-                    "Raiann", "Sora", "Surina", "Thava", "Uadjit"
-                ],
-                "Last": [
-                    "Dawnscale", "Emberclaw", "Frostfang", "Goldwing", "Ironscale",
-                    "Jadecrest", "Obsidianmaw", "Rubycrest", "Silverfang", "Stormwing",
-                    "Thunderscale", "Voidfang", "Ashenwing", "Cinderclaw", "Slatescale"
-                ]
-            }
+        "Dragonborn": {
+            "First": [
+                "Akra",
+                "Biri",
+                "Daar",
+                "Farideh",
+                "Harann",
+                "Kava",
+                "Korinn",
+                "Mishann",
+                "Nala",
+                "Perra",
+                "Raiann",
+                "Sora",
+                "Surina",
+                "Thava",
+                "Uadjit"
+            ],
+            "Last": [
+                "Dawnscale",
+                "Emberclaw",
+                "Frostfang",
+                "Goldwing",
+                "Ironscale",
+                "Jadecrest",
+                "Obsidianmaw",
+                "Rubycrest",
+                "Silverfang",
+                "Stormwing",
+                "Thunderscale",
+                "Voidfang",
+                "Ashenwing",
+                "Cinderclaw",
+                "Slatescale"
+            ]
+        },
+        "Aasimar_Necrotic": {
+            "First": [
+                "Aelora",
+                "Celeste",
+                "Davina",
+                "Elara",
+                "Galatea",
+                "Iridessa",
+                "Lumina",
+                "Mirael",
+                "Naara",
+                "Ophira",
+                "Radha",
+                "Seraphel",
+                "Thaliel",
+                "Valael",
+                "Zariah"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
+        },
+        "Githyanki": {
+            "First": [
+                "Braela",
+                "Dravka",
+                "Githara",
+                "Harzala",
+                "Karathi",
+                "Kraziel",
+                "Mardala",
+                "Nirala",
+                "Razael",
+                "Sarkala",
+                "Thraviel",
+                "Vorael",
+                "Xariel",
+                "Yalvra",
+                "Zarthael"
+            ],
+            "Last": [
+                "Voidblade",
+                "Warsong",
+                "Deathspear",
+                "Astralborn",
+                "Starreaver",
+                "Planescar",
+                "Silversting",
+                "Voidwrath",
+                "Mindsever",
+                "Steelgrasp",
+                "Doomforge",
+                "Warmantle",
+                "Starsunder",
+                "Voidstep",
+                "Ironwill"
+            ]
+        },
+        "Githzerai": {
+            "First": [
+                "Balira",
+                "Caletha",
+                "Dhamira",
+                "Estala",
+                "Falgra",
+                "Gathira",
+                "Izahla",
+                "Kethira",
+                "Lathira",
+                "Mazhira",
+                "Nethira",
+                "Ozamira",
+                "Rashaela",
+                "Talhira",
+                "Uzaina"
+            ],
+            "Last": [
+                "Stillmind",
+                "Voidwalker",
+                "Calmspire",
+                "Ironwill",
+                "Peacemantle",
+                "Soulforged",
+                "Mindkeeper",
+                "Greywind",
+                "Dawnseeker",
+                "Stonemantle",
+                "Breathless",
+                "Clearwater",
+                "Silentpeak",
+                "Truthseer",
+                "Zerthborn"
+            ]
+        },
+        "Goliath": {
+            "First": [
+                "Autha",
+                "Betha",
+                "Dorli",
+                "Galena",
+                "Ithola",
+                "Kutha",
+                "Maneka",
+                "Naliki",
+                "Orila",
+                "Pavola",
+                "Thali",
+                "Uthari",
+                "Vathi",
+                "Zareka",
+                "Elika"
+            ],
+            "Last": [
+                "Peakclimber",
+                "Stonecarver",
+                "Thunderstep",
+                "Cloudwalker",
+                "Rockbreaker",
+                "Frostbeard",
+                "Mountainborn",
+                "Skywatcher",
+                "Boulderkin",
+                "Cragborn",
+                "Highpeak",
+                "Ridgewalker",
+                "Snowmane",
+                "Windkeeper",
+                "Ironpeak"
+            ]
+        },
+        "Firbolg": {
+            "First": [
+                "Aisling",
+                "Briona",
+                "Caoimhe",
+                "Deirdre",
+                "Eithne",
+                "Fionnuala",
+                "Grainne",
+                "Iona",
+                "Keelin",
+                "Liadan",
+                "Niamh",
+                "Orlaith",
+                "Rhosyn",
+                "Roisin",
+                "Siobhan"
+            ],
+            "Last": [
+                "Deeproot",
+                "Fernwalker",
+                "Glenmoss",
+                "Hillwhisper",
+                "Ivythorn",
+                "Leafsong",
+                "Mossheart",
+                "Oakenshield",
+                "Pinegrove",
+                "Rootweaver",
+                "Stonebark",
+                "Thornvale",
+                "Willowmere",
+                "Bramblewood",
+                "Misthollow"
+            ]
+        },
+        "Tabaxi": {
+            "First": [
+                "Bright Feather",
+                "Crystal Brook",
+                "Dawn Whisker",
+                "Flame Dancer",
+                "Golden Eye",
+                "Honey Paw",
+                "Jewel Claw",
+                "Moon Singer",
+                "Pearl Strider",
+                "Rose Thorn",
+                "Silver Whisper",
+                "Sun Chaser",
+                "Twilight Prowl",
+                "Velvet Paw",
+                "Willow Song"
+            ],
+            "Last": [
+                "Bright Cliffs",
+                "Distant Rain",
+                "Emerald Shore",
+                "Hollow Tree",
+                "Ivory Mesa",
+                "Keen Wind",
+                "Moonlit Peak",
+                "Rushing River",
+                "Silver Dune",
+                "Twilight Marsh",
+                "Wandering Cloud",
+                "Crimson Bluff",
+                "Dappled Shade",
+                "Fallen Star",
+                "Golden Ridge"
+            ]
+        },
+        "Kenku": {
+            "First": [
+                "Chirp",
+                "Coo",
+                "Drip",
+                "Flutter",
+                "Hum",
+                "Lilt",
+                "Murmur",
+                "Peep",
+                "Rustle",
+                "Shimmer",
+                "Sigh",
+                "Splash",
+                "Trill",
+                "Twinkle",
+                "Whirr"
+            ],
+            "Last": [
+                "Clicktap",
+                "Creakboard",
+                "Droptile",
+                "Echohall",
+                "Floorcreak",
+                "Gutterdrop",
+                "Hingesqueal",
+                "Ironclang",
+                "Keystroke",
+                "Lockpick",
+                "Mousetrap",
+                "Nightcall",
+                "Oldbell",
+                "Pipedrip",
+                "Rooftap"
+            ]
+        },
+        "Lizardfolk": {
+            "First": [
+                "Arasha",
+                "Brazzka",
+                "Chruska",
+                "Drezzka",
+                "Esska",
+                "Grisska",
+                "Hasska",
+                "Iruska",
+                "Kethska",
+                "Loruska",
+                "Nazzka",
+                "Osska",
+                "Rasska",
+                "Sethska",
+                "Thruska"
+            ],
+            "Last": [
+                "Blackscale",
+                "Coldblood",
+                "Darkfen",
+                "Marshborn",
+                "Mudclaw",
+                "Reedhide",
+                "Riverfang",
+                "Scalethorn",
+                "Shallowmaw",
+                "Stonescale",
+                "Sunscale",
+                "Swampclaw",
+                "Tideborn",
+                "Venomscale",
+                "Bogwalker"
+            ]
+        },
+        "Triton": {
+            "First": [
+                "Adrata",
+                "Caspira",
+                "Delphina",
+                "Eratha",
+                "Galatea",
+                "Helcia",
+                "Korintha",
+                "Lysia",
+                "Nerea",
+                "Pelamira",
+                "Rathia",
+                "Sorena",
+                "Tethia",
+                "Undara",
+                "Valthra"
+            ],
+            "Last": [
+                "Coralcrest",
+                "Deepcurrent",
+                "Foambreaker",
+                "Galeborn",
+                "Highsea",
+                "Kelpcrown",
+                "Pearlward",
+                "Reefwalker",
+                "Saltborne",
+                "Shellcrest",
+                "Stormtide",
+                "Surgeborn",
+                "Tidecaller",
+                "Wavemantle",
+                "Abyssward"
+            ]
+        },
+        "Yuan-ti": {
+            "First": [
+                "Asshira",
+                "Cssara",
+                "Hassitha",
+                "Isstala",
+                "Kassira",
+                "Nassitha",
+                "Ossira",
+                "Rassila",
+                "Shissara",
+                "Thassika",
+                "Ussatha",
+                "Vassika",
+                "Xisstala",
+                "Yssitha",
+                "Zassira"
+            ],
+            "Last": [
+                "Coilshadow",
+                "Duskscale",
+                "Fangseer",
+                "Hissbane",
+                "Nightcoil",
+                "Scaleveil",
+                "Serpentblood",
+                "Shadowcoil",
+                "Silentfang",
+                "Spineweave",
+                "Veilscale",
+                "Venomtongue",
+                "Viperthorn",
+                "Wraithscale",
+                "Wyrmveil"
+            ]
+        },
+        "Leonin": {
+            "First": [
+                "Adaeze",
+                "Bahati",
+                "Dalila",
+                "Eshe",
+                "Farida",
+                "Hadiya",
+                "Imara",
+                "Kamili",
+                "Layla",
+                "Makena",
+                "Nalini",
+                "Oni",
+                "Penda",
+                "Sanura",
+                "Zuri"
+            ],
+            "Last": [
+                "Goldmane",
+                "Ironpride",
+                "Prideborn",
+                "Roarcrest",
+                "Sunmane",
+                "Thunderpride",
+                "Wildmane",
+                "Dustwalker",
+                "Firemane",
+                "Huntclaw",
+                "Kingmane",
+                "Lightpaw",
+                "Nightpride",
+                "Stormroar",
+                "Swiftclaw"
+            ]
+        },
+        "Satyr": {
+            "First": [
+                "Aella",
+                "Brythe",
+                "Calista",
+                "Dione",
+                "Evadne",
+                "Galene",
+                "Hestara",
+                "Ione",
+                "Kyra",
+                "Lyra",
+                "Melaina",
+                "Nerine",
+                "Orea",
+                "Pheona",
+                "Thalia"
+            ],
+            "Last": [
+                "Brookleap",
+                "Dawnpiper",
+                "Fernhoof",
+                "Gladesong",
+                "Greenvine",
+                "Hillrunner",
+                "Ivydance",
+                "Meadowlark",
+                "Mossfoot",
+                "Oakhorn",
+                "Revelgrove",
+                "Springhoof",
+                "Thornberry",
+                "Wildgrape",
+                "Winebloom"
+            ]
+        },
+        "Giff": {
+            "First": [
+                "Adelaide",
+                "Beatrice",
+                "Cordelia",
+                "Dorothea",
+                "Edwina",
+                "Florence",
+                "Gertrude",
+                "Harriet",
+                "Isadora",
+                "Josephine",
+                "Millicent",
+                "Nettie",
+                "Octavia",
+                "Prudence",
+                "Winifred"
+            ],
+            "Last": [
+                "Brassington",
+                "Cannonbury",
+                "Dreadnought",
+                "Fieldmarshal",
+                "Gunwright",
+                "Ironclad",
+                "Knightbridge",
+                "Muzzleton",
+                "Ordnance",
+                "Powderhorn",
+                "Rampart",
+                "Shellcasing",
+                "Thunderbore",
+                "Vanguard",
+                "Wellingford"
+            ]
+        },
+        "Warforged": {
+            "First": [
+                "Aurora",
+                "Beacon",
+                "Circuit",
+                "Dawn",
+                "Ember",
+                "Filament",
+                "Grace",
+                "Haven",
+                "Ivory",
+                "Jewel",
+                "Kindle",
+                "Lattice",
+                "Mend",
+                "Nova",
+                "Prism"
+            ],
+            "Last": [
+                "Steelframe",
+                "Copperplate",
+                "Brasswork",
+                "Ironheart",
+                "Bronzemantle",
+                "Gearheart",
+                "Springcoil",
+                "Platemend",
+                "Forgespawn",
+                "Hammerbuilt",
+                "Sparkforge",
+                "Weldborn",
+                "Moldcast",
+                "Tinkerbuilt",
+                "Coilspring"
+            ]
+        },
+        "Changeling": {
+            "First": [
+                "Alba",
+                "Blythe",
+                "Cipher",
+                "Dune",
+                "Echo",
+                "Fable",
+                "Guile",
+                "Haven",
+                "Iris",
+                "Jade",
+                "Kira",
+                "Lace",
+                "Mirage",
+                "Nyx",
+                "Opal"
+            ],
+            "Last": [
+                "Blankborn",
+                "Ciphermark",
+                "Driftmask",
+                "Faceless",
+                "Greyborn",
+                "Hollowveil",
+                "Mistveil",
+                "Nonescript",
+                "Palemark",
+                "Quickchange",
+                "Shiftborn",
+                "Thinveil",
+                "Unmarked",
+                "Veilborn",
+                "Wandermask"
+            ]
+        },
+        "Shifter": {
+            "First": [
+                "Aspen",
+                "Briar",
+                "Clover",
+                "Dove",
+                "Fawn",
+                "Hazel",
+                "Lark",
+                "Maple",
+                "Nettie",
+                "Petal",
+                "Robin",
+                "Sage",
+                "Tawny",
+                "Wren",
+                "Yarrow"
+            ],
+            "Last": [
+                "Ashfur",
+                "Blackpelt",
+                "Clawmark",
+                "Darkfang",
+                "Emberhide",
+                "Fleetpaw",
+                "Greymane",
+                "Hollowfang",
+                "Ironhide",
+                "Keenfang",
+                "Longclaw",
+                "Moonscar",
+                "Nightpelt",
+                "Razorback",
+                "Swiftfang"
+            ]
+        },
+        "Owlin": {
+            "First": [
+                "Alura",
+                "Brina",
+                "Celeste",
+                "Dawna",
+                "Elara",
+                "Featha",
+                "Gwendis",
+                "Hootara",
+                "Iria",
+                "Junara",
+                "Kira",
+                "Luna",
+                "Mira",
+                "Nesta",
+                "Olwen"
+            ],
+            "Last": [
+                "Brightfeather",
+                "Cloudperch",
+                "Downplume",
+                "Evensky",
+                "Feathermantle",
+                "Glidewind",
+                "Highperch",
+                "Ivorytalon",
+                "Keeneye",
+                "Moonplume",
+                "Nightglide",
+                "Pinehome",
+                "Softwing",
+                "Starperch",
+                "Twilightdown"
+            ]
+        },
+        "Fairy": {
+            "First": [
+                "Blossom",
+                "Clover",
+                "Daisy",
+                "Eglantine",
+                "Fern",
+                "Gossamer",
+                "Honeydew",
+                "Iris",
+                "Jasmine",
+                "Lavender",
+                "Marigold",
+                "Nectar",
+                "Orchid",
+                "Primrose",
+                "Rosebud"
+            ],
+            "Last": [
+                "Bellchime",
+                "Crystaldew",
+                "Dewshine",
+                "Evenbreeze",
+                "Frostpetal",
+                "Glowmoss",
+                "Honeybloom",
+                "Icebell",
+                "Jewelvine",
+                "Moonpetal",
+                "Nightbloom",
+                "Petalwind",
+                "Shimmerleaf",
+                "Sparkdust",
+                "Twinklevale"
+            ]
+        },
+        "Harengon": {
+            "First": [
+                "Bluebell",
+                "Clementine",
+                "Daffodil",
+                "Etta",
+                "Flora",
+                "Ginger",
+                "Hazel",
+                "Ivy",
+                "Juniper",
+                "Kale",
+                "Lily",
+                "Marigold",
+                "Nutmeg",
+                "Olive",
+                "Poppy"
+            ],
+            "Last": [
+                "Brambletail",
+                "Burrowfield",
+                "Cloverhill",
+                "Dashfoot",
+                "Fernhollow",
+                "Greensward",
+                "Hopsfield",
+                "Longear",
+                "Meadowrun",
+                "Nibblewood",
+                "Quickfoot",
+                "Thornhill",
+                "Tumbletail",
+                "Warrengate",
+                "Wheatfield"
+            ]
+        },
+        "Aasimar_Radiant": {
+            "First": [
+                "Aelora",
+                "Celeste",
+                "Davina",
+                "Elara",
+                "Galatea",
+                "Iridessa",
+                "Lumina",
+                "Mirael",
+                "Naara",
+                "Ophira",
+                "Radha",
+                "Seraphel",
+                "Thaliel",
+                "Valael",
+                "Zariah"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
         }
-    ],
-    "Neutral": [
-        {
-            "Human": {
-                "First": [
-                    "Ash", "Bren", "Cael", "Dare", "Eden",
-                    "Fenn", "Grey", "Holm", "Isen", "Lorn",
-                    "Marn", "Neven", "Oryn", "Rael", "Taren"
-                ],
-                "Last": [
-                    "Ashford", "Blackwood", "Dunmore", "Fenwick", "Greymantle",
-                    "Ironwood", "Ravenscar", "Stonehaven", "Coldwater", "Duskholm",
-                    "Embermoor", "Fairbanks", "Goldvale", "Hartwell", "Ironsides"
-                ]
-            }
+    },
+    "Neutral": {
+        "Human": {
+            "First": [
+                "Ash",
+                "Bren",
+                "Cael",
+                "Dare",
+                "Eden",
+                "Fenn",
+                "Grey",
+                "Holm",
+                "Isen",
+                "Lorn",
+                "Marn",
+                "Neven",
+                "Oryn",
+                "Rael",
+                "Taren"
+            ],
+            "Last": [
+                "Ashford",
+                "Blackwood",
+                "Dunmore",
+                "Fenwick",
+                "Greymantle",
+                "Ironwood",
+                "Ravenscar",
+                "Stonehaven",
+                "Coldwater",
+                "Duskholm",
+                "Embermoor",
+                "Fairbanks",
+                "Goldvale",
+                "Hartwell",
+                "Ironsides"
+            ]
         },
-        {
-            "Elf": {
-                "First": [
-                    "Aelun", "Caer", "Elvar", "Faen", "Iril",
-                    "Laen", "Miren", "Nael", "Silor", "Tael",
-                    "Vaen", "Wylir", "Xael", "Yaen", "Zilor"
-                ],
-                "Last": [
-                    "Amakir", "Dawnmere", "Elensar", "Faewynn", "Galendor",
-                    "Isilmere", "Lirenwood", "Moonwhisper", "Silverleaf", "Starbrow",
-                    "Windweave", "Brightleaf", "Duskmantle", "Starhollow", "Thornweald"
-                ]
-            }
+        "Elf": {
+            "First": [
+                "Aelun",
+                "Caer",
+                "Elvar",
+                "Faen",
+                "Iril",
+                "Laen",
+                "Miren",
+                "Nael",
+                "Silor",
+                "Tael",
+                "Vaen",
+                "Wylir",
+                "Xael",
+                "Yaen",
+                "Zilor"
+            ],
+            "Last": [
+                "Amakir",
+                "Dawnmere",
+                "Elensar",
+                "Faewynn",
+                "Galendor",
+                "Isilmere",
+                "Lirenwood",
+                "Moonwhisper",
+                "Silverleaf",
+                "Starbrow",
+                "Windweave",
+                "Brightleaf",
+                "Duskmantle",
+                "Starhollow",
+                "Thornweald"
+            ]
         },
-        {
-            "Dwarf": {
-                "First": [
-                    "Brak", "Durn", "Ekka", "Frun", "Grak",
-                    "Hurn", "Ikka", "Krun", "Murn", "Orna",
-                    "Rak", "Skurn", "Thruk", "Urna", "Vrak"
-                ],
-                "Last": [
-                    "Anvilmar", "Boulderkin", "Copperforge", "Deepdelve", "Firemantle",
-                    "Goldvein", "Hammerfall", "Ironbrew", "Mountainheart", "Rockseam",
-                    "Stonefist", "Thunderpeak", "Brassbuckle", "Coalmantle", "Steelwright"
-                ]
-            }
+        "Dwarf": {
+            "First": [
+                "Brak",
+                "Durn",
+                "Ekka",
+                "Frun",
+                "Grak",
+                "Hurn",
+                "Ikka",
+                "Krun",
+                "Murn",
+                "Orna",
+                "Rak",
+                "Skurn",
+                "Thruk",
+                "Urna",
+                "Vrak"
+            ],
+            "Last": [
+                "Anvilmar",
+                "Boulderkin",
+                "Copperforge",
+                "Deepdelve",
+                "Firemantle",
+                "Goldvein",
+                "Hammerfall",
+                "Ironbrew",
+                "Mountainheart",
+                "Rockseam",
+                "Stonefist",
+                "Thunderpeak",
+                "Brassbuckle",
+                "Coalmantle",
+                "Steelwright"
+            ]
         },
-        {
-            "Half-Orc": {
-                "First": [
-                    "Brak", "Darg", "Gar", "Hrak", "Karg",
-                    "Marg", "Narg", "Ork", "Rarg", "Sarg",
-                    "Targ", "Urg", "Varg", "Warg", "Zarg"
-                ],
-                "Last": [
-                    "Bearclaw", "Blacktusk", "Bloodfist", "Bonecrusher", "Darkblade",
-                    "Fiercewind", "Grimtooth", "Ironjaw", "Skullcleave", "Stoneback",
-                    "Tuskhide", "Wolfmane", "Ashbrand", "Razorback", "Warborn"
-                ]
-            }
+        "Half Orc": {
+            "First": [
+                "Brak",
+                "Darg",
+                "Gar",
+                "Hrak",
+                "Karg",
+                "Marg",
+                "Narg",
+                "Ork",
+                "Rarg",
+                "Sarg",
+                "Targ",
+                "Urg",
+                "Varg",
+                "Warg",
+                "Zarg"
+            ],
+            "Last": [
+                "Bearclaw",
+                "Blacktusk",
+                "Bloodfist",
+                "Bonecrusher",
+                "Darkblade",
+                "Fiercewind",
+                "Grimtooth",
+                "Ironjaw",
+                "Skullcleave",
+                "Stoneback",
+                "Tuskhide",
+                "Wolfmane",
+                "Ashbrand",
+                "Razorback",
+                "Warborn"
+            ]
         },
-        {
-            "Gnome": {
-                "First": [
-                    "Bipp", "Clink", "Dink", "Fizz", "Glink",
-                    "Jink", "Klink", "Nink", "Plink", "Rink",
-                    "Sink", "Tink", "Wink", "Zink", "Blink"
-                ],
-                "Last": [
-                    "Beren", "Cogsworth", "Folkor", "Garrick", "Gearspring",
-                    "Nackle", "Ningel", "Scheppen", "Tinkerton", "Turen",
-                    "Wobblewick", "Wrenchbit", "Copperkettle", "Fizzlebang", "Sprocketdale"
-                ]
-            }
+        "Gnome": {
+            "First": [
+                "Bipp",
+                "Clink",
+                "Dink",
+                "Fizz",
+                "Glink",
+                "Jink",
+                "Klink",
+                "Nink",
+                "Plink",
+                "Rink",
+                "Sink",
+                "Tink",
+                "Wink",
+                "Zink",
+                "Blink"
+            ],
+            "Last": [
+                "Beren",
+                "Cogsworth",
+                "Folkor",
+                "Garrick",
+                "Gearspring",
+                "Nackle",
+                "Ningel",
+                "Scheppen",
+                "Tinkerton",
+                "Turen",
+                "Wobblewick",
+                "Wrenchbit",
+                "Copperkettle",
+                "Fizzlebang",
+                "Sprocketdale"
+            ]
         },
-        {
-            "Halfling": {
-                "First": [
-                    "Briar", "Clover", "Dale", "Elm", "Fern",
-                    "Glen", "Hazel", "Ivy", "Jay", "Kel",
-                    "Leaf", "Moss", "Nook", "Oak", "Reed"
-                ],
-                "Last": [
-                    "Brambletoe", "Burrows", "Goodbarrel", "Greenhill", "Hillmantle",
-                    "Leagallow", "Meadowbrook", "Tealeaf", "Thorngage", "Tosscobble",
-                    "Underbough", "Tumbleweed", "Fernhollow", "Lightfoot", "Mossberg"
-                ]
-            }
+        "Halfling": {
+            "First": [
+                "Briar",
+                "Clover",
+                "Dale",
+                "Elm",
+                "Fern",
+                "Glen",
+                "Hazel",
+                "Ivy",
+                "Jay",
+                "Kel",
+                "Leaf",
+                "Moss",
+                "Nook",
+                "Oak",
+                "Reed"
+            ],
+            "Last": [
+                "Brambletoe",
+                "Burrows",
+                "Goodbarrel",
+                "Greenhill",
+                "Hillmantle",
+                "Leagallow",
+                "Meadowbrook",
+                "Tealeaf",
+                "Thorngage",
+                "Tosscobble",
+                "Underbough",
+                "Tumbleweed",
+                "Fernhollow",
+                "Lightfoot",
+                "Mossberg"
+            ]
         },
-        {
-            "Tiefling": {
-                "First": [
-                    "Ash", "Bane", "Cinder", "Dusk", "Ember",
-                    "Flame", "Gloom", "Hex", "Jinx", "Knell",
-                    "Lament", "Malice", "Null", "Omen", "Pyre"
-                ],
-                "Last": [
-                    "Ashmoor", "Blackflame", "Cinderfall", "Darkmantle", "Emberveil",
-                    "Hellscar", "Ironveil", "Nightfall", "Shadowend", "Singedge",
-                    "Soulchain", "Voidmark", "Ashenbrand", "Duskmantle", "Scorchveil"
-                ]
-            }
+        "Tiefling": {
+            "First": [
+                "Ash",
+                "Bane",
+                "Cinder",
+                "Dusk",
+                "Ember",
+                "Flame",
+                "Gloom",
+                "Hex",
+                "Jinx",
+                "Knell",
+                "Lament",
+                "Malice",
+                "Null",
+                "Omen",
+                "Pyre"
+            ],
+            "Last": [
+                "Ashmoor",
+                "Blackflame",
+                "Cinderfall",
+                "Darkmantle",
+                "Emberveil",
+                "Hellscar",
+                "Ironveil",
+                "Nightfall",
+                "Shadowend",
+                "Singedge",
+                "Soulchain",
+                "Voidmark",
+                "Ashenbrand",
+                "Duskmantle",
+                "Scorchveil"
+            ]
         },
-        {
-            "Dragonborn": {
-                "First": [
-                    "Arax", "Brix", "Crux", "Drax", "Erax",
-                    "Frax", "Grax", "Hrax", "Irax", "Jrax",
-                    "Krax", "Lrax", "Mrax", "Nrax", "Orax"
-                ],
-                "Last": [
-                    "Dawnscale", "Emberclaw", "Frostfang", "Goldwing", "Ironscale",
-                    "Jadecrest", "Obsidianmaw", "Rubycrest", "Silverfang", "Stormwing",
-                    "Thunderscale", "Voidfang", "Ashenwing", "Cinderclaw", "Slatescale"
-                ]
-            }
+        "Dragonborn": {
+            "First": [
+                "Arax",
+                "Brix",
+                "Crux",
+                "Drax",
+                "Erax",
+                "Frax",
+                "Grax",
+                "Hrax",
+                "Irax",
+                "Jrax",
+                "Krax",
+                "Lrax",
+                "Mrax",
+                "Nrax",
+                "Orax"
+            ],
+            "Last": [
+                "Dawnscale",
+                "Emberclaw",
+                "Frostfang",
+                "Goldwing",
+                "Ironscale",
+                "Jadecrest",
+                "Obsidianmaw",
+                "Rubycrest",
+                "Silverfang",
+                "Stormwing",
+                "Thunderscale",
+                "Voidfang",
+                "Ashenwing",
+                "Cinderclaw",
+                "Slatescale"
+            ]
+        },
+        "Aasimar_Necrotic": {
+            "First": [
+                "Auren",
+                "Celion",
+                "Dael",
+                "Elar",
+                "Feyn",
+                "Galen",
+                "Hael",
+                "Irien",
+                "Kaelen",
+                "Lael",
+                "Maren",
+                "Naelen",
+                "Orien",
+                "Rael",
+                "Sael"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
+        },
+        "Githyanki": {
+            "First": [
+                "Brak",
+                "Drav",
+                "Githra",
+                "Harz",
+                "Karal",
+                "Kraz",
+                "Mard",
+                "Nirg",
+                "Razh",
+                "Sark",
+                "Thrav",
+                "Vork",
+                "Xarn",
+                "Yalg",
+                "Zarth"
+            ],
+            "Last": [
+                "Voidblade",
+                "Warsong",
+                "Deathspear",
+                "Astralborn",
+                "Starreaver",
+                "Planescar",
+                "Silversting",
+                "Voidwrath",
+                "Mindsever",
+                "Steelgrasp",
+                "Doomforge",
+                "Warmantle",
+                "Starsunder",
+                "Voidstep",
+                "Ironwill"
+            ]
+        },
+        "Githzerai": {
+            "First": [
+                "Balin",
+                "Calen",
+                "Dhamin",
+                "Esten",
+                "Falin",
+                "Gathen",
+                "Izahn",
+                "Kethen",
+                "Lathen",
+                "Mazhen",
+                "Nethen",
+                "Ozamen",
+                "Rashen",
+                "Talen",
+                "Uzaen"
+            ],
+            "Last": [
+                "Stillmind",
+                "Voidwalker",
+                "Calmspire",
+                "Ironwill",
+                "Peacemantle",
+                "Soulforged",
+                "Mindkeeper",
+                "Greywind",
+                "Dawnseeker",
+                "Stonemantle",
+                "Breathless",
+                "Clearwater",
+                "Silentpeak",
+                "Truthseer",
+                "Zerthborn"
+            ]
+        },
+        "Goliath": {
+            "First": [
+                "Auk",
+                "Berth",
+                "Dorga",
+                "Galen",
+                "Itho",
+                "Kutha",
+                "Manel",
+                "Nalik",
+                "Oril",
+                "Pavel",
+                "Thalk",
+                "Uthar",
+                "Vath",
+                "Zarek",
+                "Elak"
+            ],
+            "Last": [
+                "Peakclimber",
+                "Stonecarver",
+                "Thunderstep",
+                "Cloudwalker",
+                "Rockbreaker",
+                "Frostbeard",
+                "Mountainborn",
+                "Skywatcher",
+                "Boulderkin",
+                "Cragborn",
+                "Highpeak",
+                "Ridgewalker",
+                "Snowmane",
+                "Windkeeper",
+                "Ironpeak"
+            ]
+        },
+        "Firbolg": {
+            "First": [
+                "Alder",
+                "Birch",
+                "Cedar",
+                "Dael",
+                "Elm",
+                "Fern",
+                "Glen",
+                "Heather",
+                "Ivy",
+                "Juniper",
+                "Kael",
+                "Linden",
+                "Moss",
+                "Nettle",
+                "Oak"
+            ],
+            "Last": [
+                "Deeproot",
+                "Fernwalker",
+                "Glenmoss",
+                "Hillwhisper",
+                "Ivythorn",
+                "Leafsong",
+                "Mossheart",
+                "Oakenshield",
+                "Pinegrove",
+                "Rootweaver",
+                "Stonebark",
+                "Thornvale",
+                "Willowmere",
+                "Bramblewood",
+                "Misthollow"
+            ]
+        },
+        "Tabaxi": {
+            "First": [
+                "Amber Trail",
+                "Breeze Paw",
+                "Cobalt Eye",
+                "Drift Stalker",
+                "Echo Fang",
+                "Flint Claw",
+                "Gale Runner",
+                "Haze Prowl",
+                "Ink Whisker",
+                "Keen Eye",
+                "Lake Shadow",
+                "Mist Strider",
+                "Night Bloom",
+                "Opal Fang",
+                "Pike Claw"
+            ],
+            "Last": [
+                "Bright Cliffs",
+                "Distant Rain",
+                "Emerald Shore",
+                "Hollow Tree",
+                "Ivory Mesa",
+                "Keen Wind",
+                "Moonlit Peak",
+                "Rushing River",
+                "Silver Dune",
+                "Twilight Marsh",
+                "Wandering Cloud",
+                "Crimson Bluff",
+                "Dappled Shade",
+                "Fallen Star",
+                "Golden Ridge"
+            ]
+        },
+        "Kenku": {
+            "First": [
+                "Click",
+                "Crack",
+                "Echo",
+                "Fizz",
+                "Grind",
+                "Hush",
+                "Jingle",
+                "Klang",
+                "Pop",
+                "Ring",
+                "Scratch",
+                "Tap",
+                "Whoosh",
+                "Zip",
+                "Chime"
+            ],
+            "Last": [
+                "Clicktap",
+                "Creakboard",
+                "Droptile",
+                "Echohall",
+                "Floorcreak",
+                "Gutterdrop",
+                "Hingesqueal",
+                "Ironclang",
+                "Keystroke",
+                "Lockpick",
+                "Mousetrap",
+                "Nightcall",
+                "Oldbell",
+                "Pipedrip",
+                "Rooftap"
+            ]
+        },
+        "Lizardfolk": {
+            "First": [
+                "Arash",
+                "Brazz",
+                "Chrusk",
+                "Drezz",
+                "Essk",
+                "Griss",
+                "Hassk",
+                "Irusk",
+                "Keths",
+                "Lorusk",
+                "Nazz",
+                "Ossk",
+                "Rassk",
+                "Seths",
+                "Thrusk"
+            ],
+            "Last": [
+                "Blackscale",
+                "Coldblood",
+                "Darkfen",
+                "Marshborn",
+                "Mudclaw",
+                "Reedhide",
+                "Riverfang",
+                "Scalethorn",
+                "Shallowmaw",
+                "Stonescale",
+                "Sunscale",
+                "Swampclaw",
+                "Tideborn",
+                "Venomscale",
+                "Bogwalker"
+            ]
+        },
+        "Triton": {
+            "First": [
+                "Adran",
+                "Caspen",
+                "Delphen",
+                "Erathen",
+                "Galan",
+                "Helcen",
+                "Koren",
+                "Lysen",
+                "Neren",
+                "Pelamen",
+                "Rathen",
+                "Soren",
+                "Tethen",
+                "Undaren",
+                "Valthen"
+            ],
+            "Last": [
+                "Coralcrest",
+                "Deepcurrent",
+                "Foambreaker",
+                "Galeborn",
+                "Highsea",
+                "Kelpcrown",
+                "Pearlward",
+                "Reefwalker",
+                "Saltborne",
+                "Shellcrest",
+                "Stormtide",
+                "Surgeborn",
+                "Tidecaller",
+                "Wavemantle",
+                "Abyssward"
+            ]
+        },
+        "Yuan-ti": {
+            "First": [
+                "Asshen",
+                "Cssath",
+                "Hassen",
+                "Issten",
+                "Kassen",
+                "Nassen",
+                "Ossiren",
+                "Rassen",
+                "Shissen",
+                "Thassen",
+                "Ussen",
+                "Vassen",
+                "Xissen",
+                "Yssen",
+                "Zassen"
+            ],
+            "Last": [
+                "Coilshadow",
+                "Duskscale",
+                "Fangseer",
+                "Hissbane",
+                "Nightcoil",
+                "Scaleveil",
+                "Serpentblood",
+                "Shadowcoil",
+                "Silentfang",
+                "Spineweave",
+                "Veilscale",
+                "Venomtongue",
+                "Viperthorn",
+                "Wraithscale",
+                "Wyrmveil"
+            ]
+        },
+        "Leonin": {
+            "First": [
+                "Akil",
+                "Basa",
+                "Dari",
+                "Ekon",
+                "Fari",
+                "Haki",
+                "Jata",
+                "Kali",
+                "Lari",
+                "Maji",
+                "Nari",
+                "Oni",
+                "Paka",
+                "Siri",
+                "Zaki"
+            ],
+            "Last": [
+                "Goldmane",
+                "Ironpride",
+                "Prideborn",
+                "Roarcrest",
+                "Sunmane",
+                "Thunderpride",
+                "Wildmane",
+                "Dustwalker",
+                "Firemane",
+                "Huntclaw",
+                "Kingmane",
+                "Lightpaw",
+                "Nightpride",
+                "Stormroar",
+                "Swiftclaw"
+            ]
+        },
+        "Satyr": {
+            "First": [
+                "Aer",
+                "Bryn",
+                "Cyr",
+                "Dael",
+                "Eos",
+                "Fyn",
+                "Gale",
+                "Hyl",
+                "Ion",
+                "Kyr",
+                "Lyn",
+                "Myr",
+                "Nyx",
+                "Ory",
+                "Pyx"
+            ],
+            "Last": [
+                "Brookleap",
+                "Dawnpiper",
+                "Fernhoof",
+                "Gladesong",
+                "Greenvine",
+                "Hillrunner",
+                "Ivydance",
+                "Meadowlark",
+                "Mossfoot",
+                "Oakhorn",
+                "Revelgrove",
+                "Springhoof",
+                "Thornberry",
+                "Wildgrape",
+                "Winebloom"
+            ]
+        },
+        "Giff": {
+            "First": [
+                "Ainsley",
+                "Blair",
+                "Campbell",
+                "Devon",
+                "Ellery",
+                "Finley",
+                "Greer",
+                "Hadley",
+                "Ivory",
+                "Jules",
+                "Kit",
+                "Linden",
+                "Morgan",
+                "Noel",
+                "Quinn"
+            ],
+            "Last": [
+                "Brassington",
+                "Cannonbury",
+                "Dreadnought",
+                "Fieldmarshal",
+                "Gunwright",
+                "Ironclad",
+                "Knightbridge",
+                "Muzzleton",
+                "Ordnance",
+                "Powderhorn",
+                "Rampart",
+                "Shellcasing",
+                "Thunderbore",
+                "Vanguard",
+                "Wellingford"
+            ]
+        },
+        "Warforged": {
+            "First": [
+                "Ash",
+                "Bolt",
+                "Cog",
+                "Dent",
+                "Edge",
+                "Flux",
+                "Gear",
+                "Hinge",
+                "Index",
+                "Joint",
+                "Key",
+                "Lock",
+                "Mill",
+                "Node",
+                "Ore"
+            ],
+            "Last": [
+                "Steelframe",
+                "Copperplate",
+                "Brasswork",
+                "Ironheart",
+                "Bronzemantle",
+                "Gearheart",
+                "Springcoil",
+                "Platemend",
+                "Forgespawn",
+                "Hammerbuilt",
+                "Sparkforge",
+                "Weldborn",
+                "Moldcast",
+                "Tinkerbuilt",
+                "Coilspring"
+            ]
+        },
+        "Changeling": {
+            "First": [
+                "Ash",
+                "Blur",
+                "Cloak",
+                "Dusk",
+                "Etch",
+                "Fade",
+                "Grey",
+                "Hush",
+                "Ink",
+                "Jest",
+                "Knot",
+                "Loom",
+                "Mist",
+                "Nil",
+                "Veil"
+            ],
+            "Last": [
+                "Blankborn",
+                "Ciphermark",
+                "Driftmask",
+                "Faceless",
+                "Greyborn",
+                "Hollowveil",
+                "Mistveil",
+                "Nonescript",
+                "Palemark",
+                "Quickchange",
+                "Shiftborn",
+                "Thinveil",
+                "Unmarked",
+                "Veilborn",
+                "Wandermask"
+            ]
+        },
+        "Shifter": {
+            "First": [
+                "Bark",
+                "Burr",
+                "Claw",
+                "Den",
+                "Elk",
+                "Fur",
+                "Growl",
+                "Hide",
+                "Keen",
+                "Jaw",
+                "Lean",
+                "Marsh",
+                "Nip",
+                "Prowl",
+                "Scruff"
+            ],
+            "Last": [
+                "Ashfur",
+                "Blackpelt",
+                "Clawmark",
+                "Darkfang",
+                "Emberhide",
+                "Fleetpaw",
+                "Greymane",
+                "Hollowfang",
+                "Ironhide",
+                "Keenfang",
+                "Longclaw",
+                "Moonscar",
+                "Nightpelt",
+                "Razorback",
+                "Swiftfang"
+            ]
+        },
+        "Owlin": {
+            "First": [
+                "Ashen",
+                "Birr",
+                "Crest",
+                "Dusk",
+                "Eyr",
+                "Flick",
+                "Glide",
+                "Hoot",
+                "Ivu",
+                "Jay",
+                "Kir",
+                "Loft",
+                "Mote",
+                "Nix",
+                "Ova"
+            ],
+            "Last": [
+                "Brightfeather",
+                "Cloudperch",
+                "Downplume",
+                "Evensky",
+                "Feathermantle",
+                "Glidewind",
+                "Highperch",
+                "Ivorytalon",
+                "Keeneye",
+                "Moonplume",
+                "Nightglide",
+                "Pinehome",
+                "Softwing",
+                "Starperch",
+                "Twilightdown"
+            ]
+        },
+        "Fairy": {
+            "First": [
+                "Acorn",
+                "Breeze",
+                "Clove",
+                "Dew",
+                "Ember",
+                "Frost",
+                "Glow",
+                "Haze",
+                "Ice",
+                "Jewel",
+                "Knot",
+                "Leaf",
+                "Mist",
+                "Nip",
+                "Pollen"
+            ],
+            "Last": [
+                "Bellchime",
+                "Crystaldew",
+                "Dewshine",
+                "Evenbreeze",
+                "Frostpetal",
+                "Glowmoss",
+                "Honeybloom",
+                "Icebell",
+                "Jewelvine",
+                "Moonpetal",
+                "Nightbloom",
+                "Petalwind",
+                "Shimmerleaf",
+                "Sparkdust",
+                "Twinklevale"
+            ]
+        },
+        "Harengon": {
+            "First": [
+                "Alfalfa",
+                "Basil",
+                "Carrot",
+                "Dandy",
+                "Elderberry",
+                "Fig",
+                "Garlic",
+                "Herb",
+                "Iris",
+                "Jute",
+                "Kale",
+                "Leek",
+                "Mint",
+                "Nettle",
+                "Oat"
+            ],
+            "Last": [
+                "Brambletail",
+                "Burrowfield",
+                "Cloverhill",
+                "Dashfoot",
+                "Fernhollow",
+                "Greensward",
+                "Hopsfield",
+                "Longear",
+                "Meadowrun",
+                "Nibblewood",
+                "Quickfoot",
+                "Thornhill",
+                "Tumbletail",
+                "Warrengate",
+                "Wheatfield"
+            ]
+        },
+        "Aasimar_Radiant": {
+            "First": [
+                "Auren",
+                "Celion",
+                "Dael",
+                "Elar",
+                "Feyn",
+                "Galen",
+                "Hael",
+                "Irien",
+                "Kaelen",
+                "Lael",
+                "Maren",
+                "Naelen",
+                "Orien",
+                "Rael",
+                "Sael"
+            ],
+            "Last": [
+                "Dawnbringer",
+                "Goldenwing",
+                "Lightmantle",
+                "Starborn",
+                "Sunweaver",
+                "Halomark",
+                "Celestine",
+                "Gloryfield",
+                "Brightspire",
+                "Gracewind",
+                "Pearlheart",
+                "Silverbloom",
+                "Skyforge",
+                "Duskmantle",
+                "Ashenveil"
+            ]
         }
-    ]
+    }
 }

@@ -4,7 +4,7 @@
             "CHA": 2,
             "WIS": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -20,7 +20,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Necrotic",
                 "damage_reduction": "Half"
@@ -45,7 +45,7 @@
             "CHA": 2,
             "WIS": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -61,7 +61,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Radiant",
                 "damage_reduction": "Half"
@@ -91,7 +91,7 @@
         "stat_bonus": {
             "DEX": 2
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -103,7 +103,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -118,7 +118,7 @@
         "stat_bonus": {
             "CON": 2
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -130,7 +130,7 @@
                 "distance": 25
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Poison",
                 "damage_reduction": "Half"
@@ -140,7 +140,7 @@
         "traits": [
             {
                 "name": "Dwarven Resilience",
-                "description": "The creature has advantage on saving throws against poison, and it has resistance against poison damage."
+                "description": "The creature has advantage on saving throws against poison, and it has resistances against poison damage."
             }
         ],
         "bonus_actions": [],
@@ -150,14 +150,14 @@
         "stat_bonus": {
             "DEX": 2
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 25
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -177,14 +177,14 @@
             "WIS": 1,
             "CHA": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [],
         "bonus_actions": [],
@@ -195,7 +195,7 @@
             "STR": 2,
             "CON": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -207,7 +207,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -223,7 +223,7 @@
             "INT": 1,
             "CHA": 2
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -235,7 +235,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Fire",
                 "damage_reduction": "Half"
@@ -272,19 +272,19 @@
             "STR": 2,
             "CHA": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
                 "name": "Draconic Ancestry",
-                "description": "The creature has a draconic ancestry that grants it a breath weapon and resistance to a damage type associated with its dragon ancestor."
+                "description": "The creature has a draconic ancestry that grants it a breath weapon and resistances to a damage type associated with its dragon ancestor."
             }
         ],
         "bonus_actions": [],
@@ -294,7 +294,7 @@
         "stat_bonus": {
             "INT": 2
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -306,7 +306,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -322,14 +322,14 @@
             "STR": 2,
             "INT": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [
             {
                 "name": "Mage Hand",
@@ -361,14 +361,14 @@
             "WIS": 2,
             "INT": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -384,14 +384,14 @@
             "STR": 2,
             "CON": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [],
         "bonus_actions": [],
@@ -408,14 +408,14 @@
             "WIS": 2,
             "STR": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [
             {
                 "name": "Detect Magic",
@@ -442,7 +442,7 @@
             "DEX": 2,
             "CHA": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -458,7 +458,7 @@
                 "distance": 20
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [],
         "bonus_actions": [],
@@ -469,14 +469,14 @@
             "DEX": 2,
             "WIS": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -496,7 +496,7 @@
             "CON": 2,
             "WIS": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
@@ -507,7 +507,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -528,7 +528,7 @@
             "STR": 1,
             "CHA": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
@@ -539,7 +539,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Cold",
                 "damage_reduction": "Half"
@@ -576,7 +576,7 @@
             "INT": 1,
             "CHA": 2
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -588,7 +588,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Poison",
                 "damage_reduction": "Full"
@@ -597,7 +597,7 @@
         "spells": [],
         "traits": [
             {
-                "name": "Magic Resistance",
+                "name": "Magic resistances",
                 "description": "The creature has advantage on saving throws against spells and other magical effects."
             }
         ],
@@ -609,7 +609,7 @@
             "CON": 2,
             "STR": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -621,7 +621,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -641,14 +641,14 @@
             "CHA": 2,
             "DEX": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -656,7 +656,7 @@
                 "description": "The creature can use its action to make a ram attack. The attack has a reach of 5 feet and deals 1d6 + the creature's Strength modifier bludgeoning damage."
             },
             {
-                "name": "Magic Resistance",
+                "name": "Magic resistances",
                 "description": "The creature has advantage on saving throws against spells and other magical effects."
             }
         ],
@@ -668,14 +668,14 @@
             "STR": 2,
             "CON": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -691,14 +691,14 @@
             "CON": 2,
             "STR": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [
+        "resistances": [
             {
                 "name": "Poison",
                 "damage_reduction": "Half"
@@ -723,14 +723,14 @@
             "CHA": 2,
             "DEX": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -746,7 +746,7 @@
             "WIS": 2,
             "CON": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 60
@@ -758,7 +758,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [],
         "bonus_actions": [],
@@ -775,7 +775,7 @@
             "WIS": 2,
             "DEX": 1
         },
-        "sense": [
+        "senses": [
             {
                 "name": "Darkvision",
                 "range": 120
@@ -791,7 +791,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
@@ -807,7 +807,7 @@
             "CHA": 2,
             "DEX": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
@@ -818,7 +818,7 @@
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [
             {
                 "name": "Druidcraft",
@@ -850,14 +850,14 @@
             "DEX": 2,
             "WIS": 1
         },
-        "sense": [],
+        "senses": [],
         "speed": [
             {
                 "name": "Walking",
                 "distance": 30
             }
         ],
-        "resistance": [],
+        "resistances": [],
         "spells": [],
         "traits": [
             {
