@@ -1,5 +1,7 @@
 {
     "Ambusher": {
+        "display_name": "Ambusher",
+        "display_name_weight": -85,
         "weapons": [
             "Shortsword",
             "Shortbow"
@@ -23,6 +25,8 @@
         "enhanced_ac": false
     },
     "Barkeeper": {
+        "display_name": "Barkeeper",
+        "display_name_weight": -90,
         "weapons": [
             "Broken Bottle",
             "Haymaker"
@@ -47,6 +51,8 @@
         "enhanced_ac": false
     },
     "Berserker": {
+        "display_name": "Berserker",
+        "display_name_weight": -99,
         "weapons": [
             "Greataxe"
         ],
@@ -69,6 +75,8 @@
         "enhanced_ac": true
     },
     "Blacksmith": {
+        "display_name": "Blacksmith",
+        "display_name_weight": -90,
         "weapons": [
             "Warhammer"
         ],
@@ -93,6 +101,8 @@
         "enhanced_ac": false
     },
     "Blood Hunter": {
+        "display_name": "Blood Hunter",
+        "display_name_weight": 40,
         "weapons": [
             "Longsword",
             "Longbow"
@@ -116,6 +126,8 @@
         "enhanced_ac": false
     },
     "Bodyguard": {
+        "display_name": "Bodyguard",
+        "display_name_weight": -80,
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -140,6 +152,8 @@
         "enhanced_ac": true
     },
     "Brawler": {
+        "display_name": "Brawler",
+        "display_name_weight": -85,
         "weapons": [
             "Haymaker"
         ],
@@ -162,6 +176,8 @@
         "enhanced_ac": false
     },
     "Chef": {
+        "display_name": "Chef",
+        "display_name_weight": -90,
         "weapons": [
             "Wok"
         ],
@@ -186,6 +202,8 @@
         "enhanced_ac": false
     },
     "Criminal": {
+        "display_name": "Cutthroat",
+        "display_name_weight": -75,
         "weapons": [
             "Shortsword",
             "Light Crossbow"
@@ -213,6 +231,8 @@
         "enhanced_ac": false
     },
     "Commander": {
+        "display_name": "Commander",
+        "display_name_weight": 20,
         "weapons": [
             "Longsword",
             "Longbow"
@@ -236,6 +256,8 @@
         "enhanced_ac": false
     },
     "Doomsayer": {
+        "display_name": "Doomsayer",
+        "display_name_weight": 60,
         "weapons": [
             "Scythe"
         ],
@@ -258,6 +280,8 @@
         "enhanced_ac": false
     },
     "Duelist": {
+        "display_name": "Duelist",
+        "display_name_weight": -80,
         "weapons": [
             "Rapier"
         ],
@@ -280,6 +304,8 @@
         "enhanced_ac": false
     },
     "Eldritch Knight": {
+        "display_name": "Eldritch",
+        "display_name_weight": 90,
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -304,6 +330,8 @@
         "enhanced_ac": true
     },
     "Farmer": {
+        "display_name": "Farmhand",
+        "display_name_weight": -90,
         "weapons": [
             "Pitchfork"
         ],
@@ -324,13 +352,15 @@
         "resistances": [
             {
                 "name": "Poison",
-                "damage_reduction": "half"
+                "damage_reduction": "Half"
             }
         ],
         "senses": [],
         "enhanced_ac": false
     },
     "Grave Digger": {
+        "display_name": "Grave Digger",
+        "display_name_weight": -88,
         "weapons": [
             "Shovel"
         ],
@@ -360,6 +390,8 @@
         "enhanced_ac": false
     },
     "Hexblade": {
+        "display_name": "Hexblade",
+        "display_name_weight": 85,
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -383,6 +415,8 @@
         "enhanced_ac": false
     },
     "Inquisitor": {
+        "display_name": "Inquisitor",
+        "display_name_weight": 25,
         "weapons": [
             "Dagger",
             "Light Crossbow"
@@ -406,6 +440,8 @@
         "enhanced_ac": false
     },
     "Juggernaut": {
+        "display_name": "Juggernaut",
+        "display_name_weight": -95,
         "weapons": [
             "Greataxe"
         ],
@@ -428,6 +464,8 @@
         "enhanced_ac": true
     },
     "Knight": {
+        "display_name": "Knight",
+        "display_name_weight": -90,
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -451,6 +489,8 @@
         "enhanced_ac": true
     },
     "Ki Fighter": {
+        "display_name": "Ki",
+        "display_name_weight": 50,
         "weapons": [
             "Ki Strike"
         ],
@@ -473,6 +513,8 @@
         "enhanced_ac": false
     },
     "Lumberjack": {
+        "display_name": "Lumberjack",
+        "display_name_weight": -90,
         "weapons": [
             "Handaxe"
         ],
@@ -495,6 +537,8 @@
         "enhanced_ac": false
     },
     "Oath Keeper": {
+        "display_name": "Oathsworn",
+        "display_name_weight": -70,
         "weapons": [
             "Longsword",
             "Shield Bash"
@@ -518,6 +562,8 @@
         "enhanced_ac": true
     },
     "Psion": {
+        "display_name": "Psionic",
+        "display_name_weight": 55,
         "weapons": [
             "Dagger",
             "Psi Strike"
@@ -542,6 +588,8 @@
         "enhanced_ac": false
     },
     "Sharpshooter": {
+        "display_name": "Sharpshooter",
+        "display_name_weight": -82,
         "weapons": [
             "Longbow"
         ],
@@ -564,6 +612,8 @@
         "enhanced_ac": false
     },
     "Shield Bearer": {
+        "display_name": "Shield Bearer",
+        "display_name_weight": -85,
         "weapons": [
             "Shield Bash"
         ],
@@ -587,6 +637,8 @@
         "enhanced_ac": true
     },
     "Skirmisher": {
+        "display_name": "Skirmisher",
+        "display_name_weight": -99,
         "weapons": [
             "Shortsword",
             "Shortbow"
@@ -610,6 +662,8 @@
         "enhanced_ac": false
     },
     "Sniper": {
+        "display_name": "Sniper",
+        "display_name_weight": -82,
         "weapons": [
             "Longbow"
         ],
@@ -632,6 +686,8 @@
         "enhanced_ac": false
     },
     "Spellblade": {
+        "display_name": "Spellblade",
+        "display_name_weight": 88,
         "weapons": [
             "Longsword"
         ],
@@ -655,6 +711,8 @@
         "enhanced_ac": false
     },
     "Wind Dancer": {
+        "display_name": "Wind Dancer",
+        "display_name_weight": 95,
         "weapons": [
             "Scimitar"
         ],
@@ -677,6 +735,8 @@
         "enhanced_ac": true
     },
     "Zealot": {
+        "display_name": "Zealot",
+        "display_name_weight": 45,
         "weapons": [
             "Morningstar"
         ],

@@ -1,5 +1,7 @@
 {
     "Abjuration": {
+        "display_name": "Abjurer",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -53,6 +55,8 @@
         ]
     },
     "Conjuration": {
+        "display_name": "Conjurer",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -101,6 +105,8 @@
         ]
     },
     "Divination": {
+        "display_name": "Diviner",
+        "display_name_weight": 35,
         "weapons": [
             "Dagger"
         ],
@@ -148,6 +154,8 @@
         ]
     },
     "Enchantment": {
+        "display_name": "Enchanter",
+        "display_name_weight": 35,
         "weapons": [
             "Dagger"
         ],
@@ -196,6 +204,8 @@
         ]
     },
     "Evocation": {
+        "display_name": "Evoker",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -206,7 +216,7 @@
             },
             {
                 "name": "Overchannel",
-                "description": "When the Evoker casts an evocation spell of 1st–5th level that deals damage, they can deal maximum damage. Each use after the first before a long rest deals the Evoker 2d12 necrotic damage per spell level, which cannot be reduced in any way."
+                "description": "When the Evoker casts an evocation spell of 1st-5th level that deals damage, they can deal maximum damage. Each use after the first before a long rest deals the Evoker 2d12 necrotic damage per spell level, which cannot be reduced in any way."
             }
         ],
         "bonus_actions": [],
@@ -248,6 +258,8 @@
         ]
     },
     "Illusion": {
+        "display_name": "Illusionist",
+        "display_name_weight": 35,
         "weapons": [
             "Dagger"
         ],
@@ -296,6 +308,8 @@
         ]
     },
     "Necromancy": {
+        "display_name": "Necromancer",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -343,6 +357,8 @@
         ]
     },
     "Transmutation": {
+        "display_name": "Transmuter",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -390,6 +406,8 @@
         ]
     },
     "Warlock": {
+        "display_name": "Warlock",
+        "display_name_weight": 35,
         "weapons": [
             "Dagger"
         ],
@@ -437,17 +455,19 @@
         ]
     },
     "Divine": {
+        "display_name": "Divine",
+        "display_name_weight": 35,
         "weapons": [
             "Warhammer"
         ],
         "traits": [
             {
                 "name": "Channel Divinity",
-                "description": "As an action, the Divine caster turns undead within 30 feet — each undead that can see or hear them must succeed on a Wisdom saving throw or be turned for 1 minute or until it takes damage. This trait recharges after a short or long rest."
+                "description": "As an action, the Divine caster turns undead within 30 feet - each undead that can see or hear them must succeed on a Wisdom saving throw or be turned for 1 minute or until it takes damage. This trait recharges after a short or long rest."
             },
             {
                 "name": "Divine Intervention",
-                "description": "Once per long rest, the Divine caster calls upon their deity for aid. Roll a d100 — on a result equal to or lower than their proficiency bonus × 5, the deity intervenes as the GM sees fit."
+                "description": "Once per long rest, the Divine caster calls upon their deity for aid. Roll a d100 - on a result equal to or lower than their proficiency bonus x 5, the deity intervenes as the GM sees fit."
             }
         ],
         "bonus_actions": [],
@@ -489,6 +509,8 @@
         ]
     },
     "Nature": {
+        "display_name": "Druid",
+        "display_name_weight": 35,
         "weapons": [
             "Quarterstaff"
         ],
@@ -537,6 +559,8 @@
         ]
     },
     "Performance": {
+        "display_name": "Skald",
+        "display_name_weight": 35,
         "weapons": [
             "Rapier"
         ],
@@ -585,6 +609,8 @@
         ]
     },
     "Arcane Gish": {
+        "display_name": "Arcane",
+        "display_name_weight": 92,
         "weapons": [],
         "traits": [],
         "bonus_actions": [],
@@ -611,6 +637,8 @@
         ]
     },
     "Shadow Pact": {
+        "display_name": "Dark",
+        "display_name_weight": 92,
         "weapons": [],
         "traits": [],
         "bonus_actions": [],
@@ -637,6 +665,8 @@
         ]
     },
     "Holy Warrior": {
+        "display_name": "Holy",
+        "display_name_weight": 92,
         "weapons": [],
         "traits": [],
         "bonus_actions": [],
@@ -663,6 +693,8 @@
         ]
     },
     "Ranger": {
+        "display_name": "Warden",
+        "display_name_weight": 90,
         "weapons": [],
         "traits": [],
         "bonus_actions": [],

@@ -161,3 +161,87 @@ def generate_information(
         info["role_traits"] = role_traits
 
     return info
+
+
+
+def _order_by_weight(a: tuple[str, int], b: tuple[str, int]) -> str:
+    """Join two (display_name, display_name_weight) kits into a title, higher
+    weight first. Ties keep the first argument ahead, which preserves
+    selection order since callers pass the earlier kit first."""
+    if a[1] >= b[1]:
+        return f"{a[0]} {b[0]}"
+    return f"{b[0]} {a[0]}"
+
+
+def _pair(kits: list[str], table: dict, i: int) -> tuple[str, int]:
+    """The (display_name, display_name_weight) of the kit at index i."""
+    entry = table[kits[i]]
+    return entry["display_name"], entry["display_name_weight"]
+
+
+def resolve_title(
+    role_kits: list[str] | None,
+    combat_kits: list[str] | None,
+    magic_kits: list[str] | None,
+) -> str:
+    """Derive an NPC's default title from its selected kits.
+
+    Walks a fixed precedence ladder, first match wins: no kits, Mythical
+    Conjuration, a single maxed specialty, then a weight-ordered title built
+    from combat and magic kits, then from role kits, with a Commoner floor.
+    Role counts as a full specialty alongside combat and magic.
+
+    Concatenation never exceeds two names. When combat and magic are both
+    present, each bucket's first selected kit is the finalist and the two are
+    ordered by weight. When only one specialty is present, that bucket's first
+    two selected kits fight it out, or its single kit is shown alone. A bucket
+    is represented by selection order, so the user reorders names by
+    deselecting and reselecting a kit."""
+
+    num_combat = len(combat_kits) if combat_kits else 0
+    num_magic = len(magic_kits) if magic_kits else 0
+    num_role = len(role_kits) if role_kits else 0
+
+    # Tier 1: nothing selected.
+    if not (num_combat or num_magic or num_role):
+        return "Commoner"
+
+    # Tier 2: two specialties maxed (3+ each), or all three at 2+.
+    maxed = sum(n >= 3 for n in (num_combat, num_magic, num_role))
+    if maxed >= 2 or (num_combat >= 2 and num_magic >= 2 and num_role >= 2):
+        return "Mythical Conjuration"
+
+    # Tier 3: exactly one specialty maxed (mutually exclusive after tier 2).
+    if num_combat >= 3:
+        return "Master of Arms"
+    if num_magic >= 3:
+        return "Magus"
+    if num_role >= 3:
+        return "Jack of All Trades"
+
+    # Tier 4: combat and/or magic present, role ignored. Two buckets fight it
+    # out across each other; one bucket fights within itself; a lone kit shows
+    # alone.
+    if num_combat or num_magic:
+        if num_combat and num_magic:
+            return _order_by_weight(_pair(combat_kits, COMBAT_KITS, 0),
+                                    _pair(magic_kits, MAGIC_KITS, 0))
+        if num_combat:
+            if num_combat == 1:
+                return COMBAT_KITS[combat_kits[0]]["display_name"]
+            return _order_by_weight(_pair(combat_kits, COMBAT_KITS, 0),
+                                    _pair(combat_kits, COMBAT_KITS, 1))
+        if num_magic == 1:
+            return MAGIC_KITS[magic_kits[0]]["display_name"]
+        return _order_by_weight(_pair(magic_kits, MAGIC_KITS, 0),
+                                _pair(magic_kits, MAGIC_KITS, 1))
+
+    # Tier 5: only role kits remain.
+    if num_role == 1:
+        return ROLE_KITS[role_kits[0]]["display_name"]
+    return _order_by_weight(_pair(role_kits, ROLE_KITS, 0),
+                            _pair(role_kits, ROLE_KITS, 1))
+
+    # Failsafe: Should never be reached since tier 1 covers the no-kit case, but just in case:
+    return "Report this name bug to Developer"
+
