@@ -1,18 +1,20 @@
 import unittest
-import random
 from unittest import mock
 
 import information_logic
 from information_logic import (
     generate_information,
     resolve_title,
+    generate_name,
+    generate_personality,
+    enum_name_races,
+    enum_personality_options,
     _gather,
     _reduce_max,
     _reduce_unique,
     _reduce_descriptions,
     DAMAGE_RANK,
 )
-from data_loader import data
 
 
 # ---------------------------------------------------------------------------
@@ -148,59 +150,6 @@ class TestDamageRank(unittest.TestCase):
 
 
 # ---------------------------------------------------------------------------
-# generate_information - name and personality.
-# ---------------------------------------------------------------------------
-
-class TestName(unittest.TestCase):
-
-    def setUp(self):
-        # Seed so name selection is reproducible across runs.
-        random.seed(0)
-
-    def test_name_generated_when_true(self):
-        """A name is produced from the matching gender and race lists."""
-        info = generate_information("Elf", True, "Masculine", None, None, None, None, None)
-        self.assertIn("name", info)
-        name = info["name"]
-        first_names = information_logic.NAMES["Masculine"]["Elf"]["First"]
-        last_names = information_logic.NAMES["Masculine"]["Elf"]["Last"]
-        self.assertIn(" ", name)
-        self.assertIn(name.split(" ")[0], first_names)
-        self.assertIn(name.split(" ", 1)[1], last_names)
-
-    def test_name_absent_when_false(self):
-        """No name key is added when name generation is off."""
-        info = generate_information("Elf", False, "Masculine", None, None, None, None, None)
-        self.assertNotIn("name", info)
-
-    def test_gender_defaults_to_neutral(self):
-        """A None gender falls back to the Neutral name lists."""
-        info = generate_information("Elf", True, None, None, None, None, None, None)
-        self.assertIn("name", info)
-        neutral_first = information_logic.NAMES["Neutral"]["Elf"]["First"]
-        self.assertIn(info["name"].split(" ")[0], neutral_first)
-
-
-class TestPersonality(unittest.TestCase):
-
-    def setUp(self):
-        random.seed(0)
-        # Use a real personality category so the lookup is valid.
-        self.category = next(iter(data["personalities"]))
-
-    def test_personality_when_provided(self):
-        info = generate_information("Human", False, None, self.category, None, None, None, None)
-        self.assertIn("personality", info)
-        descriptions = [entry["description"]
-                        for entry in information_logic.PERSONALITIES[self.category]["entries"]]
-        self.assertIn(info["personality"], descriptions)
-
-    def test_personality_absent_when_none(self):
-        info = generate_information("Human", False, None, None, None, None, None, None)
-        self.assertNotIn("personality", info)
-
-
-# ---------------------------------------------------------------------------
 # generate_information - senses.
 # ---------------------------------------------------------------------------
 
@@ -208,23 +157,23 @@ class TestSenses(unittest.TestCase):
 
     def test_race_sense_present(self):
         """An Elf's darkvision is carried through to the senses section."""
-        info = generate_information("Elf", False, None, None, None, None, None, None)
+        info = generate_information("Elf", None, None, None, None)
         self.assertEqual(info["senses"], {"Darkvision": 60})
 
     def test_sense_shape_is_flat(self):
         """Senses are stored as {name: int}, matching the speed shape."""
-        info = generate_information("Elf", False, None, None, None, None, None, None)
+        info = generate_information("Elf", None, None, None, None)
         for value in info["senses"].values():
             self.assertIsInstance(value, int)
 
     def test_absent_when_race_has_none(self):
         """A race with no senses and no other source produces no senses key."""
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         self.assertNotIn("senses", info)
 
     def test_combat_kit_sense_is_read(self):
         """Senses from a combat kit are gathered for a race that has none."""
-        info = generate_information("Human", False, None, None, ["Grave Digger"], None, None, None)
+        info = generate_information("Human", ["Grave Digger"], None, None, None)
         self.assertEqual(info["senses"], {"Darkvision": 60})
 
     def test_max_range_kept_higher_from_kit(self):
@@ -233,7 +182,7 @@ class TestSenses(unittest.TestCase):
         kit = {"senses": [{"name": "Darkvision", "range": 120}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.COMBAT_KITS, {"_K": kit}):
-            info = generate_information("_R", False, None, None, ["_K"], None, None, None)
+            info = generate_information("_R", ["_K"], None, None, None)
         self.assertEqual(info["senses"], {"Darkvision": 120})
 
     def test_max_range_kept_higher_from_race(self):
@@ -241,14 +190,14 @@ class TestSenses(unittest.TestCase):
         kit = {"senses": [{"name": "Darkvision", "range": 30}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.COMBAT_KITS, {"_K": kit}):
-            info = generate_information("_R", False, None, None, ["_K"], None, None, None)
+            info = generate_information("_R", ["_K"], None, None, None)
         self.assertEqual(info["senses"], {"Darkvision": 120})
 
     def test_environment_sense_is_read(self):
         """Environment senses combine with the race senses."""
         env = {"senses": [{"name": "Blindsight", "range": 30}]}
         with mock.patch.dict(information_logic.ENVIRONMENTS, {"_E": env}):
-            info = generate_information("Elf", False, None, None, None, None, None, "_E")
+            info = generate_information("Elf", None, None, None, "_E")
         self.assertEqual(info["senses"], {"Darkvision": 60, "Blindsight": 30})
 
 
@@ -260,20 +209,20 @@ class TestDamage(unittest.TestCase):
 
     def test_race_resistance(self):
         """A Dwarf's poison resistance lands in the resistances list."""
-        info = generate_information("Dwarf", False, None, None, None, None, None, None)
+        info = generate_information("Dwarf", None, None, None, None)
         self.assertEqual(info["resistances"], ["Poison"])
         self.assertNotIn("immunities", info)
         self.assertNotIn("vulnerabilities", info)
 
     def test_race_immunity(self):
         """A Yuan-ti's full poison reduction lands in immunities."""
-        info = generate_information("Yuan-ti", False, None, None, None, None, None, None)
+        info = generate_information("Yuan-ti", None, None, None, None)
         self.assertEqual(info["immunities"], ["Poison"])
         self.assertNotIn("resistances", info)
 
     def test_no_damage_keys_when_none(self):
         """A race with no damage modifiers produces none of the three keys."""
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         for key in ("resistances", "immunities", "vulnerabilities"):
             self.assertNotIn(key, info)
 
@@ -284,7 +233,7 @@ class TestDamage(unittest.TestCase):
             {"name": "Acid", "damage_reduction": "Vuln"},
         ]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}):
-            info = generate_information("_R", False, None, None, None, None, None, None)
+            info = generate_information("_R", None, None, None, None)
         self.assertEqual(info["resistances"], ["Fire"])
         self.assertEqual(info["immunities"], ["Cold"])
         self.assertEqual(info["vulnerabilities"], ["Acid"])
@@ -295,7 +244,7 @@ class TestDamage(unittest.TestCase):
         kit = {"resistances": [{"name": "Fire", "damage_reduction": "Full"}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.COMBAT_KITS, {"_K": kit}):
-            info = generate_information("_R", False, None, None, ["_K"], None, None, None)
+            info = generate_information("_R", ["_K"], None, None, None)
         self.assertEqual(info["immunities"], ["Fire"])
         self.assertNotIn("resistances", info)
 
@@ -305,7 +254,7 @@ class TestDamage(unittest.TestCase):
         kit = {"resistances": [{"name": "Fire", "damage_reduction": "Half"}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.MAGIC_KITS, {"_K": kit}):
-            info = generate_information("_R", False, None, None, None, ["_K"], None, None)
+            info = generate_information("_R", None, ["_K"], None, None)
         self.assertEqual(info["resistances"], ["Fire"])
         self.assertNotIn("vulnerabilities", info)
 
@@ -314,7 +263,7 @@ class TestDamage(unittest.TestCase):
         kit = {"resistances": [{"name": "Fire", "damage_reduction": "Full"}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.COMBAT_KITS, {"_K": kit}):
-            info = generate_information("_R", False, None, None, ["_K"], None, None, None)
+            info = generate_information("_R", ["_K"], None, None, None)
         self.assertEqual(info["immunities"], ["Fire"])
         self.assertNotIn("vulnerabilities", info)
 
@@ -324,7 +273,7 @@ class TestDamage(unittest.TestCase):
         env = {"resistances": [{"name": "Fire", "damage_reduction": "Half"}]}
         with mock.patch.dict(information_logic.RACES, {"_R": race}), \
              mock.patch.dict(information_logic.ENVIRONMENTS, {"_E": env}):
-            info = generate_information("_R", False, None, None, None, None, None, "_E")
+            info = generate_information("_R", None, None, None, "_E")
         self.assertEqual(info["resistances"], ["Fire"])
 
 
@@ -336,31 +285,31 @@ class TestSpeed(unittest.TestCase):
 
     def test_race_speed(self):
         """An Elf's walking speed is carried through."""
-        info = generate_information("Elf", False, None, None, None, None, None, None)
+        info = generate_information("Elf", None, None, None, None)
         self.assertEqual(info["speed"], {"Walking": 30})
 
     def test_multiple_movement_types(self):
         """A race with two movement types keeps both."""
-        info = generate_information("Triton", False, None, None, None, None, None, None)
+        info = generate_information("Triton", None, None, None, None)
         self.assertEqual(info["speed"], {"Walking": 30, "Swimming": 30})
 
     def test_environment_adds_speed(self):
         """An environment speed is merged with the race speed."""
         env = {"speed": [{"name": "Climbing", "distance": 20}]}
         with mock.patch.dict(information_logic.ENVIRONMENTS, {"_E": env}):
-            info = generate_information("Human", False, None, None, None, None, None, "_E")
+            info = generate_information("Human", None, None, None, "_E")
         self.assertEqual(info["speed"], {"Walking": 30, "Climbing": 20})
 
     def test_environment_max_wins(self):
         """A faster environment speed replaces the race value for that type."""
         env = {"speed": [{"name": "Walking", "distance": 40}]}
         with mock.patch.dict(information_logic.ENVIRONMENTS, {"_E": env}):
-            info = generate_information("Human", False, None, None, None, None, None, "_E")
+            info = generate_information("Human", None, None, None, "_E")
         self.assertEqual(info["speed"], {"Walking": 40})
 
     def test_walking_listed_first(self):
         """Race is gathered first, so Walking leads the speed ordering."""
-        info = generate_information("Triton", False, None, None, None, None, None, None)
+        info = generate_information("Triton", None, None, None, None)
         self.assertEqual(list(info["speed"].keys())[0], "Walking")
 
 
@@ -372,7 +321,7 @@ class TestProficiencies(unittest.TestCase):
 
     def test_role_kit_proficiencies(self):
         """Role kit skill and tool proficiencies feed the right sections."""
-        info = generate_information("Human", False, None, None, None, None, ["Sailor"], None)
+        info = generate_information("Human", None, None, ["Sailor"], None)
         expected = information_logic.ROLE_KITS["Sailor"]
         self.assertEqual(set(info["proficiencies"]), set(expected["proficiencies"]))
         self.assertEqual(set(info["tool_proficiencies"]), set(expected["proficiencies_t"]))
@@ -383,19 +332,19 @@ class TestProficiencies(unittest.TestCase):
         role = {"proficiencies": ["Stealth", "Perception"], "proficiencies_t": []}
         with mock.patch.dict(information_logic.COMBAT_KITS, {"_C": combat}), \
              mock.patch.dict(information_logic.ROLE_KITS, {"_R": role}):
-            info = generate_information("Human", False, None, None, ["_C"], None, ["_R"], None)
+            info = generate_information("Human", ["_C"], None, ["_R"], None)
         self.assertEqual(info["proficiencies"], ["Stealth", "Perception"])
 
     def test_tool_and_skill_kept_separate(self):
         """Tool proficiencies do not bleed into the skill proficiency list."""
         kit = {"proficiencies": ["Stealth"], "proficiencies_t": ["Thieves' Tools"]}
         with mock.patch.dict(information_logic.COMBAT_KITS, {"_C": kit}):
-            info = generate_information("Human", False, None, None, ["_C"], None, None, None)
+            info = generate_information("Human", ["_C"], None, None, None)
         self.assertEqual(info["proficiencies"], ["Stealth"])
         self.assertEqual(info["tool_proficiencies"], ["Thieves' Tools"])
 
     def test_absent_when_no_kits(self):
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         self.assertNotIn("proficiencies", info)
         self.assertNotIn("tool_proficiencies", info)
 
@@ -408,32 +357,32 @@ class TestTraits(unittest.TestCase):
 
     def test_environment_traits(self):
         """Environment traits are stored as a name to description dict."""
-        info = generate_information("Human", False, None, None, None, None, None, "Mountain")
+        info = generate_information("Human", None, None, None, "Mountain")
         expected = {t["name"]: t["description"]
                     for t in information_logic.ENVIRONMENTS["Mountain"]["traits"]}
         self.assertEqual(info["environmental_traits"], expected)
 
     def test_environment_trait_shape_is_dict(self):
-        info = generate_information("Human", False, None, None, None, None, None, "Mountain")
+        info = generate_information("Human", None, None, None, "Mountain")
         self.assertIsInstance(info["environmental_traits"], dict)
         for value in info["environmental_traits"].values():
             self.assertIsInstance(value, str)
 
     def test_role_traits(self):
         """A role kit with a trait surfaces it under role_traits."""
-        info = generate_information("Human", False, None, None, None, None, ["Pirate"], None)
+        info = generate_information("Human", None, None, ["Pirate"], None)
         expected = {t["name"]: t["description"]
                     for t in information_logic.ROLE_KITS["Pirate"]["traits"]}
         self.assertEqual(info["role_traits"], expected)
 
     def test_role_kit_without_traits_omits_key(self):
         """A role kit that has only proficiencies adds no role_traits key."""
-        info = generate_information("Human", False, None, None, None, None, ["Sailor"], None)
+        info = generate_information("Human", None, None, ["Sailor"], None)
         self.assertNotIn("role_traits", info)
         self.assertIn("proficiencies", info)
 
     def test_environment_traits_absent_when_none(self):
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         self.assertNotIn("environmental_traits", info)
 
 
@@ -452,7 +401,7 @@ class TestSourceScoping(unittest.TestCase):
             "speed": [{"name": "Flying", "distance": 99}],
         }
         with mock.patch.dict(information_logic.ROLE_KITS, {"_R": role}):
-            info = generate_information("Human", False, None, None, None, None, ["_R"], None)
+            info = generate_information("Human", None, None, ["_R"], None)
         self.assertNotIn("senses", info)
         self.assertNotIn("immunities", info)
         self.assertNotIn("Flying", info.get("speed", {}))
@@ -466,17 +415,17 @@ class TestStructure(unittest.TestCase):
 
     def test_minimal_call_only_has_speed(self):
         """A bare race with no options yields only the race-derived speed."""
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         self.assertEqual(info, {"speed": {"Walking": 30}})
 
     def test_no_empty_sections(self):
         """No section is ever present as an empty container."""
-        info = generate_information("Elf", False, None, None, None, None, None, None)
+        info = generate_information("Elf", None, None, None, None)
         for value in info.values():
             self.assertTrue(value)
 
     def test_returns_dict(self):
-        info = generate_information("Human", False, None, None, None, None, None, None)
+        info = generate_information("Human", None, None, None, None)
         self.assertIsInstance(info, dict)
 
 
@@ -664,6 +613,103 @@ class TestResolveTitle(unittest.TestCase):
 
     def test_role_only_two_kits_tie_keeps_selection_order(self):
         self.assertEqual(resolve_title(["r_z1", "r_z2"], None, None), "Zrole1 Zrole2")
+
+
+# ---------------------------------------------------------------------------
+# generate_name / generate_personality / enumerators.
+#
+# Controlled fakes patched into NAMES and PERSONALITIES. Single-element lists
+# give deterministic exact matches; multi-element lists prove the function
+# picks from the list rather than assuming a position.
+# ---------------------------------------------------------------------------
+
+FAKE_NAMES = {
+    "Masculine": {
+        "TestRace": {"First": ["Mfirst"], "Last": ["Mlast"]},
+        "Multi": {"First": ["A", "B"], "Last": ["X", "Y"]},
+    },
+    "Feminine": {
+        "TestRace": {"First": ["Ffirst"], "Last": ["Flast"]},
+    },
+    "Neutral": {
+        "TestRace": {"First": ["Nfirst"], "Last": ["Nlast"]},
+        "Multi": {"First": ["A", "B"], "Last": ["X", "Y"]},
+    },
+}
+
+FAKE_PERSONALITIES = {
+    "Brave": {"entries": [{"description": "Stares down danger."}]},
+    "Cowardly": {"entries": [{"description": "Flees at the first sign."},
+                             {"description": "Hides behind others."}]},
+}
+
+
+class TestGenerateName(unittest.TestCase):
+
+    def setUp(self):
+        patcher = mock.patch.dict(information_logic.NAMES, FAKE_NAMES)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_uses_given_gender_and_race(self):
+        self.assertEqual(generate_name("TestRace", "Masculine"), "Mfirst Mlast")
+
+    def test_feminine_uses_feminine_lists(self):
+        self.assertEqual(generate_name("TestRace", "Feminine"), "Ffirst Flast")
+
+    def test_gender_defaults_to_neutral(self):
+        self.assertEqual(generate_name("TestRace", None), "Nfirst Nlast")
+
+    def test_joins_first_and_last_from_lists(self):
+        # Multi has two of each; the result must be a valid first + last pair.
+        name = generate_name("Multi", "Masculine")
+        first, last = name.split(" ")
+        self.assertIn(first, ["A", "B"])
+        self.assertIn(last, ["X", "Y"])
+
+    def test_returns_single_space_separated_string(self):
+        name = generate_name("TestRace", "Masculine")
+        self.assertIsInstance(name, str)
+        self.assertEqual(name.count(" "), 1)
+
+
+class TestGeneratePersonality(unittest.TestCase):
+
+    def setUp(self):
+        patcher = mock.patch.dict(information_logic.PERSONALITIES, FAKE_PERSONALITIES)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
+    def test_none_returns_none(self):
+        self.assertIsNone(generate_personality(None))
+
+    def test_returns_description_string(self):
+        self.assertEqual(generate_personality("Brave"), "Stares down danger.")
+
+    def test_picks_from_entries(self):
+        result = generate_personality("Cowardly")
+        self.assertIn(result, ["Flees at the first sign.", "Hides behind others."])
+
+    def test_returns_str_for_category(self):
+        self.assertIsInstance(generate_personality("Brave"), str)
+
+
+class TestEnumerators(unittest.TestCase):
+
+    def setUp(self):
+        for table, fakes in (
+            (information_logic.NAMES, FAKE_NAMES),
+            (information_logic.PERSONALITIES, FAKE_PERSONALITIES),
+        ):
+            patcher = mock.patch.dict(table, fakes)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
+    def test_name_races_sorted_from_neutral(self):
+        self.assertEqual(enum_name_races(), sorted(information_logic.NAMES["Neutral"].keys()))
+
+    def test_personality_options_sorted(self):
+        self.assertEqual(enum_personality_options(), sorted(information_logic.PERSONALITIES.keys()))
 
 
 if __name__ == "__main__":

@@ -70,16 +70,13 @@ def _reduce_descriptions(entries: list[dict]) -> dict[str, str]:
 
 def generate_information(
     race: str,
-    name: bool,
-    gender: str | None,
-    personality: str | None,
     combat_kits: list[str] | None,
     magic_kits: list[str] | None,
     role_kits: list[str] | None,
     environment: str | None,
 ) -> dict:
     """Build the non-combat portion of an NPC stat block from the user's
-    selections. Gathers name, personality, senses, damage modifiers, speed,
+    selections. Gathers senses, damage modifiers, speed,
     proficiencies, and out-of-combat traits. Only sections that actually have
     content are included in the returned dict."""
 
@@ -89,17 +86,6 @@ def generate_information(
     # magic kits only. Proficiencies additionally come from role kits.
     combat_magic = ((combat_kits, COMBAT_KITS), (magic_kits, MAGIC_KITS))
     all_kits = combat_magic + ((role_kits, ROLE_KITS),)
-
-    # Name. gender defaults to Neutral when not supplied.
-    if name:
-        name_gender = gender or "Neutral"
-        first = random.choice(NAMES[name_gender][race]["First"])
-        last = random.choice(NAMES[name_gender][race]["Last"])
-        info["name"] = f"{first} {last}"
-
-    # Personality.
-    if personality:
-        info["personality"] = random.choice(PERSONALITIES[personality]["entries"])["description"]
 
     # Senses: race, combat/magic kits, and environment, keeping the longest
     # range per sense type.
@@ -245,3 +231,26 @@ def resolve_title(
     # Failsafe: Should never be reached since tier 1 covers the no-kit case, but just in case:
     return "Report this name bug to Developer"
 
+
+# The following functions generate random names and personalities when the user requests them. 
+# They also provide enumerations of valid options for the name and personality fields, 
+# which the UI can use to validate user input and populate dropdowns.
+def generate_name(race: str, gender: str | None) -> str:
+    """Generate a random name appropriate to the NPC's race and gender."""
+    if gender is None:
+        gender = "Neutral"
+    return random.choice(NAMES[gender][race]["First"]) + " " + random.choice(NAMES[gender][race]["Last"])
+
+def generate_personality(personality: str | None) -> str | None:
+    """Generate a random personality trait if the user requested one."""
+    if personality is None:
+        return None 
+    return random.choice(PERSONALITIES[personality]["entries"])["description"]
+
+def enum_name_races() -> list[str]:
+    """Return a list of all valid race names."""
+    return sorted(list(NAMES["Neutral"].keys()))
+
+def enum_personality_options() -> list[str]:
+    """Return a list of all valid personality options."""
+    return sorted(list(PERSONALITIES.keys())) 
