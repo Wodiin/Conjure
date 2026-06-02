@@ -5,6 +5,7 @@ from unittest import mock
 import information_logic
 from information_logic import (
     generate_information,
+    resolve_title,
     _gather,
     _reduce_max,
     _reduce_unique,
@@ -477,6 +478,192 @@ class TestStructure(unittest.TestCase):
     def test_returns_dict(self):
         info = generate_information("Human", False, None, None, None, None, None, None)
         self.assertIsInstance(info, dict)
+
+
+# ---------------------------------------------------------------------------
+# resolve_title - the NPC title precedence ladder.
+#
+# These use controlled fake kits patched into the real tables so the ladder
+# logic (tier thresholds, ordering, tie-breaking) is tested independently of
+# whatever weights the real kit data happens to carry. Each fake entry only
+# needs the two fields resolve_title reads.
+# ---------------------------------------------------------------------------
+
+FAKE_COMBAT = {
+    "c_hi": {"display_name": "Hicom", "display_name_weight": 90},
+    "c_lo": {"display_name": "Locom", "display_name_weight": -90},
+    "c_z1": {"display_name": "Zc1", "display_name_weight": 0},
+    "c_z2": {"display_name": "Zc2", "display_name_weight": 0},
+    "c_z3": {"display_name": "Zc3", "display_name_weight": 0},
+}
+FAKE_MAGIC = {
+    "m_hi": {"display_name": "Himag", "display_name_weight": 92},
+    "m_mid": {"display_name": "Midmag", "display_name_weight": 35},
+    "m_z1": {"display_name": "Zmag1", "display_name_weight": 0},
+    "m_z2": {"display_name": "Zmag2", "display_name_weight": 0},
+    "m_z3": {"display_name": "Zmag3", "display_name_weight": 0},
+}
+FAKE_ROLE = {
+    "r_hi": {"display_name": "Hirole", "display_name_weight": 25},
+    "r_lo": {"display_name": "Lorole", "display_name_weight": -20},
+    "r_z1": {"display_name": "Zrole1", "display_name_weight": 0},
+    "r_z2": {"display_name": "Zrole2", "display_name_weight": 0},
+    "r_z3": {"display_name": "Zrole3", "display_name_weight": 0},
+}
+
+
+class TestResolveTitle(unittest.TestCase):
+
+    def setUp(self):
+        for table, fakes in (
+            (information_logic.COMBAT_KITS, FAKE_COMBAT),
+            (information_logic.MAGIC_KITS, FAKE_MAGIC),
+            (information_logic.ROLE_KITS, FAKE_ROLE),
+        ):
+            patcher = mock.patch.dict(table, fakes)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+
+    # --- Tier 1: no kits ---------------------------------------------------
+
+    def test_commoner_all_none(self):
+        self.assertEqual(resolve_title(None, None, None), "Commoner")
+
+    def test_commoner_all_empty(self):
+        self.assertEqual(resolve_title([], [], []), "Commoner")
+
+    # --- Tier 2: Mythical Conjuration -------------------------------------
+
+    def test_mythical_combat_and_magic_maxed(self):
+        title = resolve_title(None, ["c_z1", "c_z2", "c_z3"], ["m_z1", "m_z2", "m_z3"])
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_mythical_combat_and_role_maxed(self):
+        title = resolve_title(["r_z1", "r_z2", "r_z3"], ["c_z1", "c_z2", "c_z3"], None)
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_mythical_magic_and_role_maxed(self):
+        title = resolve_title(["r_z1", "r_z2", "r_z3"], None, ["m_z1", "m_z2", "m_z3"])
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_mythical_all_three_at_two(self):
+        title = resolve_title(["r_z1", "r_z2"], ["c_z1", "c_z2"], ["m_z1", "m_z2"])
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_mythical_all_three_maxed(self):
+        title = resolve_title(["r_z1", "r_z2", "r_z3"], ["c_z1", "c_z2", "c_z3"], ["m_z1", "m_z2", "m_z3"])
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_mythical_two_at_two_one_at_three(self):
+        # combat 2, magic 2, role 3 -> all three at 2+ -> Mythical
+        title = resolve_title(["r_z1", "r_z2", "r_z3"], ["c_z1", "c_z2"], ["m_z1", "m_z2"])
+        self.assertEqual(title, "Mythical Conjuration")
+
+    def test_two_two_zero_is_not_mythical(self):
+        # combat 2, magic 2, role 0 -> not all at 2+, no two maxed -> concatenation
+        title = resolve_title(None, ["c_z1", "c_z2"], ["m_z1", "m_z2"])
+        self.assertNotEqual(title, "Mythical Conjuration")
+
+    def test_two_two_one_is_not_mythical(self):
+        title = resolve_title(["r_z1"], ["c_z1", "c_z2"], ["m_z1", "m_z2"])
+        self.assertNotEqual(title, "Mythical Conjuration")
+
+    # --- Tier 3: one specialty maxed --------------------------------------
+
+    def test_master_of_arms(self):
+        self.assertEqual(resolve_title(None, ["c_z1", "c_z2", "c_z3"], None), "Master of Arms")
+
+    def test_magus(self):
+        self.assertEqual(resolve_title(None, None, ["m_z1", "m_z2", "m_z3"]), "Magus")
+
+    def test_jack_of_all_trades(self):
+        self.assertEqual(resolve_title(["r_z1", "r_z2", "r_z3"], None, None), "Jack of All Trades")
+
+    def test_master_of_arms_with_subthreshold_magic(self):
+        # combat 3, magic 2 -> not Mythical (only one maxed, not all at 2+) -> Master
+        self.assertEqual(resolve_title(None, ["c_z1", "c_z2", "c_z3"], ["m_z1", "m_z2"]), "Master of Arms")
+
+    def test_magus_with_subthreshold_role(self):
+        self.assertEqual(resolve_title(["r_z1", "r_z2"], None, ["m_z1", "m_z2", "m_z3"]), "Magus")
+
+    def test_jack_with_subthreshold_combat(self):
+        self.assertEqual(resolve_title(["r_z1", "r_z2", "r_z3"], ["c_z1", "c_z2"], None), "Jack of All Trades")
+
+    # --- Tier 3/4 boundary: exactly 3 vs exactly 2 ------------------------
+
+    def test_combat_three_is_master_not_concat(self):
+        self.assertEqual(resolve_title(None, ["c_z1", "c_z2", "c_z3"], None), "Master of Arms")
+
+    def test_combat_two_is_concat_not_master(self):
+        title = resolve_title(None, ["c_z1", "c_z2"], None)
+        self.assertNotIn("Master", title)
+        self.assertEqual(len(title.split(" ")), 2)
+
+    # --- Tier 4: combat and magic both present ----------------------------
+
+    def test_concat_combat_leads_by_weight(self):
+        # combat 90 vs magic 35 -> combat first
+        self.assertEqual(resolve_title(None, ["c_hi"], ["m_mid"]), "Hicom Midmag")
+
+    def test_concat_magic_leads_by_weight(self):
+        # combat -90 vs magic 92 -> magic first
+        self.assertEqual(resolve_title(None, ["c_lo"], ["m_hi"]), "Himag Locom")
+
+    def test_concat_tie_combat_leads(self):
+        # equal weights, combat is passed first so it leads
+        self.assertEqual(resolve_title(None, ["c_z1"], ["m_z1"]), "Zc1 Zmag1")
+
+    def test_concat_both_caps_at_two_names(self):
+        # combat has two kits, only index 0 is used against magic's index 0
+        title = resolve_title(None, ["c_z1", "c_z2"], ["m_hi"])
+        self.assertEqual(title, "Himag Zc1")
+        self.assertNotIn("Zc2", title)
+
+    # --- Tier 4: single specialty present ---------------------------------
+
+    def test_combat_only_one_kit(self):
+        self.assertEqual(resolve_title(None, ["c_hi"], None), "Hicom")
+
+    def test_combat_only_two_kits_by_weight(self):
+        # index 0 is -90, index 1 is 90 -> higher weight leads
+        self.assertEqual(resolve_title(None, ["c_lo", "c_hi"], None), "Hicom Locom")
+
+    def test_combat_only_two_kits_tie_keeps_selection_order(self):
+        self.assertEqual(resolve_title(None, ["c_z1", "c_z2"], None), "Zc1 Zc2")
+
+    def test_magic_only_one_kit(self):
+        self.assertEqual(resolve_title(None, None, ["m_hi"]), "Himag")
+
+    def test_magic_only_two_kits_by_weight(self):
+        self.assertEqual(resolve_title(None, None, ["m_mid", "m_hi"]), "Himag Midmag")
+
+    # --- Tier 4: role ignored whenever combat or magic is present ---------
+
+    def test_role_ignored_with_combat(self):
+        title = resolve_title(["r_hi"], ["c_hi"], None)
+        self.assertEqual(title, "Hicom")
+        self.assertNotIn("Hirole", title)
+
+    def test_role_ignored_with_magic(self):
+        title = resolve_title(["r_hi"], None, ["m_hi"])
+        self.assertEqual(title, "Himag")
+
+    def test_role_ignored_with_combat_and_magic(self):
+        title = resolve_title(["r_hi", "r_lo"], ["c_hi"], ["m_mid"])
+        self.assertEqual(title, "Hicom Midmag")
+        self.assertNotIn("role", title.lower())
+
+    # --- Tier 5: role only ------------------------------------------------
+
+    def test_role_only_one_kit(self):
+        self.assertEqual(resolve_title(["r_hi"], None, None), "Hirole")
+
+    def test_role_only_two_kits_by_weight(self):
+        # index 0 is -20, index 1 is 25 -> higher weight leads
+        self.assertEqual(resolve_title(["r_lo", "r_hi"], None, None), "Hirole Lorole")
+
+    def test_role_only_two_kits_tie_keeps_selection_order(self):
+        self.assertEqual(resolve_title(["r_z1", "r_z2"], None, None), "Zrole1 Zrole2")
 
 
 if __name__ == "__main__":
