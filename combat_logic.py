@@ -26,10 +26,10 @@ def calculate_ac(cr: str, base: str, primary: str | None, combat_kits: list[str]
     return ac
 
 
-def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
+def calculate_hp(cr: str, base: str, con_mod: int) -> dict[int, str]:
     """Calculates the final HP and dice expression string for an NPC.
     Uses hit dice count from the CR table, hit die size from the base category,
-    and the NPC's actual CON modifier. Returns a tuple of (total_hp, dice_string)."""
+    and the NPC's actual CON modifier. Returns a dictionary with keys 'hp' and 'dice_string'."""
 
     num_dice = CR_TABLE[cr]['hit_dice_count']
     die_size = BASE_CATEGORIES[base]['hit_die']
@@ -37,7 +37,7 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
     # CR 0 with negative CON is an edge case - floor HP at 1
     if cr == "0" and con_mod < 0:
         dice_string = f"1d{die_size} - {abs(con_mod)}"
-        return 1, dice_string
+        return {"hp": 1, "dice_string": dice_string}
 
     # Calculate total HP: num_dice × avg_die + num_dice × con_mod
     avg_die = (die_size + 1) / 2
@@ -53,7 +53,7 @@ def calculate_hp(cr: str, base: str, con_mod: int) -> tuple[int, str]:
     else:
         dice_string = f"{num_dice}d{die_size} + {con_contribution}"
 
-    return hp, dice_string
+    return {"hp": hp, "dice_string": dice_string}
 
 
 def generate_action_data(
