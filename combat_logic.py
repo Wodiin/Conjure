@@ -75,7 +75,7 @@ def generate_action_data(
 
     action_data: dict = {}
     weapons_data: dict = {}
-    weapon_list: list[str] = actions.get("Weapons", [])
+    weapon_list: list[str] = actions.get("weapons", [])
     has_shield: bool = "Shield Bash" in weapon_list
     prof_bonus: int = CR_TABLE[cr]["proficiency_bonus"]
 
@@ -124,13 +124,13 @@ def generate_action_data(
         }
 
     if weapons_data:
-        action_data["Weapons"] = weapons_data
+        action_data["weapons"] = weapons_data
 
     # Multiattack - only generated when CR grants more than one attack
     # and the NPC has at least one weapon available.
     # Future: switch type to "prescriptive" for monstrous base types
     if CR_TABLE[cr]["multiattack_count"] > 1 and weapon_list:
-        action_data["Multiattack"] = {
+        action_data["multiattack"] = {
             "type": "any_combination",
             "count": CR_TABLE[cr]["multiattack_count"],
             "weapons": weapon_list,
@@ -141,32 +141,32 @@ def generate_action_data(
     # bonus. When use_primary_for_casting is True, the primary stat is
     # used regardless of its value. Otherwise, the highest mental stat
     # (INT, WIS, CHA) is selected automatically.
-    if "Spells" in actions:
+    if "spells" in actions:
         if use_primary_for_casting and primary:
             spellcasting_stat: str = primary
         else:
             spellcasting_stat = max(["INT", "WIS", "CHA"], key=modifiers.get)
 
         casting_mod: int = modifiers[spellcasting_stat]
-        action_data["Spells"] = {
-            "Spells": actions["Spells"],
-            "Spell Save DC": 8 + casting_mod + prof_bonus,
-            "Spell Attack Bonus": casting_mod + prof_bonus,
-            "Spell Budget": CR_TABLE[cr]["spell_budget"],
-            "Spellcasting Stat": spellcasting_stat,
+        action_data["spells"] = {
+            "spells_list": actions["spells"],
+            "spell_save_dc": 8 + casting_mod + prof_bonus,
+            "spell_attack_bonus": casting_mod + prof_bonus,
+            "spell_budget": CR_TABLE[cr]["spell_budget"],
+            "spellcasting_stat": spellcasting_stat,
         }
 
     # Traits, Bonus Actions, and Reactions are passed through as-is.
     # The trait budget is a shared cap across all three sections, set
     # by CR and enforced by the renderer or user selection.
-    if "Traits" in actions or "Bonus Actions" in actions or "Reactions" in actions:
-        action_data["Trait Budget"] = CR_TABLE[cr]["trait_budget"]
-    if "Traits" in actions:
-        action_data["Traits"] = actions["Traits"]
-    if "Bonus Actions" in actions:
-        action_data["Bonus Actions"] = actions["Bonus Actions"]
-    if "Reactions" in actions:
-        action_data["Reactions"] = actions["Reactions"]
+    if "traits" in actions or "bonus_actions" in actions or "reactions" in actions:
+        action_data["trait_budget"] = CR_TABLE[cr]["trait_budget"]
+    if "traits" in actions:
+        action_data["traits"] = actions["traits"]
+    if "bonus_actions" in actions:
+        action_data["bonus_actions"] = actions["bonus_actions"]
+    if "reactions" in actions:
+        action_data["reactions"] = actions["reactions"]
 
     return action_data
 
@@ -211,9 +211,9 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
     # Traits
     traits = _collect_descriptions("traits", "traits", "traits")
     if traits:
-        action_data["Traits"] = traits
+        action_data["traits"] = traits
  
-    # Weapons - melee first, shield bash second, ranged last
+    # weapons - melee first, shield bash second, ranged last
     weapons: list[str] = []
     if combat_kits is not None:
         for kit in combat_kits:
@@ -227,7 +227,7 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
     ranged = sorted([w for w in weapons if WEAPONS[w]["reach"] < 5 and WEAPONS[w]["range"]["short"] > 0])
     weapons = melee + shield + ranged
     if weapons:
-        action_data["Weapons"] = weapons
+        action_data["weapons"] = weapons
  
     # Spells - deduplicated, keeping the higher casting frequency
     spells: dict[str, dict] = {}
@@ -243,16 +243,16 @@ def get_action_data(combat_kits: list[str] | None, magic_kits: list[str] | None,
                     spells[name] = entry
     spells = dict(sorted(spells.items(), key=lambda x: (x[1]["level"], x[0])))
     if spells:
-        action_data["Spells"] = spells
+        action_data["spells"] = spells
  
     # Bonus Actions
     bonus_actions = _collect_descriptions("bonus_actions", "bonus_actions", "bonus_actions")
     if bonus_actions:
-        action_data["Bonus Actions"] = bonus_actions
+        action_data["bonus_actions"] = bonus_actions
  
     # Reactions
     reactions = _collect_descriptions("reactions", "reactions", "reactions")
     if reactions:
-        action_data["Reactions"] = reactions
+        action_data["reactions"] = reactions
  
     return action_data
