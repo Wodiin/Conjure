@@ -7,7 +7,7 @@ from information_logic import resolve_title, generate_information
 @dataclass
 class Selections:
     """A dataclass to represent the user's selections for generating an NPC."""
-
+    
     cr: str
     base: str
     race: str
@@ -23,8 +23,7 @@ class Selections:
     generate_name_toggle: bool = False
 
 
-
-#call sequence mockup:
+# call sequence mockup:
 # generate stats  = generate_stats(selections.cr, selections.base, selections.primary, selections.secondary, selections.race)
 # generate modifiers = generate_stat_modifiers(stats)
 # calculate AC = calculate_ac(selections.cr, selections.base, selections.primary, selections.combat_kits)
@@ -32,7 +31,7 @@ class Selections:
 # get the action data = get_action_data(selections.combat_kits, selections.magic_kits, selections.race)
 # generate action data = generate_action_data(selections.cr, modifiers, action_data, selections.use_primary_for_casting, selections.primary)
 # resolve name title = resolve_title(selections.role_kits, selections.combat_kits, selections.magic_kits)
-# generate information = generate_information(selections.race, selections.combat_kits, selections.magic_kits, selections.role_kits, selections.environment)
+# generate information = generate_information(selections.race, selections.combat_kits, selections.magic_kits, selections.role_kits, selections.environment, modifiers, selections.cr)
 
 
 def generate_npc(selections: Selections) -> dict:
@@ -55,8 +54,10 @@ def generate_npc(selections: Selections) -> dict:
     title = resolve_title(selections.role_kits, selections.combat_kits, selections.magic_kits)
 
     # Generate information
-    information = generate_information(selections.race, selections.combat_kits, selections.magic_kits, selections.role_kits, selections.environment)
-
+    information = generate_information(
+        selections.race, selections.combat_kits, selections.magic_kits,
+        selections.role_kits, selections.environment, modifiers, selections.cr
+    )
     # Return the complete NPC data
     return {
         "stats": stats,

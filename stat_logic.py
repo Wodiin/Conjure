@@ -5,7 +5,6 @@ from data_loader import data
 BASE_CATEGORIES = data['base_categories']
 RACES = data['races']
 
-
 def generate_stats(cr: str, base: str, primary: str | None, secondary: str | None, race: str) -> dict[str, int]:
     """Takes user selections and returns a complete stat dict with racial bonuses applied.
     Orchestrates the full stat generation pipeline: CR array -> priority reorder -> zip -> racial ASIs."""

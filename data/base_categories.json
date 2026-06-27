@@ -1,6 +1,7 @@
 {
     "Melee": {
         "stat_priority": ["STR", "CON", "DEX", "WIS", "CHA", "INT"],
+        "saving_throws": ["STR", "CON"],
         "hit_die": 10,
         "armour": {
             "ac_mod_default": 2,
@@ -9,6 +10,7 @@
     },
     "Half Caster": {
         "stat_priority": ["CHA", "STR", "CON", "DEX", "WIS", "INT"],
+        "saving_throws": ["CHA", "WIS"],
         "hit_die": 8,
         "armour": {
             "ac_mod_default": 1,
@@ -17,6 +19,7 @@
     },
     "Full Caster": {
         "stat_priority": ["INT", "CHA", "WIS", "DEX", "CON", "STR"],
+        "saving_throws": ["INT", "WIS"],
         "hit_die": 6,
         "armour": {
             "ac_mod_default": -2,
@@ -25,6 +28,7 @@
     },
     "Ranged": {
         "stat_priority": ["DEX", "CON", "WIS", "CHA", "STR", "INT"],
+        "saving_throws": ["DEX", "CON"],
         "hit_die": 8,
         "armour": {
             "ac_mod_default": 1,
@@ -33,6 +37,7 @@
     },
     "Non Combatant": {
         "stat_priority": ["WIS", "CHA", "INT", "DEX", "STR", "CON"],
+        "saving_throws": ["WIS", "DEX"],
         "hit_die": 4,
         "armour": {
             "ac_mod_default": -4,

@@ -8,6 +8,8 @@ ROLE_KITS = data['role_kits']
 ENVIRONMENTS = data['environments']
 PERSONALITIES = data['personalities']
 NAMES = data['names']
+PROFICIENCIES = data['proficiencies_map']
+CR_TABLE = data['cr_table']
 
 # Damage reduction strength ranking. Used to resolve conflicts when the same
 # damage type is contributed by more than one source. Immunity beats
@@ -68,12 +70,40 @@ def _reduce_descriptions(entries: list[dict]) -> dict[str, str]:
     return {entry["name"]: entry["description"] for entry in entries}
 
 
+def _map_proficiencies(entries: list[str], modifiers: dict[str, int], prof_bonus: int) -> dict[str, int]:
+    """Maps proficiency entries to a {proficiency: modifier} dict, adding the
+    proficiency bonus to the relevant ability modifier found in the
+    proficiencies map. Raises if an entry is missing from the map so a
+    contributor sees the gap loudly rather than shipping a wrong number."""
+    result = {}
+    for entry in entries:
+        ability = PROFICIENCIES.get(entry)
+        if ability is None:
+            raise KeyError(f"'{entry}' is not mapped in proficiencies_map.json")
+        result[entry] = modifiers[ability] + prof_bonus
+    return result
+
+
+# Passive Perception is a mandatory line on every stat block, so its call site
+# is unguarded unlike the optional sections. The proficiency bonus is only
+# added when the NPC is proficient in Perception.
+def _calculate_passive_perception(wis_mod: int, prof_bonus: int, is_proficient: bool) -> int:
+    """Calculate the passive perception score based on the wisdom modifier,
+    proficiency bonus, and whether the NPC is proficient in perception."""
+    passive_perception = 10 + wis_mod
+    if is_proficient:
+        passive_perception += prof_bonus
+    return passive_perception
+
+
 def generate_information(
     race: str,
     combat_kits: list[str] | None,
     magic_kits: list[str] | None,
     role_kits: list[str] | None,
     environment: str | None,
+    modifiers: dict[str, int],
+    cr: str,
 ) -> dict:
     """Build the non-combat portion of an NPC stat block from the user's
     selections. Gathers senses, damage modifiers, speed,
@@ -81,6 +111,10 @@ def generate_information(
     content are included in the returned dict."""
 
     info: dict = {}
+
+    # Proficiency bonus is read once here and threaded into the skill and
+    # passive Perception calculations below, rather than looked up per use.
+    prof_bonus = CR_TABLE[cr]["proficiency_bonus"]
 
     # Kit sources grouped for reuse. Senses and damage come from combat and
     # magic kits only. Proficiencies additionally come from role kits.
@@ -128,8 +162,13 @@ def generate_information(
 
     # Proficiencies and tool proficiencies: all kit types, deduplicated.
     proficiencies = _reduce_unique(_gather("proficiencies", kit_sources=all_kits))
-    if proficiencies:
-        info["proficiencies"] = proficiencies
+    proficiency_mods = _map_proficiencies(proficiencies, modifiers, prof_bonus)
+    if proficiency_mods:
+        info["proficiencies"] = proficiency_mods
+
+    info["passive_perception"] = _calculate_passive_perception(
+        modifiers["WIS"], prof_bonus, "Perception" in proficiencies
+    )
 
     tool_proficiencies = _reduce_unique(_gather("proficiencies_t", kit_sources=all_kits))
     if tool_proficiencies:
@@ -147,7 +186,6 @@ def generate_information(
         info["role_traits"] = role_traits
 
     return info
-
 
 
 def _order_by_weight(a: tuple[str, int], b: tuple[str, int]) -> str:
@@ -232,8 +270,8 @@ def resolve_title(
     return "Report this name bug to Developer"
 
 
-# The following functions generate random names and personalities when the user requests them. 
-# They also provide enumerations of valid options for the name and personality fields, 
+# The following functions generate random names and personalities when the user requests them.
+# They also provide enumerations of valid options for the name and personality fields,
 # which the UI can use to validate user input and populate dropdowns.
 def generate_name(race: str, gender: str | None) -> str:
     """Generate a random name appropriate to the NPC's race and gender."""
@@ -241,16 +279,19 @@ def generate_name(race: str, gender: str | None) -> str:
         gender = "Neutral"
     return random.choice(NAMES[gender][race]["First"]) + " " + random.choice(NAMES[gender][race]["Last"])
 
+
 def generate_personality(personality: str | None) -> str | None:
     """Generate a random personality trait if the user requested one."""
     if personality is None:
-        return None 
+        return None
     return random.choice(PERSONALITIES[personality]["entries"])["description"]
+
 
 def enum_name_races() -> list[str]:
     """Return a list of all valid race names."""
     return sorted(list(NAMES["Neutral"].keys()))
 
+
 def enum_personality_options() -> list[str]:
     """Return a list of all valid personality options."""
-    return sorted(list(PERSONALITIES.keys())) 
+    return sorted(list(PERSONALITIES.keys()))
