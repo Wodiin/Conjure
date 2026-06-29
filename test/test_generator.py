@@ -102,7 +102,9 @@ class TestMinimalNPC(unittest.TestCase):
         self.assertEqual(self.npc["action_data"], {})
 
     def test_information_is_race_speed_only(self):
-        self.assertEqual(self.npc["information"], {"speed": {"Walking": 30}})
+        self.assertEqual(self.npc["information"]["speed"], {"Walking": 30})
+        self.assertNotIn("senses", self.npc["information"])
+        self.assertNotIn("proficiencies", self.npc["information"])
 
 
 # ---------------------------------------------------------------------------

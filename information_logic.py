@@ -86,16 +86,13 @@ def _map_proficiencies(entries: list[str], modifiers: dict[str, int], prof_bonus
 
 
 def _map_saves(proficiency_saves: list[str], modifiers: dict[str, int], prof_bonus: int) -> dict[str, int]:
-    """Maps all six saving throws to a {ability: modifier} dict. Every ability
-    is always emitted since saving throws are a mandatory stat block section.
-    The proficiency bonus is added only for the two saves granted by the base
-    category."""
+    """Maps the proficient saving throws to a {ability: modifier} dict. Only the
+    two saves granted by the base category are emitted, each with the
+    proficiency bonus applied, matching the stat block convention of listing
+    proficient saves only."""
     result = {}
-    for ability in modifiers.keys():
-        save_modifier = modifiers[ability]
-        if ability in proficiency_saves:
-            save_modifier += prof_bonus
-        result[ability] = save_modifier
+    for ability in proficiency_saves:
+        result[ability] = modifiers[ability] + prof_bonus
     return result
 
 
@@ -149,6 +146,9 @@ def generate_information(
     )
     if senses:
         info["senses"] = senses
+    
+    # Size: grabs the size from the race
+    info["size"] = RACES[race]["size"]
 
     # Damage modifiers: gather every resistance entry from race, combat/magic
     # kits, and environment, keeping the strongest reduction per damage type,
@@ -194,9 +194,9 @@ def generate_information(
     if tool_proficiencies:
         info["tool_proficiencies"] = tool_proficiencies
 
-    # Saving throws: always emitted for all six abilities, unguarded, since
-    # every stat block requires them. The proficiency bonus applies only to the
-    # two saves granted by the base category.
+    # Saving throws: only the proficient saves are emitted, matching the stat
+    # block convention. The base category always grants two, so the dict is
+    # never empty and the call stays unguarded.
     info["saving_throws"] = _map_saves(proficiency_saves, modifiers, prof_bonus)
 
     # Out-of-combat traits: environment and role kits, kept uncapped since they
