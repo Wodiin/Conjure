@@ -10,6 +10,7 @@ PERSONALITIES = data['personalities']
 NAMES = data['names']
 PROFICIENCIES = data['proficiencies_map']
 CR_TABLE = data['cr_table']
+BASE_CATEGORIES = data['base_categories']
 
 # Damage reduction strength ranking. Used to resolve conflicts when the same
 # damage type is contributed by more than one source. Immunity beats
@@ -84,6 +85,20 @@ def _map_proficiencies(entries: list[str], modifiers: dict[str, int], prof_bonus
     return result
 
 
+def _map_saves(proficiency_saves: list[str], modifiers: dict[str, int], prof_bonus: int) -> dict[str, int]:
+    """Maps all six saving throws to a {ability: modifier} dict. Every ability
+    is always emitted since saving throws are a mandatory stat block section.
+    The proficiency bonus is added only for the two saves granted by the base
+    category."""
+    result = {}
+    for ability in modifiers.keys():
+        save_modifier = modifiers[ability]
+        if ability in proficiency_saves:
+            save_modifier += prof_bonus
+        result[ability] = save_modifier
+    return result
+
+
 # Passive Perception is a mandatory line on every stat block, so its call site
 # is unguarded unlike the optional sections. The proficiency bonus is only
 # added when the NPC is proficient in Perception.
@@ -104,6 +119,7 @@ def generate_information(
     environment: str | None,
     modifiers: dict[str, int],
     cr: str,
+    base: str,
 ) -> dict:
     """Build the non-combat portion of an NPC stat block from the user's
     selections. Gathers senses, damage modifiers, speed,
@@ -115,6 +131,10 @@ def generate_information(
     # Proficiency bonus is read once here and threaded into the skill and
     # passive Perception calculations below, rather than looked up per use.
     prof_bonus = CR_TABLE[cr]["proficiency_bonus"]
+
+    # Save proficiencies are fixed to the base category -- exactly two per NPC,
+    # regardless of kit selection. Extracted here and passed into _map_saves.
+    proficiency_saves = BASE_CATEGORIES[base]["saving_throws"]
 
     # Kit sources grouped for reuse. Senses and damage come from combat and
     # magic kits only. Proficiencies additionally come from role kits.
@@ -173,6 +193,11 @@ def generate_information(
     tool_proficiencies = _reduce_unique(_gather("proficiencies_t", kit_sources=all_kits))
     if tool_proficiencies:
         info["tool_proficiencies"] = tool_proficiencies
+
+    # Saving throws: always emitted for all six abilities, unguarded, since
+    # every stat block requires them. The proficiency bonus applies only to the
+    # two saves granted by the base category.
+    info["saving_throws"] = _map_saves(proficiency_saves, modifiers, prof_bonus)
 
     # Out-of-combat traits: environment and role kits, kept uncapped since they
     # carry no combat weight. Stored as {name: description} to match the trait

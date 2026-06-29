@@ -56,8 +56,10 @@ def generate_npc(selections: Selections) -> dict:
     # Generate information
     information = generate_information(
         selections.race, selections.combat_kits, selections.magic_kits,
-        selections.role_kits, selections.environment, modifiers, selections.cr
+        selections.role_kits, selections.environment, modifiers, selections.cr,
+        selections.base
     )
+    
     # Return the complete NPC data
     return {
         "stats": stats,
