@@ -13,11 +13,11 @@
         ],
         "speed": [
             {
-                "name": "Flying",
+                "name": "Walking",
                 "distance": 30
             },
             {
-                "name": "Walking",
+                "name": "Flying",
                 "distance": 30
             }
         ],
@@ -55,11 +55,11 @@
         ],
         "speed": [
             {
-                "name": "Flying",
+                "name": "Walking",
                 "distance": 30
             },
             {
-                "name": "Walking",
+                "name": "Flying",
                 "distance": 30
             }
         ],

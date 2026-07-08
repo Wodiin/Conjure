@@ -150,6 +150,9 @@ def generate_information(
     # Size: grabs the size from the race
     info["size"] = RACES[race]["size"]
 
+    # XP: grabs the XP from the CR table
+    info["xp"] = CR_TABLE[cr]["xp"]
+
     # Damage modifiers: gather every resistance entry from race, combat/magic
     # kits, and environment, keeping the strongest reduction per damage type,
     # then split into the three stat block lines. Resolving by rank here means

@@ -18,9 +18,6 @@ class Selections:
     role_kits: list[str] | None = None
     environment: str | None = None
     use_primary_for_casting: bool = False
-    personality: str | None = None
-    gender: str | None = None
-    generate_name_toggle: bool = False
 
 
 # call sequence mockup:

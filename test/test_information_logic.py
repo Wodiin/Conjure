@@ -631,11 +631,18 @@ class TestSourceScoping(unittest.TestCase):
 class TestStructure(unittest.TestCase):
 
     def test_mandatory_keys_always_present(self):
-        """Passive Perception, saving throws, and size are always in the output."""
+        """Passive Perception, saving throws, size, and XP are always in the output."""
         info = generate_information("Human", None, None, None, None, FAKE_MODIFIERS, CR, BASE)
         self.assertIn("passive_perception", info)
         self.assertIn("saving_throws", info)
         self.assertIn("size", info)
+        self.assertIn("xp", info)
+
+    def test_xp_matches_cr_table(self):
+        """XP is read straight from the CR table for the NPC's challenge rating."""
+        # CR 5 is 1800 XP in cr_table.json.
+        info = generate_information("Human", None, None, None, None, FAKE_MODIFIERS, CR, BASE)
+        self.assertEqual(info["xp"], 1800)
 
     def test_no_empty_sections(self):
         """No optional section is ever present as an empty container."""

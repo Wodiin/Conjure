@@ -626,7 +626,7 @@
         "bonus_actions": [],
         "reactions": [
             {
-                "name": "Shield push",
+                "name": "Shield Push",
                 "description": "The Shield Bearer can use their reaction to push a creature they can see within 5 feet of them. The target must succeed on a DC 12 Strength saving throw or be pushed 10 feet away from the Shield Bearer in a straight line."
             }
         ],
