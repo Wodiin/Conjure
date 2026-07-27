@@ -252,9 +252,11 @@ class TestStats(unittest.TestCase):
         self.assertEqual(positions, sorted(positions))
 
     def test_rows_are_equal_width(self):
-        # Six columns at width 7 = 42 characters per row.
-        self.assertEqual(len(self.lines[0]), 42)
-        self.assertEqual(len(self.lines[1]), 42)
+        # Six columns at WIDTH // 6; both rows must match or the
+        # header cells drift off their value cells.
+        expected = (WIDTH // 6) * 6
+        self.assertEqual(len(self.lines[0]), expected)
+        self.assertEqual(len(self.lines[1]), expected)
 
     def test_cell_holds_score_and_signed_mod(self):
         # STR 17 with mod +3 renders as the single centred cell "17(+3)".

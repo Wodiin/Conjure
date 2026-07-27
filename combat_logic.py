@@ -148,6 +148,7 @@ def generate_action_data(
             spellcasting_stat = max(["INT", "WIS", "CHA"], key=modifiers.get)
 
         casting_mod: int = modifiers[spellcasting_stat]
+        # LEGACY: budget is now a legacy value. See traits.
         action_data["spells"] = {
             "spells_list": actions["spells"],
             "spell_save_dc": 8 + casting_mod + prof_bonus,
@@ -157,8 +158,9 @@ def generate_action_data(
         }
 
     # Traits, Bonus Actions, and Reactions are passed through as-is.
-    # The trait budget is a shared cap across all three sections, set
-    # by CR and enforced by the renderer or user selection.
+    # LEGACY: traits budget is now legacy code but kept in for 
+    # potential future use. Was intended to cull traits to avoid bloat.
+    # User now controls the number of traits displayed.
     if "traits" in actions or "bonus_actions" in actions or "reactions" in actions:
         action_data["trait_budget"] = CR_TABLE[cr]["trait_budget"]
     if "traits" in actions:

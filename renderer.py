@@ -18,6 +18,7 @@ class RenderedNPC:
 # or the block renders ragged. 42 was too narrow: the info cluster lines
 # (senses, saves) already run past it unwrapped.
 WIDTH = 60
+CELL = WIDTH // 6
 DIVIDER = "-" * WIDTH
 SPEED_LABELS = { "Swimming": "Swim", "Flying": "Fly", "Climbing": "Climb", "Burrowing": "Burrow" }
 ABILITY_ORDER = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
@@ -81,9 +82,9 @@ def _stats(rendered: RenderedNPC) -> list[str]:
     footer = []
     for stat in ABILITY_ORDER:
         value = rendered.npc["stats"][stat]
-        header.append(f"{stat:^7}")
+        header.append(f"{stat:^{CELL}}")
         cell = f"{value}({_format_mod(rendered.npc['modifiers'][stat])})"
-        footer.append(f"{cell:^7}")
+        footer.append(f"{cell:^{CELL}}")
 
     return [ "".join(header), "".join(footer) ]
 
